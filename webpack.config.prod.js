@@ -1,17 +1,14 @@
 const path = require('path');
 
+const config = require('./webpack.config');
+
 module.exports = {
-  entry: ['./client/index.jsx'],
+  ...config,
+  entry: ['babel-polyfill', './client/index.jsx'],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'client.bundle.js',
     publicPath: '/',
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    alias: {
-      components: path.resolve(__dirname, 'common/components/'),
-    },
   },
   module: {
     rules: [

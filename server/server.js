@@ -4,7 +4,7 @@ import Express from 'express';
 import template from './template';
 
 const app = new Express();
-const port = 3000;
+const port = 3030;
 
 app.use((req, res) => {
   res.send(template());

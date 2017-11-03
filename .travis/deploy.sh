@@ -5,4 +5,4 @@ ssh-add /tmp/deploy_rsa
 
 npm run build
 
-rsync -e ssh -avz --delete-after $TRAVIS_BUILD_DIR/dist observatoire@163.172.60.184:/home/observatoire/front
+rsync -e ssh -avz --delete-after $TRAVIS_BUILD_DIR/build observatoire@163.172.60.184:/home/observatoire/front

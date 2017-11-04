@@ -5,7 +5,7 @@ const config = require('./webpack.config.prod');
 
 module.exports = {
   ...config,
-  entry: ['./server/server.js'],
+  entry: ['babel-polyfill', './server/server.js'],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'server.bundle.js',

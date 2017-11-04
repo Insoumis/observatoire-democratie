@@ -3,7 +3,5 @@ eval "$(ssh-agent -s)"
 chmod 600 /tmp/deploy_rsa
 ssh-add /tmp/deploy_rsa
 
-npm run build
-
-rsync -e ssh -avz --delete-after $TRAVIS_BUILD_DIR/build observatoire@163.172.60.184:/home/observatoire/front
-ssh observatoire@163.172.60.184 "pm2 stop all && pm2 start all"
+git remote add deploy ssh://observatoire@163.172.60.184:/home/observatoire/front.git
+git push deploy master

@@ -3,5 +3,5 @@ eval "$(ssh-agent -s)"
 chmod 600 /tmp/deploy_rsa
 ssh-add /tmp/deploy_rsa
 
-git remote add deploy ssh://observatoire@163.172.60.184:/home/observatoire/front.git
+git remote add deploy ssh://observatoire@163.172.60.184:/home/observatoire/dev/front.git
 git push deploy master

@@ -1,0 +1,143 @@
+@import '~normalize.css';
+@import '~styles/colors';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: $background;
+  color: $main;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5em;
+  padding-bottom: 120px;
+}
+
+h1,
+h2,
+h3 {margin: 0;}
+
+a {
+  color: $lighter;
+  text-decoration: none;
+
+  &:hover {text-decoration: underline;}
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+button,
+input {
+  color: $main;
+  font-family: Montserrat, sans-serif;
+}
+
+fieldset {border: 0;}
+
+select {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url('styles/assets/ico-down.svg') $main no-repeat right 20px center;
+  background-size: 12px;
+  border: 0;
+  border-radius: 35px;
+  color: $white;
+  font-family: Montserrat, sans-serif;
+  font-size: .9em;
+  font-weight: 600;
+  height: 38px;
+  overflow: hidden;
+  padding: 0 40px 0 20px;
+  transition: background .2s;
+
+  &:hover,
+  &:focus {
+    background-color: $lighter;
+    outline: 0;
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: transparentize($main, .25);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: transparentize($main, .25);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: transparentize($main, .25);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: transparentize($main, .25);
+}
+
+:global {
+  .container {
+    margin: auto;
+    width: 980px;
+
+    @media (max-width: 1023px) {width: 700px;}
+    @media (max-width: 767px) {width: calc(100% - 20px);}
+  }
+
+  .flex {
+    display: flex;
+
+    &.wrap {flex-wrap: wrap;}
+    &.space-between {justify-content: space-between;}
+  }
+
+  .searchField {
+    border-radius: 35px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 0;
+
+    &:hover {background: $lighter;}
+
+    input {
+      background: $white;
+      border: 3px solid $main;
+      border-radius: 0;
+      border-bottom-left-radius: 35px;
+      border-top-left-radius: 35px;
+      font-size: .95em;
+      height: 40px;
+      padding: 0 15px;
+      transition: border .2s;
+      vertical-align: middle;
+      width: calc(100% - 45px);
+
+      &:focus {
+        border-color: $lighter;
+        outline: 0;
+      }
+    }
+
+    button {
+      background: $main;
+      height: 40px;
+      text-indent: -3px;
+      transition: background .2s;
+      vertical-align: middle;
+      width: 45px;
+
+      &:focus,
+      &:hover {
+        background: $lighter;
+        outline: 0;
+      }
+    }
+
+    i {color: $white;}
+  }
+}

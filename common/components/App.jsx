@@ -1,10 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-const App = () => (
+import Header from 'components/header/Header';
+
+import './App.scss';
+
+const App = ({ children }) => (
   <div>
-    <Helmet titleTemplate="%s | RemixJobs">
-      <title>Observatoire de la Démocratie</title>
+    <Helmet
+      defaultTitle="Observatoire de la Démocratie"
+      titleTemplate="%s | Observatoire de la Démocratie"
+    >
       <meta name="description" content="" />
       <meta name="og:description" content="" />
       <meta name="og:image" content="" />
@@ -13,8 +20,12 @@ const App = () => (
       <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
 
-    Hello World !
+    <Header />
+
+    {children}
   </div>
 );
+
+App.propTypes = { children: PropTypes.node.isRequired };
 
 export default App;

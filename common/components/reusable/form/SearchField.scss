@@ -1,0 +1,46 @@
+@import '~styles/colors';
+
+.module {
+  border-radius: 35px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 0;
+
+  &:hover {background: $lighter;}
+
+  input {
+    background: $white;
+    border: 3px solid $main;
+    border-radius: 0;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    font-size: .95em;
+    height: 40px;
+    padding: 0 15px;
+    transition: border .2s;
+    vertical-align: middle;
+    width: calc(100% - 45px);
+
+    &:focus {
+      border-color: $lighter;
+      outline: 0;
+    }
+  }
+
+  button {
+    background: $main;
+    height: 40px;
+    text-indent: -3px;
+    transition: background .2s;
+    vertical-align: middle;
+    width: 45px;
+
+    &:focus,
+    &:hover {
+      background: $lighter;
+      outline: 0;
+    }
+  }
+
+  i {color: $white;}
+}

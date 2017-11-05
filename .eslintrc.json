@@ -5,5 +5,10 @@
   },
   "settings": {
     "import/resolver": "webpack"
+  },
+  "rules": {
+    "function-paren-newline": ["error", "consistent"],
+    "object-curly-newline": "off",
+    "jsx-a11y/anchor-is-valid": ["error", { "specialLink": ["to"] }]
   }
 }

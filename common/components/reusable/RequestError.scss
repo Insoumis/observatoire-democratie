@@ -1,0 +1,19 @@
+@import '~styles/colors';
+
+.module {
+  text-align: center;
+
+  button {
+    background: $emphasis;
+    color: $white;
+    font-weight: 600;
+    padding: 8px 16px;
+    transition: background .2s;
+
+    &:focus,
+    &:hover {
+      background: $lighter;
+      outline: 0;
+    }
+  }
+}

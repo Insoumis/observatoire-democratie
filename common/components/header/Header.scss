@@ -1,0 +1,75 @@
+@import '~styles/colors';
+
+.module {
+  nav:first-of-type {
+    background: $main;
+    display: flex;
+    height: 70px;
+    padding: 10px 15px 15px;
+
+    h1 {
+      background: url('./assets/logo.svg') no-repeat center;
+      height: 45px;
+      text-indent: -9999px;
+      width: 210px;
+    }
+
+    // ul {
+    //   display: none;
+    //   padding: 0 20px;
+    // }
+
+    // li {
+    //   display: inline-block;
+    //   color: $white;
+    //   font-size: .9em;
+    //   font-weight: 600;
+    //   margin: 2px 20px 0 0;
+    //   text-transform: uppercase;
+    // }
+  }
+
+  header {
+    background: url('./assets/banner.png') no-repeat center #89d6ec;
+    background-size: auto 100%;
+    height: 300px;
+  }
+
+  nav:last-of-type {
+    background: $white;
+    border-bottom: 1px solid darken($background, 15%);
+    padding: 16px 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      font-size: .9em;
+      margin: 0 10px;
+    }
+
+
+    a {
+      color: $main;
+
+      i {transition: color .2s;}
+
+      &:global(.active),
+      &:hover {
+        text-decoration: none;
+
+        i {color: $lighter;}
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .module header {
+    height: 138px;
+  }
+}

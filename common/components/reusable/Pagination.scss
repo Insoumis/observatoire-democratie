@@ -1,0 +1,23 @@
+@import '~styles/colors';
+
+.module {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a {
+    background: $main;
+    color: $white;
+    font-weight: 600;
+    margin: 0 5px 8px;
+    padding: 4px 10px;
+    transition: background .2s;
+
+    &:global(.active),
+    &:hover {background: $lighter;}
+  }
+
+  :global(.active) {
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,88 @@
+@import '~styles/colors';
+
+.module {
+  display: flex;
+  margin-bottom: 70px;
+
+  > div {width: 100%;}
+
+  img {margin-top: 30px;}
+
+  a:hover > header {
+    h1,
+    h2 span {background: $lighter;}
+  }
+
+  header {
+    color: $white;
+    display: inline-block;
+  }
+
+  h2 {
+    font-size: 1em;
+
+    span {
+      background: $emphasis;
+      display: inline-block;
+      padding: 3px 6px;
+      transition: .2s;
+    }
+  }
+
+  h1 {
+    background: $main;
+    display: inline-block;
+    font-size: 1.13em;
+    padding: 1px 5px;
+    transition: .2s;
+  }
+}
+
+.infos {
+  font-size: .82em;
+  margin: 2px 15px 0;
+
+  :global(.fa) {color: $lighter;}
+
+  a {color: $main;}
+}
+
+.stats {
+  background: white;
+  border: 1px solid $border;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5px;
+  padding: 4px;
+  text-align: center;
+
+  h3 {
+    border-bottom: 1px dashed $lighter;
+    display: inline-block;
+    font-size: .92em;
+    font-weight: 600;
+    line-height: 1.5em;
+  }
+
+  div div {
+    background: url('./assets/ico-participation.svg') no-repeat center 6px;
+    background-size: 25px;
+    color: $emphasis;
+    padding-top: 30px;
+  }
+
+  .dissidence div {
+    background-image: url('./assets/ico-dissidence.svg');
+    background-position: calc(50% - 4px) 6px;
+    background-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .module {
+    display: block;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}

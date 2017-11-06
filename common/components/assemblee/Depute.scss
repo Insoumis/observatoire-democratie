@@ -1,0 +1,82 @@
+@import '~styles/colors';
+
+.module {
+  padding-top: 60px;
+
+  > div {margin-bottom: 60px;}
+
+  img {margin-top: 32px;}
+
+  header {
+    color: $white;
+    margin: 0 -15px;
+  }
+
+  h2 {
+    font-size: 1em;
+
+    span {
+      background: $emphasis;
+      display: inline-block;
+      padding: 4px 6px;
+    }
+  }
+
+  h1 {
+    background: $main;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 3px 5px;
+  }
+}
+
+.infos {margin: 0 15px;}
+
+.contacts {
+  margin: 10px -5px 18px;
+
+  a {margin-right: 5px;}
+
+  i {
+    background: $lighter;
+    color: $white;
+    padding: 8px;
+    transition: background .2s;
+
+    &:hover {background: $emphasis;}
+  }
+
+  :global {
+    .fa-facebook-square {background: $facebook;}
+    .fa-twitter {background: $twitter;}
+  }
+}
+
+.data {
+  a {
+    color: $main;
+    display: inline-block;
+    margin-bottom: 8px;
+
+    i {color: $lighter;}
+  }
+
+  div {font-size: .85em;}
+
+  i {margin-right: 4px;}
+}
+
+@media (max-width: 767px) {
+  .module {
+    > div:first-of-type {display: block;}
+
+    img {
+      display: block;
+      margin: 0 auto 8px;
+    }
+
+    header {text-align: center;}
+  }
+
+  .contacts {text-align: center;}
+}

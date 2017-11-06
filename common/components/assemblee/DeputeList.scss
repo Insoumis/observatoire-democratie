@@ -15,8 +15,6 @@
   100% {transform: translate(0);}
 }
 
-.retry {margin-top: 50px;}
-
 .count {
   border-bottom: 1px dashed $lighter;
   display: inline-block;
@@ -26,5 +24,10 @@
 }
 
 @media (max-width: 767px) {
-  .count {margin-bottom: 30px;}
+  .count {
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+    width: 50%;
+  }
 }

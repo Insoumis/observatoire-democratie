@@ -13,15 +13,16 @@ const DeputeSearchListItem = ({ depute }) => (
       <Link to={`/assemblee/deputes/${depute.id}`}>
         <header>
           <h2>
-            <span>{
-              depute.depute_region} / {depute.depute_departement} / {depute.depute_circo}
-            </span>
+            <span>{depute.depute_circo_complet}</span>
           </h2>
           <h1>{depute.depute_nom}</h1>
         </header>
       </Link>
 
       <div className={css.infos}>
+        <Link to={`/assemblee/groupes/${depute.groupe_abrev}`}>
+          <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+        </Link>
         <div>
           <i className="fa fa-briefcase" aria-hidden="true" />
           {' '}
@@ -30,9 +31,6 @@ const DeputeSearchListItem = ({ depute }) => (
         <div>
           <i className="fa fa-birthday-cake" aria-hidden="true" /> {depute.depute_naissance}
         </div>
-        <Link to={`/assemblee/groupes/${depute.groupe_abrev}`}>
-          <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
-        </Link>
 
         <div className={css.stats}>
           <div className={css.participation}>

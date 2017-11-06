@@ -20,10 +20,19 @@ const Header = () => (
     <header />
     <nav>
       <ul>
-        {/* <li><i className="fa fa-users" aria-hidden="true" /> Groupes</li> */}
+        <li>
+          <ActiveLink to="/assemblee/groups">
+            <i className="fa fa-group" aria-hidden="true" /> Groupes
+          </ActiveLink>
+        </li>
         <li>
           <ActiveLink to="/assemblee/deputes/search">
             <i className="fa fa-user-circle-o" aria-hidden="true" /> Députés
+          </ActiveLink>
+        </li>
+        <li>
+          <ActiveLink to="/assemblee/deputes/top">
+            <i className="fa fa-bar-chart" aria-hidden="true" /> Top Députés
           </ActiveLink>
         </li>
       </ul>

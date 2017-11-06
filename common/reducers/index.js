@@ -16,6 +16,8 @@ export default app;
 
 const getAllDeputes = state => fromDeputes.getDeputes(state.deputes);
 
+export const getDepute = (state, deputeId) => getAllDeputes(state)[deputeId];
+
 export const getDeputeSearch = createSelector(
   state => fromDeputeSearch.getDeputeSearch(state.deputeSearch),
   state => getAllDeputes(state),

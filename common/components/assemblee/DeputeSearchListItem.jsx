@@ -7,7 +7,7 @@ import css from './DeputeSearchListItem.scss';
 const DeputeSearchListItem = ({ depute }) => (
   <article className={css.module}>
     <Link to={`/assemblee/deputes/${depute.id}`}>
-      <img src={depute.photo_an} alt="député" />
+      <img src={depute.depute_photo_an} alt="député" />
     </Link>
     <div>
       <Link to={`/assemblee/deputes/${depute.id}`}>

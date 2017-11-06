@@ -20,6 +20,7 @@ const DeputeList = ({ deputes, error, isPending, ListItem, pagination, refetch }
     );
   }
 
+  console.log(deputes);
   return (
     <div className={css.module}>
       <div className={css.count}>

@@ -20,8 +20,11 @@ SEARCH:
   ✔ Ajouter la variable pour la photo @done (2017-11-6 16:05:01)
   ✔ Ajouter la variable pour le CSP @done (2017-11-6 16:05:01)
   ✔ Responsive @done (2017-11-6 17:15:05)
+  ✔ Baisser le nombre de députés à 15 @done (2017-11-7 02:03:25)
   ☐ Ajouter d'autres stats ?
-  ☐ Baisser le nombre de députés à 15
+
+TOP:
+  ☐ Tester le formulaire de tri
 
 DEPUTE:
   ☐ Vérifier valeurs entre liste et fiche

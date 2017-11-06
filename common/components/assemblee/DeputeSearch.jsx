@@ -33,7 +33,7 @@ const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => {
       />
     </div>
   );
-}
+};
 
 DeputeSearch.propTypes = {
   deputeSearch: PropTypes.shape({

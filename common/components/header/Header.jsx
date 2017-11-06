@@ -21,7 +21,7 @@ const Header = () => (
     <nav>
       <ul>
         <li>
-          <ActiveLink to="/assemblee/groups">
+          <ActiveLink to="/assemblee/groupes">
             <i className="fa fa-group" aria-hidden="true" /> Groupes
           </ActiveLink>
         </li>

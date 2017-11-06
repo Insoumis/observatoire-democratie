@@ -33,7 +33,7 @@ class DeputeList extends Component {
     return (
       <View
         deputeSearch={this.props.deputeSearch}
-        fetchDeputeSearch={() => this.fetchDeputeSearch()}
+        fetchDeputeSearch={() => this.fetchDeputeSearch(this.props.location)}
         router={this.props.router}
       />
     );

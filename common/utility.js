@@ -1,4 +1,14 @@
-export const chut = {};
+import numeral from 'numeral';
+
+numeral.register('locale', 'fr', {
+  delimiters: {
+    thousands: '\u00a0',
+    decimal: ',',
+  },
+});
+numeral.locale('fr');
+
+export const formatNbr = value => numeral(value).format('0,0');
 
 export const groups = [{
   text: 'La France Insoumise',

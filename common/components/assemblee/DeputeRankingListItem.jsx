@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router';
 
+import { formatNbr } from 'utility';
+
 import css from './DeputeRankingListItem.scss';
+
+
 
 const DeputeRankingListItem = ({ depute, location }) => {
   let stat;
@@ -12,7 +16,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
         <div className={css.stats}>
           <h3>Contre son groupe</h3>
           <div className={css.dissidence}>
-            <span>{Math.ceil(depute.stats.positions.dissidence)} %</span>
+            <span>{formatNbr(depute.stats.positions.dissidence)} %</span>
           </div>
         </div>
       );
@@ -22,7 +26,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
         <div className={css.stats}>
           <h3>Nombre d&apos;interventions</h3>
           <div className={css.talk}>
-            <span>{Math.ceil(depute.stats.nbitvs)}</span>
+            <span>{formatNbr(depute.stats.nbitvs)}</span>
           </div>
         </div>
       );
@@ -32,7 +36,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
         <div className={css.stats}>
           <h3>Nombre de mots</h3>
           <div className={css.words}>
-            <span>{Math.ceil(depute.stats.nbmots)}</span>
+            <span>{formatNbr(depute.stats.nbmots)}</span>
           </div>
         </div>
       );
@@ -42,7 +46,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
         <div className={css.stats}>
           <h3>Amendements rédigés</h3>
           <div className={css.law}>
-            <span>{Math.ceil(depute.stats.amendements.rediges)}</span>
+            <span>{formatNbr(depute.stats.amendements.rediges)}</span>
           </div>
         </div>
       );
@@ -52,7 +56,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
         <div className={css.stats}>
           <h3>Présence en commission</h3>
           <div className={css.commission}>
-            <span>{Math.ceil(depute.stats.commissions.present)} %</span>
+            <span>{formatNbr(depute.stats.commissions.present)} %</span>
           </div>
         </div>
       );
@@ -62,7 +66,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
         <div className={css.stats}>
           <h3>Participation aux votes</h3>
           <div>
-            <span>{Math.ceil(depute.stats.positions.exprimes)} %</span>
+            <span>{formatNbr(depute.stats.positions.exprimes)} %</span>
           </div>
         </div>
       );

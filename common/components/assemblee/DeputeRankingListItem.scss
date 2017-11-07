@@ -1,0 +1,151 @@
+@import '~styles/colors';
+
+.module {
+  display: flex;
+  margin-bottom: 80px;
+
+  img {
+    display: block;
+    margin-top: 30px;
+  }
+
+  > div:last-of-type {width: 100%;}
+
+  a:hover > header {
+    h1,
+    h2 span {background: $lighter;}
+  }
+
+  header {
+    color: $white;
+    display: inline-block;
+  }
+
+  h2 {
+    font-size: 1em;
+
+    span {
+      background: $emphasis;
+      display: inline-block;
+      padding: 3px 6px;
+      transition: .2s;
+    }
+  }
+
+  h1 {
+    background: $main;
+    display: inline-block;
+    font-size: 1.13em;
+    padding: 1px 5px;
+    transition: .2s;
+  }
+}
+
+.rank {
+  margin-top: 30px;
+  width: 62px;
+
+  span {
+    background: $main;
+    color: $white;
+    display: inline-block;
+    font-size: 1.4em;
+    font-weight: 600;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    width: 62px;
+  }
+}
+
+.infos {
+  font-size: .85em;
+  margin: 5px 15px 0;
+
+  :global(.fa) {color: $lighter;}
+
+  a {color: $main;}
+}
+
+.stats {
+  background: white;
+  border: 1px solid $border;
+  margin-top: 5px;
+  padding: 12px 5px 18px;
+  text-align: center;
+
+  h3 {
+    border-bottom: 1px dashed $lighter;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 12px;
+  }
+
+  span {
+    background: url('./assets/ico-participation.svg') no-repeat left center;
+    background-size: 60px;
+    color: $emphasis;
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: 600;
+    padding: 20px 0 20px 78px;
+  }
+
+  .dissidence span {
+    background-image: url('./assets/ico-dissidence.svg');
+    background-size: 36px;
+    padding-left: 66px;
+  }
+
+  .talk span {
+    background-image: url('./assets/ico-talk.svg');
+    background-size: 32px;
+    padding-left: 62px;
+  }
+
+  .words span {
+    background-image: url('./assets/ico-words.svg');
+    background-size: 40px;
+    padding-left: 62px;
+  }
+
+  .law span {
+    background-image: url('./assets/ico-law.svg');
+    background-size: 50px;
+    padding-left: 72px;
+  }
+
+  .commission span {
+    background-image: url('./assets/ico-commission.svg');
+    background-size: 48px;
+    padding-left: 72px;
+  }
+}
+
+@media (max-width: 767px) {
+  .module {
+    display: block;
+    margin-bottom: 20px;
+
+    &:first-of-type {margin-top: -10px;}
+
+    img {margin: 0 auto 8px;}
+
+    > a,
+    header {
+      display: block;
+      text-align: center;
+    }
+
+    header {margin-bottom: 15px;}
+  }
+
+  .rank {
+    margin: 0 auto;
+    transform: translate(-114px, 62px);
+  }
+
+  .infos {margin: 0 5px;}
+}

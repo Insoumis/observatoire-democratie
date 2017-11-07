@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import RankingForm from './DeputeRankingForm';
+import DeputeRankingForm from './DeputeRankingForm';
 import DeputeList from './DeputeList';
-import ListItem from './DeputeRankingListItem';
+import DeputeRankingListItem from './DeputeRankingListItem';
 
 import css from './DeputeRanking.scss';
 
@@ -18,7 +18,7 @@ const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => {
         <title>Tops / Flops</title>
       </Helmet>
 
-      <RankingForm
+      <DeputeRankingForm
         initialValues={rankInit}
         router={router}
       />
@@ -28,7 +28,7 @@ const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => {
         deputes={deputeRanking.deputes}
         error={deputeRanking.error}
         isPending={deputeRanking.isPending}
-        ListItem={ListItem}
+        ListItem={DeputeRankingListItem}
         pagination={deputeRanking.pagination}
         refetch={fetchDeputeRanking}
       />

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import SearchForm from './DeputeSearchForm';
+import DeputeSearchForm from './DeputeSearchForm';
 import DeputeList from './DeputeList';
-import ListItem from './DeputeSearchListItem';
+import DeputeSearchListItem from './DeputeSearchListItem';
 
 import css from './DeputeSearch.scss';
 
@@ -18,7 +18,7 @@ const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => {
         <title>Les députés</title>
       </Helmet>
 
-      <SearchForm
+      <DeputeSearchForm
         initialValues={searchInit}
         router={router}
       />
@@ -28,7 +28,7 @@ const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => {
         deputes={deputeSearch.deputes}
         error={deputeSearch.error}
         isPending={deputeSearch.isPending}
-        ListItem={ListItem}
+        ListItem={DeputeSearchListItem}
         pagination={deputeSearch.pagination}
         refetch={fetchDeputeSearch}
       />

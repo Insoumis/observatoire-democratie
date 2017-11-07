@@ -13,6 +13,9 @@ HEADER:
   ✔ Liens actifs @done (2017-11-5 14:17:45)
   ✔ Responsive @done (2017-11-6 17:15:41)
 
+GLOBAL:
+  ☐ Président et vice-pres pas les mêmes votes
+
 SEARCH:
   ✔ Style de RequestError @done (2017-11-6 01:58:04)
   ✔ Ne pas charger la liste si déjà chargée @done (2017-11-6 16:04:58)
@@ -31,4 +34,5 @@ TOP:
 
 DEPUTE:
   ☐ Vérifier valeurs entre liste/top et fiche
+
 

@@ -36,7 +36,7 @@ const DeputeSearchListItem = ({ depute }) => (
 
         <div className={css.stats}>
           <div className={css.participation}>
-            <h3>Participation vote</h3>
+            <h3>Participation</h3>
             <div>{formatNbr(depute.stats.positions.exprimes)} %</div>
           </div>
           <div className={css.dissidence}>
@@ -52,6 +52,13 @@ const DeputeSearchListItem = ({ depute }) => (
             <div>{formatNbr(depute.stats.nbitvs)}</div>
           </div>
         </div>
+        {(depute.depute_bureau) ?
+          <div className={css.role}>
+            <i className="fa fa-exclamation-circle" aria-hidden="true" /> {depute.depute_bureau}
+          </div>
+          :
+          false
+        }
       </div>
     </div>
   </article>

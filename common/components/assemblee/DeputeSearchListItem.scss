@@ -42,7 +42,7 @@
   font-size: .82em;
   margin: 2px 15px 0;
 
-  :global(.fa) {color: $lighter;}
+  i {color: $lighter;}
 
   a {color: $main;}
 }
@@ -87,6 +87,12 @@
     background-image: url('./assets/ico-talk.svg');
     background-size: 13px;
   }
+}
+
+.role {
+  margin-top: 5px;
+
+  i {color: $emphasis;}
 }
 
 @media (max-width: 767px) {

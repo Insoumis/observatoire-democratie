@@ -84,7 +84,7 @@ export const ages = [
 ];
 
 export const tris = [{
-  text: 'Participation aux votes',
+  text: 'Participation aux scrutins publics',
   value: 'stats.positions.exprimes',
 }, {
   text: 'Contre son groupe',

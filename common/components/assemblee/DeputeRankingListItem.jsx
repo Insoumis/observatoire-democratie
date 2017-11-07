@@ -64,7 +64,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
     default:
       stat = (
         <div className={css.stats}>
-          <h3>Participation aux votes</h3>
+          <h3>Participation aux scrutins publics</h3>
           <div>
             <span>{formatNbr(depute.stats.positions.exprimes)} %</span>
           </div>

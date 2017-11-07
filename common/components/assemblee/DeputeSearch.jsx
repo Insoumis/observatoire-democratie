@@ -9,7 +9,7 @@ import DeputeSearchListItem from './DeputeSearchListItem';
 import css from './DeputeSearch.scss';
 
 const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => {
-  const searchInit = router.location.query;
+  const searchInit = { ...router.location.query };
   delete searchInit.page;
 
   return (

@@ -9,7 +9,7 @@ import DeputeRankingListItem from './DeputeRankingListItem';
 import css from './DeputeRanking.scss';
 
 const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => {
-  const rankInit = router.location.query;
+  const rankInit = { ...router.location.query };
   delete rankInit.page;
 
   return (

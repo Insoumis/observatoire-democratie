@@ -34,12 +34,20 @@ const DeputeSearchListItem = ({ depute }) => (
 
         <div className={css.stats}>
           <div className={css.participation}>
-            <h3>Participation</h3>
+            <h3>Participation vote</h3>
             <div>{Math.ceil(depute.stats.positions.exprimes)} %</div>
           </div>
           <div className={css.dissidence}>
             <h3>Contre son groupe</h3>
             <div>{Math.ceil(depute.stats.positions.dissidence)} %</div>
+          </div>
+          <div className={css.commission}>
+            <h3>Présence commission</h3>
+            <div>{Math.ceil(depute.stats.commissions.present)} %</div>
+          </div>
+          <div className={css.talk}>
+            <h3>Interventions</h3>
+            <div>{Math.ceil(depute.stats.nbitvs)}</div>
           </div>
         </div>
       </div>

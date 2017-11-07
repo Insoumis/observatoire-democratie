@@ -77,6 +77,16 @@
     background-position: calc(50% - 4px) 6px;
     background-size: 15px;
   }
+
+  .commission div {
+    background-image: url('./assets/ico-commission.svg');
+    background-size: 27px;
+  }
+
+  .talk div {
+    background-image: url('./assets/ico-talk.svg');
+    background-size: 13px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -92,5 +102,19 @@
     }
 
     header {margin-bottom: 15px;}
+  }
+
+  .infos {margin: 0 5px;}
+
+  .stats {
+    margin-top: 10px;
+    padding: 10px 5px 0;
+
+    > div {
+      margin: 0 5px 10px;
+      width: calc(50% - 10px);
+    }
+
+    h3 {font-size: .8em;}
   }
 }

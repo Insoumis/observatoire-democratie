@@ -14,8 +14,8 @@ export const fetchDeputeSearch = search => ({
   meta: { search },
 });
 
-export const fetchDeputeRanking = (order = 'tops', search) => ({
-  endpoint: `/api/deputes/${order}${search}`,
+export const fetchDeputeRanking = search => ({
+  endpoint: `/api/deputes/top${search}`,
   api: 'assemblee',
   type: ASSEMBLEE.fetchDeputeRanking,
   schema: { items: [depute] },

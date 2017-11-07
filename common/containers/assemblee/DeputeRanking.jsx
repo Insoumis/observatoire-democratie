@@ -9,7 +9,7 @@ import View from 'components/assemblee/DeputeRanking';
 
 class DeputeRanking extends Component {
   static fetchData(dispatch, { location }) {
-    return dispatch(fetchDeputeRanking(location.query.order, location.search));
+    return dispatch(fetchDeputeRanking(location.search));
   }
 
   componentDidMount() {
@@ -44,7 +44,6 @@ DeputeRanking.propTypes = {
   deputeRanking: PropTypes.shape({}).isRequired,
   dispatch: PropTypes.func.isRequired,
   location: PropTypes.shape({
-    query: PropTypes.shape({}).isRequired,
     search: PropTypes.string.isRequired,
   }).isRequired,
   router: PropTypes.shape({}).isRequired,

@@ -4,8 +4,7 @@ import Helmet from 'react-helmet';
 
 import RankingForm from './DeputeRankingForm';
 import DeputeList from './DeputeList';
-//import DeputeRankingListItem from './DeputeRankingListItem';
-import ListItem from './DeputeSearchListItem';
+import ListItem from './DeputeRankingListItem';
 
 import css from './DeputeRanking.scss';
 
@@ -25,6 +24,7 @@ const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => {
       />
 
       <DeputeList
+        baseLink="/assemblee/deputes/ranking"
         deputes={deputeRanking.deputes}
         error={deputeRanking.error}
         isPending={deputeRanking.isPending}

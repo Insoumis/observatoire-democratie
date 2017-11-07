@@ -74,7 +74,7 @@ export const ages = [
 ];
 
 export const tris = [{
-  text: 'Participation',
+  text: 'Participation au vote',
   value: 'stats.positions.exprimes',
 }, {
   text: 'Contre son groupe',
@@ -88,9 +88,6 @@ export const tris = [{
 }, {
   text: 'Amendements rédigés',
   value: 'stats.amendements.rediges',
-}, {
-  text: 'Amendements adoptés (%)',
-  value: 'stats.amendements.adoptes',
 }, {
   text: 'Présence en commission',
   value: 'stats.commissions.present',

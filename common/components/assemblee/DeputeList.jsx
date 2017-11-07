@@ -7,7 +7,7 @@ import Pagination from 'components/reusable/Pagination';
 
 import css from './DeputeList.scss';
 
-const DeputeList = ({ deputes, error, isPending, ListItem, pagination, refetch }) => {
+const DeputeList = ({ baseLink, deputes, error, isPending, ListItem, pagination, refetch }) => {
   if (isPending) {
     return <Spinner />;
   }
@@ -33,7 +33,7 @@ const DeputeList = ({ deputes, error, isPending, ListItem, pagination, refetch }
       </ul>
       {(pagination.nbrPages > 1) ?
         <Pagination
-          baseLink="/assemblee/deputes/search"
+          baseLink={baseLink}
           currentPage={pagination.currentPage}
           nbrPages={pagination.nbrPages}
         />
@@ -45,6 +45,7 @@ const DeputeList = ({ deputes, error, isPending, ListItem, pagination, refetch }
 };
 
 DeputeList.propTypes = {
+  baseLink: PropTypes.string.isRequired,
   deputes: PropTypes.arrayOf(PropTypes.object).isRequired,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
   isPending: PropTypes.bool.isRequired,

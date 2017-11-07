@@ -25,8 +25,8 @@ const DeputeRankingForm = ({ router }) => {
         component="select"
         onChange={(e, order) => goTo({ ...router.location.query, order })}
       >
-        <option value="tops">Top</option>
-        <option value="flops">Flop</option>
+        <option value="down">Top</option>
+        <option value="up">Flop</option>
       </Field>
       <Field
         name="sort"

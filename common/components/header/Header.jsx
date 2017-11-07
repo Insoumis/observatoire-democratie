@@ -31,8 +31,8 @@ const Header = () => (
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink to="/assemblee/deputes/top">
-            <i className="fa fa-bar-chart" aria-hidden="true" /> Top Députés
+          <ActiveLink to="/assemblee/deputes/ranking">
+            <i className="fa fa-bar-chart" aria-hidden="true" /> Tops / Flops
           </ActiveLink>
         </li>
       </ul>

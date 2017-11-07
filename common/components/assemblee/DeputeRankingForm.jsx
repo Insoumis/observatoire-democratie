@@ -5,7 +5,7 @@ import qs from 'qs';
 
 import { groups, regions, tris } from 'utility';
 
-const DeputeTopForm = ({ handleSubmit, router }) => {
+const DeputeRankingForm = ({ router }) => {
   const goTo = (data) => {
     const search = Object.keys(data).reduce((acc, key) => {
       if (data[key].length) {
@@ -15,23 +15,23 @@ const DeputeTopForm = ({ handleSubmit, router }) => {
       return acc;
     }, {});
 
-    router.push(`/assemblee/deputes/top?${qs.stringify(search)}`);
+    router.push(`/assemblee/deputes/ranking?${qs.stringify(search)}`);
   };
 
   return (
     <form className="flex wrap space-between">
       <Field
-        name="top"
+        name="order"
         component="select"
-        onChange={(e, top) => goTo({ ...router.location.query, top })}
+        onChange={(e, order) => goTo({ ...router.location.query, order })}
       >
-        <option value="top">Top</option>
-        <option value="flop">Flop</option>
+        <option value="tops">Top</option>
+        <option value="flops">Flop</option>
       </Field>
       <Field
-        name="tri"
+        name="sort"
         component="select"
-        onChange={(e, tri) => goTo({ ...router.location.query, tri })}
+        onChange={(e, sort) => goTo({ ...router.location.query, sort })}
       >
         {tris.map(tri => (
           <option key={tri.value} value={tri.value}>{tri.text}</option>
@@ -61,8 +61,7 @@ const DeputeTopForm = ({ handleSubmit, router }) => {
   );
 };
 
-DeputeTopForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
+DeputeRankingForm.propTypes = {
   router: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
@@ -71,4 +70,4 @@ DeputeTopForm.propTypes = {
 export default reduxForm({
   enableReinitialize: true,
   form: 'deputeSearch',
-})(DeputeTopForm);
+})(DeputeRankingForm);

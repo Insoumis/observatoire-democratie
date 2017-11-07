@@ -2,7 +2,7 @@ import { depute } from './schema';
 
 export const ASSEMBLEE = {
   fetchDeputeSearch: 'FETCH_DEPUTE_SEARCH',
-  fetchDeputeTop: 'FETCH_DEPUTE_TOP',
+  fetchDeputeRanking: 'FETCH_DEPUTE_RANKING',
   fetchDepute: 'FETCH_DEPUTE',
 };
 
@@ -14,10 +14,10 @@ export const fetchDeputeSearch = search => ({
   meta: { search },
 });
 
-export const fetchDeputeTop = search => ({
-  endpoint: `/api/deputes/tops${search}`,
+export const fetchDeputeRanking = (order = 'tops', search) => ({
+  endpoint: `/api/deputes/${order}${search}`,
   api: 'assemblee',
-  type: ASSEMBLEE.fetchDeputeTop,
+  type: ASSEMBLEE.fetchDeputeRanking,
   schema: { items: [depute] },
   meta: { search },
 });

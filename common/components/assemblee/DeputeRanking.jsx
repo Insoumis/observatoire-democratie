@@ -2,47 +2,48 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import SearchForm from './DeputeSearchForm';
+import RankingForm from './DeputeRankingForm';
 import DeputeList from './DeputeList';
+//import DeputeRankingListItem from './DeputeRankingListItem';
 import ListItem from './DeputeSearchListItem';
 
-import css from './DeputeSearch.scss';
+import css from './DeputeRanking.scss';
 
-const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => {
-  const searchInit = router.location.query;
-  delete searchInit.page;
+const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => {
+  const rankInit = router.location.query;
+  delete rankInit.page;
 
   return (
     <div className={`container ${css.module}`}>
       <Helmet>
-        <title>Les députés</title>
+        <title>Tops / Flops</title>
       </Helmet>
 
-      <SearchForm
-        initialValues={searchInit}
+      <RankingForm
+        initialValues={rankInit}
         router={router}
       />
 
       <DeputeList
-        deputes={deputeSearch.deputes}
-        error={deputeSearch.error}
-        isPending={deputeSearch.isPending}
+        deputes={deputeRanking.deputes}
+        error={deputeRanking.error}
+        isPending={deputeRanking.isPending}
         ListItem={ListItem}
-        pagination={deputeSearch.pagination}
-        refetch={fetchDeputeSearch}
+        pagination={deputeRanking.pagination}
+        refetch={fetchDeputeRanking}
       />
     </div>
   );
 };
 
-DeputeSearch.propTypes = {
-  deputeSearch: PropTypes.shape({
+DeputeRanking.propTypes = {
+  deputeRanking: PropTypes.shape({
     deputes: PropTypes.arrayOf(PropTypes.object).isRequired,
     error: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
     isPending: PropTypes.bool.isRequired,
     pagination: PropTypes.shape({}).isRequired,
   }).isRequired,
-  fetchDeputeSearch: PropTypes.func.isRequired,
+  fetchDeputeRanking: PropTypes.func.isRequired,
   router: PropTypes.shape({
     location: PropTypes.shape({
       query: PropTypes.shape({}).isRequired,
@@ -50,4 +51,4 @@ DeputeSearch.propTypes = {
   }).isRequired,
 };
 
-export default DeputeSearch;
+export default DeputeRanking;

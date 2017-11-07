@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DeputeTopListItem = ({ depute }) => {
+const DeputeRankingListItem = ({ depute }) => {
   return (
     <div>
       {depute.depute_nom}
@@ -9,8 +9,8 @@ const DeputeTopListItem = ({ depute }) => {
   );
 };
 
-DeputeTopListItem.propTypes = {
+DeputeRankingListItem.propTypes = {
   depute: PropTypes.shape({}).isRequired,
 };
 
-export default DeputeTopListItem;
+export default DeputeRankingListItem;

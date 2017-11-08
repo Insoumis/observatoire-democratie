@@ -66,7 +66,6 @@ const Pagination = ({
 
     if (currentPage < 10 || nbrPages === 10) {
       // Page 1 is displayed
-      console.log(query);
       content[1] = (
         <Link
           className={classNames({

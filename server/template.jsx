@@ -35,6 +35,7 @@ export default (store, props) => {
           window.__PRELOADED_STATE__ = ${serialize(store.getState())}
         </script>
         <script src="/client.bundle.js"></script>
+        <script src="http://localhost:8080/target/target-script-min.js#anonymous"></script>
       </body>
     </html>
   `;

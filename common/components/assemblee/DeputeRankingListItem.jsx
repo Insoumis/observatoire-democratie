@@ -96,6 +96,14 @@ const DeputeRankingListItem = ({ depute, location }) => {
           </Link>
 
           {stat}
+
+          {(depute.depute_bureau) ?
+            <div className={css.role}>
+              <i className="fa fa-exclamation-circle" aria-hidden="true" /> {depute.depute_bureau}
+            </div>
+            :
+            false
+          }
         </div>
       </div>
     </article>

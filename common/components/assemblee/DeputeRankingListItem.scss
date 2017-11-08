@@ -62,7 +62,7 @@
   font-size: .85em;
   margin: 5px 15px 0;
 
-  :global(.fa) {color: $lighter;}
+  i {color: $lighter;}
 
   a {color: $main;}
 }
@@ -122,6 +122,12 @@
     background-size: 48px;
     padding-left: 72px;
   }
+}
+
+.role {
+  margin-top: 5px;
+
+  i {color: $emphasis;}
 }
 
 @media (max-width: 767px) {

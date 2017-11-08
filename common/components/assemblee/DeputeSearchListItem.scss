@@ -2,21 +2,16 @@
 
 .module {
   display: flex;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 
-  > div {width: 100%;}
-
-  img {margin-top: 30px;}
+  > div:last-child {width: 100%;}
 
   a:hover > header {
     h1,
     h2 span {background: $lighter;}
   }
 
-  header {
-    color: $white;
-    display: inline-block;
-  }
+  header {color: $white;}
 
   h2 {
     font-size: 1em;
@@ -25,7 +20,7 @@
       background: $emphasis;
       display: inline-block;
       padding: 3px 6px;
-      transition: .2s;
+      transition: background .2s;
     }
   }
 
@@ -34,9 +29,11 @@
     display: inline-block;
     font-size: 1.13em;
     padding: 1px 5px;
-    transition: .2s;
+    transition: background .2s;
   }
 }
+
+.photo {margin-top: 30px;}
 
 .infos {
   font-size: .82em;
@@ -98,16 +95,14 @@
 @media (max-width: 767px) {
   .module {
     display: block;
-    margin-bottom: 40px;
 
-    > a,
     header {
-      display: block;
       text-align: center;
+      margin-bottom: 15px;
     }
-
-    header {margin-bottom: 15px;}
   }
+
+  .photo {text-align: center;}
 
   .infos {margin: 0 5px;}
 

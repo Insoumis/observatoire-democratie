@@ -14,8 +14,8 @@ HEADER:
   ✔ Responsive @done (2017-11-6 17:15:41)
 
 GLOBAL:
+  ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)
   ☐ Président et vice-pres pas les mêmes votes
-  ☐ Debug sur chrome iOS
 
 SEARCH:
   ✔ Style de RequestError @done (2017-11-6 01:58:04)
@@ -26,15 +26,17 @@ SEARCH:
   ✔ Responsive @done (2017-11-6 17:15:05)
   ✔ Baisser le nombre de députés à 15 @done (2017-11-7 02:03:25)
   ✔ Ajouter d'autres stats ? @done (2017-11-7 16:21:55)
+  ✔ Ajouter un bouton pour cacher/montrer les filtres en mode mobile @done (2017-11-8 19:48:33)
+  ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:41)
   ☐ Ajouter un petit mot de description ?
-  ☐ Ajouter un bouton pour cacher/montrer les filtres en mode mobile
 
 TOP:
   ✔ Tester le formulaire de tri @done (2017-11-7 16:21:57)
   ✔ Ajouter numbers sur nbr interventions et mots @done (2017-11-7 16:22:00)
   ✔ Ajouter le champ de recherche @done (2017-11-8 16:51:03)
+  ✔ Ajouter un bouton pour cacher/montrer les filtres en mode mobile @done (2017-11-8 19:48:35)
+  ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:44)
   ☐ Ajouter un petit mot de description ?
-  ☐ Ajouter un bouton pour cacher/montrer les filtres en mode mobile
 
 DEPUTE:
   ☐ Vérifier valeurs entre liste/top et fiche

@@ -77,9 +77,11 @@ const DeputeRankingListItem = ({ depute, location }) => {
       <div className={css.rank}>
         <span>{depute.depute_rank}</span>
       </div>
-      <Link to={`/assemblee/deputes/${depute.id}`}>
-        <img src={depute.depute_photo_an} alt="député" />
-      </Link>
+      <div className={css.photo}>
+        <Link to={`/assemblee/deputes/${depute.id}`}>
+          <img src={depute.depute_photo_an} alt="député" />
+        </Link>
+      </div>
       <div>
         <Link to={`/assemblee/deputes/${depute.id}`}>
           <header>

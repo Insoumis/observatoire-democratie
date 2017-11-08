@@ -4,11 +4,6 @@
   display: flex;
   margin-bottom: 80px;
 
-  img {
-    display: block;
-    margin-top: 30px;
-  }
-
   > div:last-of-type {width: 100%;}
 
   a:hover > header {
@@ -16,10 +11,7 @@
     h2 span {background: $lighter;}
   }
 
-  header {
-    color: $white;
-    display: inline-block;
-  }
+  header {color: $white;}
 
   h2 {
     font-size: 1em;
@@ -28,7 +20,7 @@
       background: $emphasis;
       display: inline-block;
       padding: 3px 6px;
-      transition: .2s;
+      transition: background .2s;
     }
   }
 
@@ -37,7 +29,7 @@
     display: inline-block;
     font-size: 1.13em;
     padding: 1px 5px;
-    transition: .2s;
+    transition: background .2s;
   }
 }
 
@@ -58,6 +50,8 @@
   }
 }
 
+.photo {margin-top: 30px;}
+
 .infos {
   font-size: .85em;
   margin: 5px 15px 0;
@@ -68,7 +62,7 @@
 }
 
 .stats {
-  background: white;
+  background: $white;
   border: 1px solid $border;
   margin-top: 5px;
   padding: 12px 5px 18px;
@@ -133,25 +127,22 @@
 @media (max-width: 767px) {
   .module {
     display: block;
-    margin-bottom: 20px;
+    position: relative;
 
-    &:first-of-type {margin-top: -10px;}
-
-    img {margin: 0 auto 8px;}
-
-    > a,
     header {
-      display: block;
       text-align: center;
+      margin-bottom: 15px;
     }
-
-    header {margin-bottom: 15px;}
   }
 
   .rank {
-    margin: 0 auto;
-    transform: translate(-114px, 62px);
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    transform: translateX(-145px);
   }
+
+  .photo {text-align: center;}
 
   .infos {margin: 0 5px;}
 }

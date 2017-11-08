@@ -1,8 +1,12 @@
+@import '~styles/colors';
+
 .module {
   margin-top: 40px;
 
   select {width: calc(100% / 4 - 15px);}
 }
+
+.toggleFilters {display: none;}
 
 @media (max-width: 1023px) {
   .module select {
@@ -12,5 +16,36 @@
 }
 
 @media (max-width: 767px) {
-  .module select {width: 100%;}
+  .module {
+    select {
+      margin-bottom: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s;
+      width: 100%;
+    }
+
+    .displayFilters select {
+      margin-bottom: 10px;
+      max-height: 38px;
+    }
+  }
+
+  .toggleFilters {
+    background: $main;
+    border-radius: 30px;
+    color: $white;
+    display: block;
+    font-size: .85em;
+    font-weight: 600;
+    margin: 0 0 10px auto;
+    padding: 6px 12px;
+    transition: max-height .2s;
+
+    &:focus,
+    &:hover {
+      background: $lighter;
+      outline: 0;
+    }
+  }
 }

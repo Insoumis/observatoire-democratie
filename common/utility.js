@@ -64,14 +64,14 @@ export const regions = [
 ];
 
 export const csps = [
-  'Agriculteurs exploitants',
-  'Artisans, commerçants et chefs d\'entreprise',
+  'Agriculteur·trice·s exploitant·e·s',
+  'Artisans, commerçant·e·s et chefs d\'entreprise',
   'Autres (y compris inconnu et sans profession déclarée)',
   'Cadres et professions intellectuelles supérieures',
-  'Employés',
-  'Ouvriers',
+  'Employé·e·s',
+  'Ouvrier·ère·s',
   'Professions Intermédiaires',
-  'Retraités',
+  'Retraité·e·s',
 ];
 
 export const ages = [

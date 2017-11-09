@@ -28,7 +28,9 @@ SEARCH:
   ✔ Ajouter d'autres stats ? @done (2017-11-7 16:21:55)
   ✔ Ajouter un bouton pour cacher/montrer les filtres en mode mobile @done (2017-11-8 19:48:33)
   ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:41)
+  ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:48)
   ☐ Ajouter un petit mot de description ?
+  ☐ Changer les select pour un truc custom
 
 TOP:
   ✔ Tester le formulaire de tri @done (2017-11-7 16:21:57)
@@ -36,7 +38,10 @@ TOP:
   ✔ Ajouter le champ de recherche @done (2017-11-8 16:51:03)
   ✔ Ajouter un bouton pour cacher/montrer les filtres en mode mobile @done (2017-11-8 19:48:35)
   ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:44)
+  ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:54)
   ☐ Ajouter un petit mot de description ?
+  ☐ Changer les select pour un truc custom
+  ☐ Ajouter liens spécifiques à chaque tri sur la stat ?
 
 DEPUTE:
   ☐ Vérifier valeurs entre liste/top et fiche

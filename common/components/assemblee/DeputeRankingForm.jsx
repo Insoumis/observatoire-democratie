@@ -15,7 +15,7 @@ class DeputeRankingForm extends Component {
 
   goTo(data) {
     const search = Object.keys(data).reduce((acc, key) => {
-      if (data[key].length) {
+      if (key !== 'page' && data[key].length) {
         acc[key] = data[key];
       }
 

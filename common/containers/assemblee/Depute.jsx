@@ -36,12 +36,15 @@ class Depute extends Component {
         depute={this.props.depute}
         error={this.state.error}
         fetchDepute={() => this.fetchDepute()}
-      />
+      >
+        {this.props.children}
+      </View>
     );
   }
 }
 
 Depute.propTypes = {
+  children: PropTypes.node.isRequired,
   depute: PropTypes.shape({}),
   dispatch: PropTypes.func.isRequired,
   params: PropTypes.shape({

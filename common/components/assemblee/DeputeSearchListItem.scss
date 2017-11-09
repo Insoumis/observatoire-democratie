@@ -1,6 +1,7 @@
 @import '~styles/colors';
 
 .module {
+  align-items: flex-start;
   display: flex;
   margin-bottom: 80px;
 
@@ -47,6 +48,7 @@
 .stats {
   background: white;
   border: 1px solid $border;
+  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

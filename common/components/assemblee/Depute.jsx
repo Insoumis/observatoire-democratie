@@ -5,10 +5,11 @@ import { Link } from 'react-router';
 
 import RequestError from 'components/reusable/RequestError';
 import Spinner from 'components/reusable/Spinner';
+import ActiveLink from 'components/reusable/ActiveLink';
 
 import css from './Depute.scss';
 
-const Depute = ({ depute, error, fetchDepute }) => {
+const Depute = ({ children, depute, error, fetchDepute }) => {
   if (error) {
     return <RequestError retry={fetchDepute} />;
   }
@@ -30,7 +31,7 @@ const Depute = ({ depute, error, fetchDepute }) => {
         <title>{depute.depute_nom}</title>
       </Helmet>
 
-      <div className="flex align-start">
+      <div className={css.header}>
         <img src={depute.depute_photo_an} alt="député" />
 
         <div className={css.infos}>
@@ -58,9 +59,26 @@ const Depute = ({ depute, error, fetchDepute }) => {
               <i className="fa fa-birthday-cake" aria-hidden="true" /> {depute.depute_naissance}
             </div>
             <div>
-              <i className="fa fa-user-plus" aria-hidden="true" /> Suppléant(e) : {depute.depute_suppleant}
+              <i className="fa fa-calendar" aria-hidden="true" /> Début de mandat : {depute.depute_mandat_debut}
+              {(depute.depute_mandat_fin) ?
+                ` | Fin de mandat : ${depute.depute_mandat_fin} (${depute.depute_mandat_fin_cause})`
+                :
+                false
+              }
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className={css.content}>
+        <nav>
+          <ActiveLink>Scrutins publics</ActiveLink>
+          <ActiveLink>Interventions</ActiveLink>
+          <ActiveLink>Participations</ActiveLink>
+          <ActiveLink to={`/assemblee/deputes/${depute.id}/about`}>Informations</ActiveLink>
+        </nav>
+        <div>
+          {React.cloneElement(children, { depute })}
         </div>
       </div>
     </div>
@@ -68,6 +86,7 @@ const Depute = ({ depute, error, fetchDepute }) => {
 };
 
 Depute.propTypes = {
+  children: PropTypes.node.isRequired,
   depute: PropTypes.shape({}),
   error: PropTypes.bool.isRequired,
   fetchDepute: PropTypes.func.isRequired,

@@ -1,9 +1,11 @@
 @import '~styles/colors';
 
-.module {
-  padding-top: 60px;
+.module {padding-top: 60px;}
 
-  > div {margin-bottom: 60px;}
+.header {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 80px;
 
   img {margin-top: 32px;}
 
@@ -64,6 +66,70 @@
   div {font-size: .85em;}
 
   i {margin-right: 4px;}
+}
+
+.content {
+  align-items: flex-start;
+  display: flex;
+
+  > nav {
+    margin-right: 15px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px;
+
+    a {
+      background: $main;
+      color: $white;
+      display: block;
+      font-size: .95em;
+      font-weight: 600;
+      margin-bottom: 5px;
+      padding: 10px 0;
+      text-align: center;
+      transition: background .2s;
+      width: 150px;
+
+      &:global(.active),
+      &:hover {
+        background: $emphasis;
+        text-decoration: none;
+      }
+    }
+  }
+
+  > div {
+    background: $white;
+    border: 1px solid $border;
+    padding: 30px 40px;
+    width: 100%;
+
+    h2 {
+      border-bottom: 1px dashed $lighter;
+      font-size: 1.6em;
+      margin-bottom: 35px;
+      padding: 15px 30px;
+
+      &:not(:first-of-type) {margin-top: 55px;}
+
+      & + div {margin-left: 10px;}
+    }
+
+    h3 {
+      margin-bottom: 5px;
+      text-indent: 5px;
+    }
+
+    :global(.fa-ul) {
+      margin-bottom: 30px;
+
+      i {color: $lighter;}
+
+      li {margin-bottom: 15px;}
+    }
+
+    a {font-weight: 600;}
+  }
 }
 
 @media (max-width: 767px) {

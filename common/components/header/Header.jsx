@@ -27,7 +27,7 @@ const Header = () => (
         </li>
         <li>
           <ActiveLink to="/assemblee/deputes/search">
-            <i className="fa fa-user-circle-o" aria-hidden="true" /> Députés
+            <i className="fa fa-user-circle-o" aria-hidden="true" /> Député&middot;e&middot;s
           </ActiveLink>
         </li>
         <li>

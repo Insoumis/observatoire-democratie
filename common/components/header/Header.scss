@@ -2,6 +2,7 @@
 
 .module {
   nav:first-of-type {
+    align-items: flex-start;
     background: $main;
     display: flex;
     height: 70px;
@@ -37,7 +38,7 @@
 
   nav:last-of-type {
     background: $white;
-    border-bottom: 1px solid darken($background, 15%);
+    border-bottom: 1px solid $border;
     padding: 16px 0;
 
     ul {

@@ -8,33 +8,28 @@ import DeputeSearchListItem from './DeputeSearchListItem';
 
 import css from './DeputeSearch.scss';
 
-const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => {
-  const searchInit = { ...router.location.query };
-  delete searchInit.page;
+const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => (
+  <div className={`container ${css.module}`}>
+    <Helmet>
+      <title>Les députés</title>
+    </Helmet>
 
-  return (
-    <div className={`container ${css.module}`}>
-      <Helmet>
-        <title>Les députés</title>
-      </Helmet>
+    <DeputeSearchForm
+      initialValues={router.location.query}
+      router={router}
+    />
 
-      <DeputeSearchForm
-        initialValues={searchInit}
-        router={router}
-      />
-
-      <DeputeList
-        baseLink="/assemblee/deputes/search"
-        deputes={deputeSearch.deputes}
-        error={deputeSearch.error}
-        isPending={deputeSearch.isPending}
-        ListItem={DeputeSearchListItem}
-        pagination={deputeSearch.pagination}
-        refetch={fetchDeputeSearch}
-      />
-    </div>
-  );
-};
+    <DeputeList
+      baseLink="/assemblee/deputes/search"
+      deputes={deputeSearch.deputes}
+      error={deputeSearch.error}
+      isPending={deputeSearch.isPending}
+      ListItem={DeputeSearchListItem}
+      pagination={deputeSearch.pagination}
+      refetch={fetchDeputeSearch}
+    />
+  </div>
+);
 
 DeputeSearch.propTypes = {
   deputeSearch: PropTypes.shape({

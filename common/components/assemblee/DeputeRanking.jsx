@@ -8,33 +8,28 @@ import DeputeRankingListItem from './DeputeRankingListItem';
 
 import css from './DeputeRanking.scss';
 
-const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => {
-  const rankInit = { ...router.location.query };
-  delete rankInit.page;
+const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => (
+  <div className={`container ${css.module}`}>
+    <Helmet>
+      <title>Tops / Flops</title>
+    </Helmet>
 
-  return (
-    <div className={`container ${css.module}`}>
-      <Helmet>
-        <title>Tops / Flops</title>
-      </Helmet>
+    <DeputeRankingForm
+      initialValues={router.location.query}
+      router={router}
+    />
 
-      <DeputeRankingForm
-        initialValues={rankInit}
-        router={router}
-      />
-
-      <DeputeList
-        baseLink="/assemblee/deputes/ranking"
-        deputes={deputeRanking.deputes}
-        error={deputeRanking.error}
-        isPending={deputeRanking.isPending}
-        ListItem={DeputeRankingListItem}
-        pagination={deputeRanking.pagination}
-        refetch={fetchDeputeRanking}
-      />
-    </div>
-  );
-};
+    <DeputeList
+      baseLink="/assemblee/deputes/ranking"
+      deputes={deputeRanking.deputes}
+      error={deputeRanking.error}
+      isPending={deputeRanking.isPending}
+      ListItem={DeputeRankingListItem}
+      pagination={deputeRanking.pagination}
+      refetch={fetchDeputeRanking}
+    />
+  </div>
+);
 
 DeputeRanking.propTypes = {
   deputeRanking: PropTypes.shape({

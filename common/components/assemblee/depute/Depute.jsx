@@ -32,7 +32,9 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
       </Helmet>
 
       <div className={css.header}>
-        <img src={depute.depute_photo_an} alt="député" />
+        <div className={css.photo}>
+          <img src={depute.depute_photo_an} alt="député" />
+        </div>
 
         <div className={css.infos}>
           <header>

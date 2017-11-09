@@ -7,8 +7,6 @@
   display: flex;
   margin: 0 0 60px 180px;
 
-  img {margin-top: 32px;}
-
   header {
     color: $white;
     margin: 0 -15px;
@@ -31,6 +29,8 @@
     padding: 3px 5px;
   }
 }
+
+.photo {margin-top: 32px;}
 
 .infos {margin: 0 15px;}
 
@@ -132,17 +132,52 @@
   li {margin-bottom: 15px;}
 }
 
+@media (max-width: 1023px) {
+  .header {
+    margin: 0 0 50px 0;
+  }
+
+  .content {
+    display: block;
+
+    > nav {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 0 10px;
+      position: static;
+      justify-content: space-between;
+
+      a {
+        font-size: .9em;
+        padding: 6px 0;
+        width: calc(100% / 4 - 5px);
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .module {
-    > div:first-of-type {display: block;}
+    padding-top: 10px;
 
-    img {
-      display: block;
-      margin: 0 auto 8px;
-    }
+    .header {display: block;}
 
     header {text-align: center;}
   }
 
-  .contacts {text-align: center;}
+  .photo {text-align: center;}
+
+  .contacts {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .content {
+    > nav a {width: calc(100% / 2 - 5px);}
+
+    > div {
+      padding: 15px 20px;
+      font-size: .95em;
+    }
+  }
 }

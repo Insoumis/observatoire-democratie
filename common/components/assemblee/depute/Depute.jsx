@@ -77,9 +77,8 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
           <ActiveLink>Participations</ActiveLink>
           <ActiveLink to={`/assemblee/deputes/${depute.id}/about`}>Informations</ActiveLink>
         </nav>
-        <div>
-          {React.cloneElement(children, { depute })}
-        </div>
+
+        {React.cloneElement(children, { depute })}
       </div>
     </div>
   );

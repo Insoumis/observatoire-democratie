@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchDeputeRanking } from 'actions/assemblee';
 import { getDeputeRanking } from 'reducers';
 
-import View from 'components/assemblee/DeputeRanking';
+import View from 'components/assemblee/deputeList/DeputeRanking';
 
 class DeputeRanking extends Component {
   static fetchData(dispatch, { location }) {

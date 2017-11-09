@@ -8,7 +8,7 @@ numeral.register('locale', 'fr', {
 });
 numeral.locale('fr');
 
-export const formatNbr = value => numeral(value).format('0,0');
+export const formatNbr = (value, format = '0,0') => numeral(value).format(format);
 
 export const groups = [{
   text: 'La France Insoumise',

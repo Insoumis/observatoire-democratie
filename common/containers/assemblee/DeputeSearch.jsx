@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchDeputeSearch } from 'actions/assemblee';
 import { getDeputeSearch } from 'reducers';
 
-import View from 'components/assemblee/DeputeSearch';
+import View from 'components/assemblee/deputeList/DeputeSearch';
 
 class DeputeList extends Component {
   static fetchData(dispatch, { location }) {

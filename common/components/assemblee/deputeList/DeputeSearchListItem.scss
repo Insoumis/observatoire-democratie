@@ -65,25 +65,25 @@
   }
 
   div div {
-    background: url('./assets/ico-participation.svg') no-repeat center 6px;
+    background: url('../assets/ico-participation.svg') no-repeat center 6px;
     background-size: 25px;
     color: $emphasis;
     padding-top: 30px;
   }
 
   .dissidence div {
-    background-image: url('./assets/ico-dissidence.svg');
+    background-image: url('../assets/ico-dissidence.svg');
     background-position: calc(50% - 4px) 6px;
     background-size: 15px;
   }
 
   .commission div {
-    background-image: url('./assets/ico-commission.svg');
+    background-image: url('../assets/ico-commission.svg');
     background-size: 22px;
   }
 
   .talk div {
-    background-image: url('./assets/ico-talk.svg');
+    background-image: url('../assets/ico-talk.svg');
     background-size: 13px;
   }
 }

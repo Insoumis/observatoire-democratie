@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import ElectionGraph from './ElectionGraph';
+
 const DeputeAbout = ({ depute }) => (
   <div>
+    <h2>Élection</h2>
+    <div>
+      <ElectionGraph depute={depute} />
+    </div>
+
     <h2>Mandats et fonctions</h2>
     <div>
       {(depute.depute_bureau) ?
@@ -63,7 +70,7 @@ const DeputeAbout = ({ depute }) => (
         false
       }
 
-      {(depute.depute_autresmandats) ?
+      {(depute.depute_autresmandats.length) ?
         <div>
           <h3>Autres mandats</h3>
           <ul className="fa-ul">

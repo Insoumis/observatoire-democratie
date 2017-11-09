@@ -1,0 +1,25 @@
+@import '~styles/colors';
+
+.module {
+  span {
+    animation: appear .7s linear;
+    background: $main;
+    color: $white;
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    text-align: right;
+  }
+
+  div:first-child span {background: darken($lighter, 5%);}
+
+  ul {margin-top: 30px;}
+
+  li {margin-bottom: 5px;}
+}
+
+@keyframes appear {
+  0% {max-width: 0;}
+  100% {max-width: 100%;}
+}

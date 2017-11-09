@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchDepute } from 'actions/assemblee';
 import { getDepute } from 'reducers';
 
-import View from 'components/assemblee/Depute';
+import View from 'components/assemblee/depute/Depute';
 
 class Depute extends Component {
   static fetchData(dispatch, { params }) {

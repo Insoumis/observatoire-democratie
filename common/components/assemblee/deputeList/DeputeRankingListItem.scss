@@ -79,7 +79,7 @@
   }
 
   span {
-    background: url('./assets/ico-participation.svg') no-repeat left center;
+    background: url('../assets/ico-participation.svg') no-repeat left center;
     background-size: 60px;
     color: $emphasis;
     display: inline-block;
@@ -89,31 +89,31 @@
   }
 
   .dissidence span {
-    background-image: url('./assets/ico-dissidence.svg');
+    background-image: url('../assets/ico-dissidence.svg');
     background-size: 36px;
     padding-left: 66px;
   }
 
   .talk span {
-    background-image: url('./assets/ico-talk.svg');
+    background-image: url('../assets/ico-talk.svg');
     background-size: 32px;
     padding-left: 62px;
   }
 
   .words span {
-    background-image: url('./assets/ico-words.svg');
+    background-image: url('../assets/ico-words.svg');
     background-size: 40px;
     padding-left: 62px;
   }
 
   .law span {
-    background-image: url('./assets/ico-law.svg');
+    background-image: url('../assets/ico-law.svg');
     background-size: 50px;
     padding-left: 72px;
   }
 
   .commission span {
-    background-image: url('./assets/ico-commission.svg');
+    background-image: url('../assets/ico-commission.svg');
     background-size: 48px;
     padding-left: 72px;
   }

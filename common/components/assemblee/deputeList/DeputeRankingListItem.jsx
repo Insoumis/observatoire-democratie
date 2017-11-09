@@ -6,8 +6,6 @@ import { formatNbr } from 'utility';
 
 import css from './DeputeRankingListItem.scss';
 
-
-
 const DeputeRankingListItem = ({ depute, location }) => {
   let stat;
   switch (location.query.sort) {

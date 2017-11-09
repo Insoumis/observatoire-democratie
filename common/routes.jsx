@@ -7,7 +7,7 @@ import Home from 'components/Home';
 import DeputeSearch from 'containers/assemblee/DeputeSearch';
 import DeputeRanking from 'containers/assemblee/DeputeRanking';
 import Depute from 'containers/assemblee/Depute';
-import DeputeAbout from 'components/assemblee/DeputeAbout';
+import DeputeAbout from 'components/assemblee/depute/DeputeAbout';
 
 import GroupeList from 'containers/assemblee/GroupeList';
 

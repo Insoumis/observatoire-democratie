@@ -13,18 +13,22 @@ const ElectionGraph = ({ depute }) => {
     <div className={css.module}>
       <div>
         {depute.depute_nom} ({election.nuance})
-        <span style={{ width: `${formatNbr(deputeResult)}%` }}>
-          {formatNbr(deputeResult, '0,0.0')} %
-        </span>
+        <div>
+          <span style={{ width: `${formatNbr(deputeResult)}%` }} />
+          <span>{formatNbr(deputeResult, '0,0.0')}&nbsp;%</span>
+        </div>
       </div>
       {election.adversaires.map((adversaire) => {
         const adversaireResult = (adversaire.voix / election.exprimes) * 100;
         return (
           <div>
             {adversaire.nom}
-            <span style={{ width: `${formatNbr(adversaireResult)}%` }}>
-              {formatNbr(adversaireResult, '0,0.0')} %
-            </span>
+            <div>
+              <span style={{ width: `${formatNbr(adversaireResult)}%` }} />
+              <span>
+                {formatNbr(adversaireResult, '0,0.0')} %
+              </span>
+            </div>
           </div>
         );
       })}

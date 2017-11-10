@@ -1,18 +1,28 @@
 @import '~styles/colors';
 
 .module {
-  span {
-    animation: appear .7s linear;
-    background: $main;
-    color: $white;
-    display: block;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    padding: 5px 10px;
-    text-align: right;
-  }
+  > div {
+    &:first-child {
+      span:first-child {background: $lighter;}
 
-  div:first-child span {background: darken($lighter, 5%);}
+      span:last-child {color: darken($lighter, 5%);}
+    }
+
+    div {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    span:first-child {
+      animation: appear .7s linear;
+      background: $main;
+      display: block;
+      height: 34px;
+      min-width: 1%;
+    }
+
+    span:last-child {padding: 5px 10px;}
+  }
 
   ul {margin-top: 30px;}
 

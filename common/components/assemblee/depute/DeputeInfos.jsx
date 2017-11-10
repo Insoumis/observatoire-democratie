@@ -3,7 +3,7 @@ import React from 'react';
 
 import ElectionGraph from './ElectionGraph';
 
-const DeputeAbout = ({ depute }) => (
+const DeputeInfos = ({ depute }) => (
   <div>
     <h2>Élection</h2>
     <div>
@@ -118,10 +118,8 @@ const DeputeAbout = ({ depute }) => (
   </div>
 );
 
-DeputeAbout.propTypes = {
-  depute: PropTypes.shape({}),
-};
+DeputeInfos.propTypes = { depute: PropTypes.shape({}) };
 
-DeputeAbout.defaultProps = { depute: {} };
+DeputeInfos.defaultProps = { depute: {} };
 
-export default DeputeAbout;
+export default DeputeInfos;

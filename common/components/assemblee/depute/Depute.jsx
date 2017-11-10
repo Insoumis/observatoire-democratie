@@ -74,10 +74,10 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
 
       <div className={css.content}>
         <nav>
-          <ActiveLink>Scrutins publics</ActiveLink>
+          <ActiveLink to={`/assemblee/deputes/${depute.id}/votes`}>Scrutins publics</ActiveLink>
           <ActiveLink>Interventions</ActiveLink>
           <ActiveLink>Participations</ActiveLink>
-          <ActiveLink to={`/assemblee/deputes/${depute.id}/about`}>Informations</ActiveLink>
+          <ActiveLink to={`/assemblee/deputes/${depute.id}/informations`}>Informations</ActiveLink>
         </nav>
 
         {React.cloneElement(children, { depute })}

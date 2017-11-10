@@ -33,12 +33,12 @@ const Header = ({ location }) => (
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink to="/assemblee/deputes/search">
+          <ActiveLink to="/assemblee/deputes/recherche">
             <i className="fa fa-user-circle-o" aria-hidden="true" /> Député&middot;e&middot;s
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink to="/assemblee/deputes/ranking">
+          <ActiveLink to="/assemblee/deputes/classement">
             <i className="fa fa-bar-chart" aria-hidden="true" /> Tops / Flops
           </ActiveLink>
         </li>

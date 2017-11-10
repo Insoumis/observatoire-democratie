@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router';
+import PropTypes from 'prop-types';
+import { Link, withRouter } from 'react-router';
+import classNames from 'classnames';
 
 import ActiveLink from 'components/reusable/ActiveLink';
 
 import css from './Header.scss';
 
-const Header = () => (
+const Header = ({ location }) => (
   <div className={css.module}>
     <nav>
       <Link title="Accueil" to="/">
@@ -17,7 +19,12 @@ const Header = () => (
         <li>Assemblée Nationale</li>
       </ul> */}
     </nav>
-    <header />
+    <header className={classNames({
+      [css.noHome]: location.pathname !== '/',
+    })}
+    >
+      <div />
+    </header>
     <nav>
       <ul>
         <li>
@@ -40,4 +47,10 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+Header.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default withRouter(Header);

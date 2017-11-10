@@ -5,7 +5,7 @@
 .header {
   align-items: flex-start;
   display: flex;
-  margin: 0 0 60px 180px;
+  margin-bottom: 60px;
 
   header {
     color: $white;
@@ -69,14 +69,11 @@
 }
 
 .content {
-  align-items: flex-start;
-  display: flex;
-
   > nav {
-    margin-right: 30px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
 
     a {
       background: $main;
@@ -88,7 +85,7 @@
       padding: 10px 0;
       text-align: center;
       transition: background .2s;
-      width: 150px;
+      width: calc(100% / 4 - 5px);
 
       &:global(.active),
       &:hover {
@@ -133,26 +130,11 @@
 }
 
 @media (max-width: 1023px) {
-  .header {
-    margin: 0 0 50px 0;
-  }
+  .header {margin-bottom: 50px;}
 
-  .content {
-    display: block;
-
-    > nav {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 0 10px;
-      position: static;
-      justify-content: space-between;
-
-      a {
-        font-size: .9em;
-        padding: 6px 0;
-        width: calc(100% / 4 - 5px);
-      }
-    }
+  .content > nav a {
+    font-size: .9em;
+    padding: 6px 0;
   }
 }
 

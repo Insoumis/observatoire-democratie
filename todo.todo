@@ -31,6 +31,7 @@ SEARCH:
   ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:48)
   ☐ Ajouter un petit mot de description ?
   ☐ Changer les select pour un truc custom
+  ☐ Virer la stat dissidence pour les non inscrits
 
 TOP:
   ✔ Tester le formulaire de tri @done (2017-11-7 16:21:57)

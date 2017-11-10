@@ -108,7 +108,7 @@ const DeputeAbout = ({ depute }) => (
         </a>
       </p>
       <p>
-        <strong>Page sur le site de l&apos;Assemblée Nationale :</strong>
+        <strong>Page sur le site de l&apos;Assemblée Nationale&nbsp;:</strong>
         {' '}
         <a href={`http://www2.assemblee-nationale.fr/deputes/fiche/OMC_${depute.depute_uid}`}>
           Voir la page

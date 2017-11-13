@@ -7,7 +7,7 @@ export const ASSEMBLEE = {
 };
 
 export const fetchDeputeSearch = search => ({
-  endpoint: `/api/deputes/liste${search}`,
+  endpoint: `/deputes/liste${search}`,
   api: 'assemblee',
   type: ASSEMBLEE.fetchDeputeSearch,
   schema: { items: [depute] },
@@ -15,7 +15,7 @@ export const fetchDeputeSearch = search => ({
 });
 
 export const fetchDeputeRanking = search => ({
-  endpoint: `/api/deputes/top${search}`,
+  endpoint: `/deputes/top${search}`,
   api: 'assemblee',
   type: ASSEMBLEE.fetchDeputeRanking,
   schema: { items: [depute] },
@@ -23,7 +23,7 @@ export const fetchDeputeRanking = search => ({
 });
 
 export const fetchDepute = deputeId => ({
-  endpoint: `/api/deputes/${deputeId}`,
+  endpoint: `/deputes/${deputeId}`,
   api: 'assemblee',
   type: ASSEMBLEE.fetchDepute,
   schema: depute,

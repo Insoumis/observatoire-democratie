@@ -22,18 +22,20 @@ body {
 
 h1,
 h2,
-h3 {margin: 0;}
+h3,
+h4 {margin: 0;}
 
 a {
-  color: $lighter;
-  text-decoration: none;
+  color: $main;
+  transition: .2s;
 
-  &:hover {text-decoration: underline;}
+  &:hover {color: $lighter;}
 }
 
 button {
   cursor: pointer;
   border: 0;
+  border-radius: 0;
 }
 
 button,

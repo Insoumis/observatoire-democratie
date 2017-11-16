@@ -7,14 +7,50 @@
 
   > div {
     width: calc(100% / 3 - 120px);
-    margin: 0 60px 70px;
+    margin: 20px 60px 50px;
   }
 
   h3 {
     border-bottom: 1px dashed $lighter;
     font-size: 1em;
-    margin: 0 0 20px;
+    margin-bottom: 20px;
     padding: 0 0 5px;
     text-align: center;
+  }
+}
+
+.keyVote {
+  margin: 20px 0 40px;
+
+  h4 {
+    background: $main;
+    color: $white;
+    display: inline-block;
+    font-size: .9em;
+    padding: 2px 6px;
+  }
+
+  span {
+    color: $white;
+    display: inline-block;
+    font-size: .85em;
+    font-weight: 600;
+    margin-right: 8px;
+    padding: 8px 0;
+    text-align: center;
+    width: 130px;
+  }
+
+  .pour {background: $pour;}
+  .contre {background: $contre;}
+  .abstention {background: $abstention;}
+  .absent {background: $absent;}
+
+  p {
+    font-size: .93em;
+    line-height: 1.8em;
+    margin-left: 20px;
+
+    i {color: $lighter;}
   }
 }

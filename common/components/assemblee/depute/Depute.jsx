@@ -14,7 +14,7 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
     return <RequestError retry={fetchDepute} />;
   }
 
-  if (!depute) {
+  if (!depute || !depute.votes_cles) {
     return <Spinner />;
   }
 

@@ -52,25 +52,23 @@ class DeputeGauge extends Component {
 
   render() {
     const Picto = pictos[this.props.picto];
-    console.log(this.props.picto);
-    console.log(Picto);
 
     return (
       <svg viewBox="0 0 220 220" preserveAspectRatio="xMinYMin meet">
-        <text textAnchor="middle" x="115" y="205" fontSize="38" fontWeight="bold" fill="#82cde2" style={{ fontFamily: 'Montserrat, sans serif' }}>
+        <text textAnchor="middle" x="115" y="205" fontSize="38" fontWeight="bold" fill={this.props.color || '#82cde2'} style={{ fontFamily: 'Montserrat, sans serif' }}>
           {this.props.number}{this.props.unit}
         </text>
         <path
           d={DeputeGauge.describeArc(110, 110, 100, 220, 500)}
           fill="none"
-          stroke="#82cde2"
+          stroke={this.props.color || '#82cde2'}
           strokeOpacity="0.33"
           strokeWidth="20"
         />
         <path
           d={this.state.animatedArc}
           fill="none"
-          stroke="#82cde2"
+          stroke={this.props.color || '#82cde2'}
           strokeWidth="20"
         />
         <Picto />
@@ -80,6 +78,7 @@ class DeputeGauge extends Component {
 }
 
 DeputeGauge.propTypes = {
+  color: PropTypes.string,
   number: PropTypes.number.isRequired,
   picto: PropTypes.string,
   unit: PropTypes.string,

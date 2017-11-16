@@ -56,9 +56,9 @@
 
 .data {
   a {
-    color: $main;
     display: inline-block;
     margin-bottom: 8px;
+    text-decoration: none;
 
     i {color: $lighter;}
   }
@@ -84,6 +84,7 @@
       margin-bottom: 5px;
       padding: 10px 0;
       text-align: center;
+      text-decoration: none;
       transition: background .2s;
       width: calc(100% / 4 - 5px);
 

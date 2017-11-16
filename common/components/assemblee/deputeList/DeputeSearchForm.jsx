@@ -22,13 +22,13 @@ class DeputeSearchForm extends Component {
       return acc;
     }, {});
 
-    this.props.router.push(`/assemblee/deputes/search?${qs.stringify(search)}`);
+    this.props.router.push(`/assemblee/deputes/recherche?${qs.stringify(search)}`);
   }
 
   render() {
     return (
       <form onSubmit={this.props.handleSubmit(data => this.goTo(data))}>
-        <Field component={SearchField} name="query" placeholder="Rechercher ..." />
+        <Field component={SearchField} name="query" placeholder="Rechercher un député ..." />
         <div className={classNames('flex wrap space-between', {
           [css.displayFilters]: this.state.displayFilters,
         })}

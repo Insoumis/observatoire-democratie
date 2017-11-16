@@ -15,7 +15,7 @@ class Depute extends Component {
   state = { error: false };
 
   componentDidMount() {
-    if (!this.props.depute) {
+    if (!this.props.depute || !this.props.depute.votes_cles) {
       this.fetchDepute();
     }
   }

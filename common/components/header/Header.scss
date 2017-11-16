@@ -69,13 +69,13 @@
 
 
     a {
-      color: $main;
+      text-decoration: none;
 
       i {transition: color .2s;}
 
       &:global(.active),
       &:hover {
-        text-decoration: none;
+        color: $main;
 
         i {color: $lighter;}
       }

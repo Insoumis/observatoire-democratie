@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import numeral from 'numeral';
 
 numeral.register('locale', 'fr', {
@@ -9,6 +10,34 @@ numeral.register('locale', 'fr', {
 numeral.locale('fr');
 
 export const formatNbr = (value, format = '0,0') => numeral(value).format(format);
+
+export const withResize = WrappedComponent => (
+  class WithResize extends Component {
+    static displayName = `WithResize(${WrappedComponent.displayName || WrappedComponent.name || 'Component'}})`;
+
+    state = { width: 1000 };
+
+    componentDidMount() {
+      this.updateWidth();
+
+      window.onresize = () => {
+        this.updateWidth();
+      };
+    }
+
+    updateWidth() {
+      this.setState({ width: this.node.offsetWidth });
+    }
+
+    render() {
+      return (
+        <div ref={(node) => { this.node = node; }}>
+          <WrappedComponent {...this.props} width={this.state.width} />
+        </div>
+      );
+    }
+  }
+);
 
 export const groups = [{
   text: 'La France Insoumise',

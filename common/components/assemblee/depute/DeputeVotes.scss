@@ -1,0 +1,20 @@
+@import '~styles/colors';
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  > div {
+    width: calc(100% / 3 - 120px);
+    margin: 0 60px 70px;
+  }
+
+  h3 {
+    border-bottom: 1px dashed $lighter;
+    font-size: 1em;
+    margin: 0 0 20px;
+    padding: 0 0 5px;
+    text-align: center;
+  }
+}

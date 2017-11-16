@@ -6,7 +6,8 @@ import { AppContainer } from 'react-hot-loader';
 import configureStore from '../common/configureStore';
 import Root from './Root';
 
-const store = configureStore();
+// eslint-disable-next-line no-underscore-dangle
+const store = configureStore(window.__PRELOADED_STATE__);
 
 ReactDOM.render(
   <AppContainer>

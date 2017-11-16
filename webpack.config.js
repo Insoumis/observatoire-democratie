@@ -17,7 +17,7 @@ module.exports = {
       containers: path.resolve(__dirname, 'common/containers/'),
       reducers: path.resolve(__dirname, 'common/reducers/'),
       styles: path.resolve(__dirname, 'common/styles/'),
-      utility: path.resolve(__dirname, 'common/utility.js'),
+      utility: path.resolve(__dirname, 'common/utility.jsx'),
     },
   },
   plugins: [

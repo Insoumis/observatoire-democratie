@@ -10,6 +10,7 @@
 
     h1 {
       background: url('./assets/logo.svg') no-repeat center;
+      background-size: cover;
       height: 45px;
       text-indent: -9999px;
       width: 210px;
@@ -87,6 +88,22 @@
   .module {
     font-size: .9em;
 
-    header {height: 138px;}
+    nav:first-of-type {
+      height: 50px;
+      padding: 10px;
+
+      h1 {
+        height: 30px;
+        width: 140px;
+      }
+    }
+
+    header {
+      height: 138px;
+
+      &.noHome {
+        height: 100px;
+      }
+    }
   }
 }

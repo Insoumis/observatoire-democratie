@@ -79,12 +79,13 @@ class DeputeGauge extends Component {
 
 DeputeGauge.propTypes = {
   color: PropTypes.string,
-  number: PropTypes.number.isRequired,
+  number: PropTypes.string.isRequired,
   picto: PropTypes.string,
   unit: PropTypes.string,
 };
 
 DeputeGauge.defaultProps = {
+  color: undefined,
   picto: 'participation',
   unit: '',
 };

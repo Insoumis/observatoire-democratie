@@ -1,5 +1,7 @@
+/* eslint-disable react/no-danger */
 import React, { Component } from 'react';
 import numeral from 'numeral';
+import sanitizeHtml from 'sanitize-html';
 
 numeral.register('locale', 'fr', {
   delimiters: {
@@ -10,6 +12,10 @@ numeral.register('locale', 'fr', {
 numeral.locale('fr');
 
 export const formatNbr = (value, format = '0,0') => numeral(value).format(format);
+
+export const parseHTML = html => (
+  <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(html) }} />
+);
 
 export const withResize = WrappedComponent => (
   class WithResize extends Component {
@@ -92,16 +98,31 @@ export const regions = [
   'Wallis-et-Futuna',
 ];
 
-export const csps = [
-  'Agriculteur·trice·s exploitant·e·s',
-  'Artisans, commerçant·e·s et chefs d\'entreprise',
-  'Autres (y compris inconnu et sans profession déclarée)',
-  'Cadres et professions intellectuelles supérieures',
-  'Employé·e·s',
-  'Ouvrier·ère·s',
-  'Professions Intermédiaires',
-  'Retraité·e·s',
-];
+export const csps = [{
+  text: 'Agriculteur·trice·s exploitant·e·s',
+  value: 'Agriculteurs exploitants',
+}, {
+  text: 'Artisans, commerçant·e·s et chefs d\'entreprise',
+  value: 'Artisans, commerçants et chefs d\'entreprise',
+}, {
+  text: 'Autres (y compris inconnu et sans profession déclarée)',
+  value: 'Autres (y compris inconnu et sans profession déclarée)',
+}, {
+  text: 'Cadres et professions intellectuelles supérieures',
+  value: 'Cadres et professions intellectuelles supérieures',
+}, {
+  text: 'Employé·e·s',
+  value: 'Employés',
+}, {
+  text: 'Ouvrier·ère·s',
+  value: 'Ouvriers',
+}, {
+  text: 'Professions Intermédiaires',
+  value: 'Professions Intermédiaires',
+}, {
+  text: 'Retraité·e·s',
+  value: 'Retraités',
+}];
 
 export const ages = [
   '20-30 ans',

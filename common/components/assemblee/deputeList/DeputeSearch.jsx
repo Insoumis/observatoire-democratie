@@ -20,7 +20,7 @@ const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => (
     />
 
     <DeputeList
-      baseLink="/assemblee/deputes/search"
+      baseLink="/assemblee/deputes/recherche"
       deputes={deputeSearch.deputes}
       error={deputeSearch.error}
       isPending={deputeSearch.isPending}

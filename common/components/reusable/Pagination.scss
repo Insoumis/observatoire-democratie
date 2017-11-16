@@ -6,7 +6,8 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  a {
+  a,
+  button {
     background: $main;
     color: $white;
     font-weight: 600;
@@ -16,7 +17,11 @@
     transition: background .2s;
 
     &:global(.active),
-    &:hover {background: $lighter;}
+    &:hover,
+    &:focus {
+      background: $lighter;
+      outline: 0;
+    }
   }
 
   :global(.active) {

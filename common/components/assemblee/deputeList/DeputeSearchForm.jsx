@@ -60,7 +60,7 @@ class DeputeSearchForm extends Component {
           >
             <option value="">Toutes les CSP</option>
             {csps.map(csp => (
-              <option key={csp}>{csp}</option>
+              <option key={csp.value} value={csp.value}>{csp.text}</option>
             ))}
           </Field>
           <Field

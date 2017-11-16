@@ -5,11 +5,13 @@ import { reducer as form } from 'redux-form';
 import deputes, * as fromDeputes from './deputes';
 import deputeSearch, * as fromDeputeSearch from './deputeSearch';
 import deputeRanking, * as fromDeputeRanking from './deputeRanking';
+import deputeVotes, * as fromDeputeVotes from './deputeVotes';
 
 const app = combineReducers({
   deputes,
   deputeSearch,
   deputeRanking,
+  deputeVotes,
   form,
 });
 
@@ -37,3 +39,5 @@ export const getDeputeRanking = createSelector(
     deputes: deputeRankingState.deputes.map(id => allDeputes[id]),
   }),
 );
+
+export const getDeputeVotes = state => fromDeputeVotes.getDeputeVotes(state.deputeVotes);

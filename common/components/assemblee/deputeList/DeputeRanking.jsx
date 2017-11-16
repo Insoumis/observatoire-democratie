@@ -20,7 +20,7 @@ const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => (
     />
 
     <DeputeList
-      baseLink="/assemblee/deputes/ranking"
+      baseLink="/assemblee/deputes/classement"
       deputes={deputeRanking.deputes}
       error={deputeRanking.error}
       isPending={deputeRanking.isPending}

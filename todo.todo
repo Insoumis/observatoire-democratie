@@ -16,6 +16,8 @@ HEADER:
 GLOBAL:
   ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)
   ☐ Président et vice-pres pas les mêmes votes
+  ☐ Épurer l'API (liste pour Oro)
+  ☐ Franciser lien et requêtes
 
 SEARCH:
   ✔ Style de RequestError @done (2017-11-6 01:58:04)
@@ -43,8 +45,12 @@ TOP:
   ☐ Ajouter un petit mot de description ?
   ☐ Changer les select pour un truc custom
   ☐ Ajouter liens spécifiques à chaque tri sur la stat ?
+  ☐ Virer la stat dissidence pour les non inscrits
 
 DEPUTE:
+  ✔ Sur le serveur node -> client rechargement entier de la page @done (2017-11-17 00:11:37)
   ☐ Vérifier valeurs entre liste/top et fiche
-  ☐ Sur le serveur node -> client rechargement entier de la page
   ☐ Corriger orthographe des votes clés
+  ☐ Virer la stat dissidence pour les non inscrits
+  ☐ Responsive
+  ☐ Changer les pictos de la page de vote

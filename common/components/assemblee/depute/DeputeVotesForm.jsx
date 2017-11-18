@@ -12,7 +12,7 @@ const DeputeVotesForm = ({ handleSubmit }) => (
       (data, dispatch) => dispatch(searchDeputeVotes(data)),
     )}
   >
-    <Field component={SearchField} name="query" placeholder="Rechercher un scrutin public ..." />
+    <Field component={SearchField} name="requete" placeholder="Rechercher un scrutin public ..." />
   </form>
 );
 

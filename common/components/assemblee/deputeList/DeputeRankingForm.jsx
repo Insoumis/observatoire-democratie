@@ -28,32 +28,32 @@ class DeputeRankingForm extends Component {
   render() {
     return (
       <form onSubmit={this.props.handleSubmit(data => this.goTo(data))}>
-        <Field component={SearchField} name="query" placeholder="Rechercher un député ..." />
+        <Field component={SearchField} name="requete" placeholder="Rechercher un député ..." />
         <div className={classNames('flex wrap space-between', {
           [css.displayFilters]: this.state.displayFilters,
         })}
         >
           <Field
-            name="sort"
+            name="tri"
             component="select"
-            onChange={(e, sort) => this.goTo({ ...this.props.router.location.query, sort })}
+            onChange={(e, tri) => this.goTo({ ...this.props.router.location.query, tri })}
           >
             {tris.map(tri => (
               <option key={tri.value} value={tri.value}>{tri.text}</option>
             ))}
           </Field>
           <Field
-            name="order"
+            name="ordre"
             component="select"
-            onChange={(e, order) => this.goTo({ ...this.props.router.location.query, order })}
+            onChange={(e, ordre) => this.goTo({ ...this.props.router.location.query, ordre })}
           >
-            <option value="down">Top</option>
-            <option value="up">Flop</option>
+            <option value="desc">Top</option>
+            <option value="asc">Flop</option>
           </Field>
           <Field
-            name="group"
+            name="groupe"
             component="select"
-            onChange={(e, group) => this.goTo({ ...this.props.router.location.query, group })}
+            onChange={(e, groupe) => this.goTo({ ...this.props.router.location.query, groupe })}
           >
             <option value="">Tous les groupes</option>
             {groups.map(group => (

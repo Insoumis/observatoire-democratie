@@ -12,7 +12,7 @@ const DeputeInterventionsForm = ({ handleSubmit }) => (
       (data, dispatch) => dispatch(searchDeputeInterventions(data)),
     )}
   >
-    <Field component={SearchField} name="query" placeholder="Rechercher une intervention ..." />
+    <Field component={SearchField} name="requete" placeholder="Rechercher une intervention ..." />
   </form>
 );
 

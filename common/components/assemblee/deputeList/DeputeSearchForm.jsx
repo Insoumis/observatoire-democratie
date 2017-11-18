@@ -28,15 +28,15 @@ class DeputeSearchForm extends Component {
   render() {
     return (
       <form onSubmit={this.props.handleSubmit(data => this.goTo(data))}>
-        <Field component={SearchField} name="query" placeholder="Rechercher un député ..." />
+        <Field component={SearchField} name="requete" placeholder="Rechercher un député ..." />
         <div className={classNames('flex wrap space-between', {
           [css.displayFilters]: this.state.displayFilters,
         })}
         >
           <Field
-            name="group"
+            name="groupe"
             component="select"
-            onChange={(e, group) => this.goTo({ ...this.props.router.location.query, group })}
+            onChange={(e, groupe) => this.goTo({ ...this.props.router.location.query, groupe })}
           >
             <option value="">Tous les groupes</option>
             {groups.map(group => (

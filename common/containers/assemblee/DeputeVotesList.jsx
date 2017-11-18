@@ -36,7 +36,7 @@ class DeputeVotesList extends Component {
         isPending={isPending}
         newSearch={this.props.searchDeputeVotes}
         pagination={pagination}
-        refetch={() => this.fetchDeputeVotes()}
+        refetch={() => this.fetchDeputeVotes(this.props.deputeVotes.search)}
         search={search}
         votes={votes}
       />

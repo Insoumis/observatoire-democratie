@@ -18,6 +18,8 @@ GLOBAL:
   ☐ Président et vice-pres pas les mêmes votes
   ☐ Épurer l'API (liste pour Oro)
   ☐ Franciser lien et requêtes
+  ☐ Debounce le HOC de resize
+  ☐ Tester les 404
 
 SEARCH:
   ✔ Style de RequestError @done (2017-11-6 01:58:04)
@@ -49,8 +51,10 @@ TOP:
 
 DEPUTE:
   ✔ Sur le serveur node -> client rechargement entier de la page @done (2017-11-17 00:11:37)
-  ☐ Vérifier valeurs entre liste/top et fiche
-  ☐ Corriger orthographe des votes clés
+  ✔ Vérifier valeurs entre liste/top et fiche @done (2017-11-17 04:38:12)
+  ✔ Responsive @done (2017-11-17 04:38:19)
   ☐ Virer la stat dissidence pour les non inscrits
-  ☐ Responsive
   ☐ Changer les pictos de la page de vote
+  ☐ Changer les pictos de la page de participation
+  ☐ Corriger orthographe des votes clés
+  ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K)

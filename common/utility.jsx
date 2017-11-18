@@ -14,31 +14,35 @@ numeral.locale('fr');
 export const formatNbr = (value, format = '0,0') => numeral(value).format(format);
 
 export const parseHTML = html => (
-  <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(html) }} />
+  <span dangerouslySetInnerHTML={{ __html: sanitizeHtml(html) }} />
 );
 
 export const withResize = WrappedComponent => (
   class WithResize extends Component {
     static displayName = `WithResize(${WrappedComponent.displayName || WrappedComponent.name || 'Component'}})`;
 
-    state = { width: 1000 };
+    state = { height: 0, width: 0 };
 
     componentDidMount() {
-      this.updateWidth();
+      this.update();
 
+      const callback = window.onresize;
       window.onresize = () => {
-        this.updateWidth();
+        if (callback) {
+          callback();
+        }
+        this.update();
       };
     }
 
-    updateWidth() {
-      this.setState({ width: this.node.offsetWidth });
+    update() {
+      this.setState({ height: this.node.offsetHeight, width: this.node.offsetWidth });
     }
 
     render() {
       return (
-        <div ref={(node) => { this.node = node; }}>
-          <WrappedComponent {...this.props} width={this.state.width} />
+        <div ref={(node) => { this.node = node; }} style={{ height: '100%' }}>
+          <WrappedComponent {...this.props} height={this.state.height} width={this.state.width} />
         </div>
       );
     }

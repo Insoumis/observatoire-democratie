@@ -28,7 +28,7 @@ const DeputeInfos = ({ depute }) => (
           <h3>Commission</h3>
           <ul className="fa-ul">
             {depute.depute_mandats.commissions.map(commission => (
-              <li>
+              <li key={commission.nom}>
                 <i className="fa fa-li fa-dot-circle-o" />
                 <strong>{commission.qualite}</strong> : {commission.nom}
                 <br />
@@ -49,7 +49,7 @@ const DeputeInfos = ({ depute }) => (
           <h3>Délégation</h3>
           <ul className="fa-ul">
             {depute.depute_mandats.delegations_bureau.map(delegation => (
-              <li>
+              <li key={delegation.nom}>
                 <i className="fa fa-li fa-dot-circle-o" />
                 <strong>{delegation.qualite}</strong> - {delegation.nom}
                 <br />
@@ -75,7 +75,7 @@ const DeputeInfos = ({ depute }) => (
           <h3>Autres mandats</h3>
           <ul className="fa-ul">
             {depute.depute_autresmandats.map(mandat => (
-              <li><i className="fa fa-li fa-dot-circle-o" /> {mandat}</li>
+              <li key={mandat}><i className="fa fa-li fa-dot-circle-o" /> {mandat}</li>
             ))}
           </ul>
         </div>
@@ -93,7 +93,7 @@ const DeputeInfos = ({ depute }) => (
       <h3>Collaborateur·trice·s :</h3>
       <ul className="fa-ul">
         {depute.depute_collaborateurs.map(collab => (
-          <li><i className="fa fa-li fa-dot-circle-o" /> {collab}</li>
+          <li key={collab}><i className="fa fa-li fa-dot-circle-o" /> {collab}</li>
         ))}
       </ul>
     </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
-import qs from 'qs';
 
 import { searchDeputeVotes } from 'actions/assemblee';
 

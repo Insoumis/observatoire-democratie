@@ -29,20 +29,26 @@ class DeputeGauge extends Component {
   state = {};
 
   componentDidMount() {
-    this.anime();
+    this.animate();
+  }
+
+  componentWillUnmount() {
+    if (this.animation) {
+      clearTimeout(this.animation);
+    }
   }
 
   limit = 280 * (this.props.number / 100);
 
   nextval = 0;
 
-  anime() {
+  animate() {
     if (this.nextval < this.limit) {
       this.setState({
         animatedArc: DeputeGauge.describeArc(110, 110, 100, 220, 220 + this.nextval),
       });
       this.nextval += this.limit / 20;
-      setTimeout(() => this.anime(), 30);
+      this.animation = setTimeout(() => this.animate(), 30);
     } else {
       this.setState({
         animatedArc: DeputeGauge.describeArc(110, 110, 100, 220, 220 + this.limit),
@@ -56,7 +62,7 @@ class DeputeGauge extends Component {
     return (
       <svg viewBox="0 0 220 220" preserveAspectRatio="xMinYMin meet">
         <text textAnchor="middle" x="115" y="205" fontSize="38" fontWeight="bold" fill={this.props.color || '#82cde2'} style={{ fontFamily: 'Montserrat, sans serif' }}>
-          {this.props.number}{this.props.unit}
+          {this.props.number}%
         </text>
         <path
           d={DeputeGauge.describeArc(110, 110, 100, 220, 500)}
@@ -81,13 +87,11 @@ DeputeGauge.propTypes = {
   color: PropTypes.string,
   number: PropTypes.string.isRequired,
   picto: PropTypes.string,
-  unit: PropTypes.string,
 };
 
 DeputeGauge.defaultProps = {
   color: undefined,
   picto: 'participation',
-  unit: '',
 };
 
 export default DeputeGauge;

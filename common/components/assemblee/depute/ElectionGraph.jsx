@@ -21,7 +21,7 @@ const ElectionGraph = ({ depute }) => {
       {election.adversaires.map((adversaire) => {
         const adversaireResult = (adversaire.voix / election.exprimes) * 100;
         return (
-          <div>
+          <div key={adversaire.nom}>
             {adversaire.nom}
             <div>
               <span style={{ width: `${formatNbr(adversaireResult)}%` }} />

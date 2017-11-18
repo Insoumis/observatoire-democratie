@@ -6,8 +6,8 @@
   justify-content: space-around;
 
   > div {
-    width: calc(100% / 3 - 120px);
     margin: 20px 60px 50px;
+    width: calc(100% / 3 - 120px);
   }
 
   h3 {
@@ -100,7 +100,7 @@
     padding: 2px 6px;
   }
 
-  span {
+  div > span {
     color: $white;
     display: inline-block;
     font-size: .85em;
@@ -124,7 +124,8 @@
     strong {
       background: $emphasis;
       color: $white;
-      padding: 2px 8px;
+      margin: 0 2px;
+      padding: 2px 6px;
     }
 
     i {color: $lighter;}

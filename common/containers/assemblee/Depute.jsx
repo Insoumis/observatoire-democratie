@@ -27,6 +27,11 @@ class Depute extends Component {
       if (res instanceof Error) {
         this.setState({ error: true });
       }
+
+      if (res.id !== params.id) {
+        const { location, router } = this.props;
+        router.push(location.pathname.replace(/(\/assemblee\/deputes\/)(\w+)(.*)/, `$1${res.id}$3`));
+      }
     });
   }
 
@@ -45,10 +50,18 @@ class Depute extends Component {
 
 Depute.propTypes = {
   children: PropTypes.node.isRequired,
-  depute: PropTypes.shape({}),
+  depute: PropTypes.shape({
+    votes_cles: PropTypes.shape({}),
+  }),
   dispatch: PropTypes.func.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
   params: PropTypes.shape({
     id: PropTypes.string,
+  }).isRequired,
+  router: PropTypes.shape({
+    push: PropTypes.func.isRequired,
   }).isRequired,
 };
 

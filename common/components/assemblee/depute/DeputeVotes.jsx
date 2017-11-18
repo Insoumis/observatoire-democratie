@@ -30,10 +30,14 @@ const DeputeVotes = ({ depute }) => (
       </div>
       <div>
         <h3>Contre son groupe</h3>
-        <DeputeGauge
-          picto="dissidence"
-          number={formatNbr(depute.stats.positions.dissidence)}
-        />
+        {(depute.groupe_abrev === 'NI') ?
+          <div className={css.notAvailable}>Non disponible</div>
+          :
+          <DeputeGauge
+            picto="dissidence"
+            number={formatNbr(depute.stats.positions.dissidence)}
+          />
+        }
       </div>
       <div>
         <h3>Vote pour</h3>

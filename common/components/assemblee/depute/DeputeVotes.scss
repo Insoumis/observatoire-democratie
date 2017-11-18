@@ -19,6 +19,11 @@
   }
 }
 
+.notAvailable {
+  color: $emphasis;
+  text-align: center;
+}
+
 .keyVotes {
   &:first-child h3 {margin-top: 20px;}
 

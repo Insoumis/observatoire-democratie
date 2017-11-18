@@ -43,7 +43,13 @@ const DeputeSearchListItem = ({ depute }) => (
           </div>
           <div className={css.dissidence}>
             <h3>Contre son groupe</h3>
-            <div>{formatNbr(depute.stats.positions.dissidence)} %</div>
+            <div>
+              {(depute.groupe_abrev === 'NI') ?
+                'Non disponible'
+                :
+                `${formatNbr(depute.stats.positions.dissidence)} %`
+              }
+            </div>
           </div>
           <div className={css.commission}>
             <h3>Présence commission</h3>

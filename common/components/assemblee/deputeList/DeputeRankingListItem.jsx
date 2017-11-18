@@ -14,7 +14,13 @@ const DeputeRankingListItem = ({ depute, location }) => {
         <div className={css.stats}>
           <h3>Contre son groupe</h3>
           <div className={css.dissidence}>
-            <span>{formatNbr(depute.stats.positions.dissidence)} %</span>
+            <span>
+              {(depute.groupe_abrev === 'NI') ?
+                'Non disponible'
+                :
+                `${formatNbr(depute.stats.positions.dissidence)} %`
+              }
+            </span>
           </div>
         </div>
       );

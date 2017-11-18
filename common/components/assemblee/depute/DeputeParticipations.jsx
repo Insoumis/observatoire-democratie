@@ -14,32 +14,40 @@ import css from './DeputeParticipations.scss';
 const DeputeParticipations = ({ depute }) => (
   <div>
     <h2>Ses participations en chiffres</h2>
-    <div className={css.stats}>
-      <div>
-        <h3>Présence en commission</h3>
-        <DeputeGauge
-          picto="commission"
-          number={formatNbr(depute.stats.commissions.present)}
-        />
+    {(depute.id !== 'francoisderugy') ?
+      <div className={css.stats}>
+        <div>
+          <h3>Présence en commission</h3>
+          <DeputeGauge
+            picto="commission"
+            number={formatNbr(depute.stats.commissions.present)}
+          />
+        </div>
+        <div>
+          <h3>Absence en commission</h3>
+          <DeputeGauge
+            picto="absent"
+            number={formatNbr(depute.stats.commissions.absent)}
+          />
+          <p><strong>{formatNbr(depute.stats.commissions.excuse)}%</strong> excusées</p>
+        </div>
       </div>
-      <div>
-        <h3>Absence en commission</h3>
-        <DeputeGauge
-          picto="absent"
-          number={formatNbr(depute.stats.commissions.absent)}
-        />
-        <p><strong>{formatNbr(depute.stats.commissions.excuse)}%</strong> excusées</p>
-      </div>
-    </div>
+      :
+      false
+    }
     <div className={css.numbers}>
-      <div>
-        <h3>Amendements rédigés</h3>
-        <strong><AnimatedNumber value={depute.stats.amendements.rediges} /></strong>
-        <p>
-          <strong>{depute.stats.amendements.adoptes}%</strong> adopté
-          {(depute.stats.amendements.adoptes > 1) ? 's' : ''}
-        </p>
-      </div>
+      {(depute.id !== 'francoisderugy') ?
+        <div>
+          <h3>Amendements rédigés</h3>
+          <strong><AnimatedNumber value={depute.stats.amendements.rediges} /></strong>
+          <p>
+            <strong>{depute.stats.amendements.adoptes}%</strong> adopté
+            {(depute.stats.amendements.adoptes > 1) ? 's' : ''}
+          </p>
+        </div>
+        :
+        false
+      }
       <div>
         <h3>Nombre d&apos;interventions</h3>
         <strong><AnimatedNumber value={depute.stats.nbitvs} /></strong>

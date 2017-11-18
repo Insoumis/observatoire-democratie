@@ -8,7 +8,7 @@ import css from './DeputeRankingListItem.scss';
 
 const DeputeRankingListItem = ({ depute, location }) => {
   let stat;
-  switch (location.query.sort) {
+  switch (location.query.tri) {
     case 'stats.positions.dissidence':
       stat = (
         <div className={css.stats}>

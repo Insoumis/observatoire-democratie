@@ -11,7 +11,7 @@ SEO:
 
 GLOBAL:
   ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)
-  ☐ Franciser lien et requêtes @high
+  ✔ Franciser lien et requêtes @high @done (2017-11-18 15:20:54)
   ☐ Épurer l'API (liste pour Oro) @low
   ☐ Debounce le HOC de resize @low
 
@@ -54,9 +54,9 @@ DEPUTE:
   ✔ Sur le serveur node -> client rechargement entier de la page @done (2017-11-17 00:11:37)
   ✔ Vérifier valeurs entre liste/top et fiche @done (2017-11-17 04:38:12)
   ✔ Responsive @done (2017-11-17 04:38:19)
-  ☐ Changer les pictos de la page de vote @critical
-  ☐ Changer les pictos de la page de participation @critical
-  ☐ Gérer les 404 redirect sur député insoumis @high
+  ✔ Changer les pictos de la page de vote @critical @done (2017-11-18 15:22:09)
+  ✔ Changer les pictos de la page de participation @critical @done (2017-11-18 15:22:10)
+  ✔ Gérer les 404 redirect sur député insoumis @high @done (2017-11-18 15:22:11)
   ☐ Virer la stat dissidence pour les non inscrits @high
   ☐ Président et vice-pres pas les mêmes votes @high
   ☐ Corriger orthographe des votes clés @low

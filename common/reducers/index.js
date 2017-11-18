@@ -44,4 +44,5 @@ export const getDeputeRanking = createSelector(
 
 export const getDeputeVotes = state => fromDeputeVotes.getDeputeVotes(state.deputeVotes);
 
-export const getDeputeInterventions = state => fromDeputeInterventions.getDeputeInterventions(state.deputeInterventions);
+export const getDeputeInterventions = state =>
+  fromDeputeInterventions.getDeputeInterventions(state.deputeInterventions);

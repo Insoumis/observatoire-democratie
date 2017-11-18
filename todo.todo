@@ -1,25 +1,26 @@
 PROD:
   ✔ Ajouter conf pour les styles + extract css + autoprefixer @done (2017-11-6 17:15:48)
-  ☐ Changer lien API
-  ☐ Ajouter 404
+  ☐ Styler la page 404 de façon marrante @high
+  ☐ Changer lien API @low
 
 SEO:
-  ☐ Ajouter une description
-  ☐ Ajouter les images de share
-  ☐ Ajouter favicon
-  ☐ Images particulières pour page député et groupe
+  ☐ Ajouter une description @high
+  ☐ Ajouter les images de share @high
+  ☐ Ajouter favicon @high
+  ☐ Images particulières pour page député et groupe @low
+
+GLOBAL:
+  ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)
+  ☐ Franciser lien et requêtes @high
+  ☐ Épurer l'API (liste pour Oro) @low
+  ☐ Debounce le HOC de resize @low
 
 HEADER:
   ✔ Liens actifs @done (2017-11-5 14:17:45)
   ✔ Responsive @done (2017-11-6 17:15:41)
 
-GLOBAL:
-  ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)
-  ☐ Président et vice-pres pas les mêmes votes
-  ☐ Épurer l'API (liste pour Oro)
-  ☐ Franciser lien et requêtes
-  ☐ Debounce le HOC de resize
-  ☐ Tester les 404
+HOME:
+  ☐ À faire @critical
 
 SEARCH:
   ✔ Style de RequestError @done (2017-11-6 01:58:04)
@@ -33,9 +34,9 @@ SEARCH:
   ✔ Ajouter un bouton pour cacher/montrer les filtres en mode mobile @done (2017-11-8 19:48:33)
   ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:41)
   ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:48)
-  ☐ Ajouter un petit mot de description ?
-  ☐ Changer les select pour un truc custom
-  ☐ Virer la stat dissidence pour les non inscrits
+  ☐ Virer la stat dissidence pour les non inscrits @high
+  ☐ Changer les select pour un truc custom @low
+  ☐ Ajouter un petit mot de description ? @low
 
 TOP:
   ✔ Tester le formulaire de tri @done (2017-11-7 16:21:57)
@@ -44,17 +45,22 @@ TOP:
   ✔ Ajouter un bouton pour cacher/montrer les filtres en mode mobile @done (2017-11-8 19:48:35)
   ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:44)
   ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:54)
-  ☐ Ajouter un petit mot de description ?
-  ☐ Changer les select pour un truc custom
-  ☐ Ajouter liens spécifiques à chaque tri sur la stat ?
-  ☐ Virer la stat dissidence pour les non inscrits
+  ☐ Virer la stat dissidence pour les non inscrits @high
+  ☐ Ajouter un petit mot de description ? @low
+  ☐ Changer les select pour un truc custom @low
+  ☐ Ajouter liens spécifiques à chaque tri sur la stat ? @low
 
 DEPUTE:
   ✔ Sur le serveur node -> client rechargement entier de la page @done (2017-11-17 00:11:37)
   ✔ Vérifier valeurs entre liste/top et fiche @done (2017-11-17 04:38:12)
   ✔ Responsive @done (2017-11-17 04:38:19)
-  ☐ Virer la stat dissidence pour les non inscrits
-  ☐ Changer les pictos de la page de vote
-  ☐ Changer les pictos de la page de participation
-  ☐ Corriger orthographe des votes clés
-  ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K)
+  ☐ Changer les pictos de la page de vote @critical
+  ☐ Changer les pictos de la page de participation @critical
+  ☐ Gérer les 404 redirect sur député insoumis @high
+  ☐ Virer la stat dissidence pour les non inscrits @high
+  ☐ Président et vice-pres pas les mêmes votes @high
+  ☐ Corriger orthographe des votes clés @low
+  ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K)@low
+
+PAGE À PROPOS:
+  ☐ À faire @critical

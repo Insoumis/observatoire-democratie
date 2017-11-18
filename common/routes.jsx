@@ -14,6 +14,8 @@ import DeputeInfos from 'components/assemblee/depute/DeputeInfos';
 
 import GroupeList from 'containers/assemblee/GroupeList';
 
+import NotFound from 'components/NotFound';
+
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />
@@ -28,5 +30,7 @@ export default (
     </Route>
 
     <Route path="/assemblee/groupes" component={GroupeList} />
+
+    <Route path="*" component={NotFound} />
   </Route>
 );

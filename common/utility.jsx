@@ -50,6 +50,9 @@ export const withResize = WrappedComponent => (
 );
 
 export const groups = [{
+  text: 'Tous les groupes',
+  value: '',
+}, {
   text: 'La France Insoumise',
   value: 'FI',
 }, {
@@ -103,6 +106,9 @@ export const regions = [
 ];
 
 export const csps = [{
+  text: 'Toutes les CSP',
+  value: '',
+}, {
   text: 'Agriculteur·trice·s exploitant·e·s',
   value: 'Agriculteurs exploitants',
 }, {

@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import { ages, csps, groups, regions } from 'utility';
 
 import SearchField from 'components/reusable/form/SearchField';
+import SelectField from 'components/reusable/form/SelectField';
 
 import css from './DeputeSearch.scss';
 
@@ -29,50 +30,48 @@ class DeputeSearchForm extends Component {
     return (
       <form onSubmit={this.props.handleSubmit(data => this.goTo(data))}>
         <Field component={SearchField} name="requete" placeholder="Rechercher un député ..." />
-        <div className={classNames('flex wrap space-between', {
+        <div className={classNames('flex wrap space-between', css.filters, {
           [css.displayFilters]: this.state.displayFilters,
         })}
         >
           <Field
             name="groupe"
-            component="select"
+            component={SelectField}
+            data={groups}
             onChange={(e, groupe) => this.goTo({ ...this.props.router.location.query, groupe })}
-          >
-            <option value="">Tous les groupes</option>
-            {groups.map(group => (
-              <option key={group.value} value={group.value}>{group.text}</option>
-            ))}
-          </Field>
+            textField="text"
+            valueField="value"
+          />
           <Field
+            component={SelectField}
+            data={[
+              { text: 'Toutes les régions', value: '' },
+              ...regions.map(region => ({ text: region, value: region })),
+            ]}
             name="region"
-            component="select"
             onChange={(e, region) => this.goTo({ ...this.props.router.location.query, region })}
-          >
-            <option value="">Toutes les régions</option>
-            {regions.map(region => (
-              <option key={region}>{region}</option>
-            ))}
-          </Field>
+            textField="text"
+            valueField="value"
+          />
           <Field
+            component={SelectField}
+            data={csps}
             name="csp"
-            component="select"
             onChange={(e, csp) => this.goTo({ ...this.props.router.location.query, csp })}
-          >
-            <option value="">Toutes les CSP</option>
-            {csps.map(csp => (
-              <option key={csp.value} value={csp.value}>{csp.text}</option>
-            ))}
-          </Field>
+            textField="text"
+            valueField="value"
+          />
           <Field
+            component={SelectField}
+            data={[
+              { text: 'Tous les âges', value: '' },
+              ...ages.map(age => ({ text: age, value: age })),
+            ]}
             name="age"
-            component="select"
             onChange={(e, age) => this.goTo({ ...this.props.router.location.query, age })}
-          >
-            <option value="">Tous les âges</option>
-            {ages.map(age => (
-              <option key={age}>{age}</option>
-            ))}
-          </Field>
+            textField="text"
+            valueField="value"
+          />
         </div>
         <button
           className={css.toggleFilters}

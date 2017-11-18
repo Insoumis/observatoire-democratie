@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import { groups, regions, tris } from 'utility';
 
 import SearchField from 'components/reusable/form/SearchField';
+import SelectField from 'components/reusable/form/SelectField';
 
 import css from './DeputeRanking.scss';
 
@@ -29,47 +30,51 @@ class DeputeRankingForm extends Component {
     return (
       <form onSubmit={this.props.handleSubmit(data => this.goTo(data))}>
         <Field component={SearchField} name="requete" placeholder="Rechercher un député ..." />
-        <div className={classNames('flex wrap space-between', {
+        <div className={classNames('flex wrap space-between', css.filters, {
           [css.displayFilters]: this.state.displayFilters,
         })}
         >
           <Field
+            component={SelectField}
+            data={tris}
             name="tri"
-            component="select"
             onChange={(e, tri) => this.goTo({ ...this.props.router.location.query, tri })}
-          >
-            {tris.map(tri => (
-              <option key={tri.value} value={tri.value}>{tri.text}</option>
-            ))}
-          </Field>
+            textField="text"
+            valueField="value"
+          />
           <Field
+            component={SelectField}
+            data={[{
+              text: 'Top',
+              value: 'desc',
+            }, {
+              text: 'Flop',
+              value: 'asc',
+            }]}
             name="ordre"
-            component="select"
             onChange={(e, ordre) => this.goTo({ ...this.props.router.location.query, ordre })}
-          >
-            <option value="desc">Top</option>
-            <option value="asc">Flop</option>
-          </Field>
+            textField="text"
+            valueField="value"
+          />
           <Field
+            component={SelectField}
+            data={groups}
             name="groupe"
-            component="select"
             onChange={(e, groupe) => this.goTo({ ...this.props.router.location.query, groupe })}
-          >
-            <option value="">Tous les groupes</option>
-            {groups.map(group => (
-              <option key={group.value} value={group.value}>{group.text}</option>
-            ))}
-          </Field>
+            textField="text"
+            valueField="value"
+          />
           <Field
+            component={SelectField}
+            data={[
+              { text: 'Toutes les régions', value: '' },
+              ...regions.map(region => ({ text: region, value: region })),
+            ]}
             name="region"
-            component="select"
             onChange={(e, region) => this.goTo({ ...this.props.router.location.query, region })}
-          >
-            <option value="">Toutes les régions</option>
-            {regions.map(region => (
-              <option key={region}>{region}</option>
-            ))}
-          </Field>
+            textField="text"
+            valueField="value"
+          />
         </div>
         <button
           className={css.toggleFilters}
@@ -95,5 +100,5 @@ DeputeRankingForm.propTypes = {
 
 export default reduxForm({
   enableReinitialize: true,
-  form: 'deputeSearch',
+  form: 'deputeRanking',
 })(DeputeRankingForm);

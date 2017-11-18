@@ -1,34 +1,30 @@
 @import '~styles/colors';
 
-.module {
-  margin-top: 40px;
+.module {margin-top: 40px;}
 
-  select {width: calc(100% / 4 - 15px);}
-}
+.filters > div {width: calc(100% / 4 - 15px);}
 
 .toggleFilters {display: none;}
 
 @media (max-width: 1023px) {
-  .module select {
+  .filters > div {
     margin-bottom: 10px;
     width: calc(100% / 2 - 15px);
   }
 }
 
 @media (max-width: 767px) {
-  .module {
-    select {
-      margin-bottom: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s;
-      width: 100%;
-    }
+  .filters > div {
+    margin-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+    width: 100%;
+  }
 
-    .displayFilters select {
-      margin-bottom: 10px;
-      max-height: 38px;
-    }
+  .displayFilters > div {
+    margin-bottom: 10px;
+    max-height: 38px;
   }
 
   .toggleFilters {

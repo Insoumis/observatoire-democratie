@@ -12,7 +12,10 @@
     h2 span {background: $lighter;}
   }
 
-  header {color: $white;}
+  header {
+    color: $white;
+    display: inline-block;
+  }
 
   h2 {
     font-size: 1em;
@@ -99,8 +102,9 @@
     display: block;
 
     header {
-      text-align: center;
+      display: block;
       margin-bottom: 15px;
+      text-align: center;
     }
   }
 

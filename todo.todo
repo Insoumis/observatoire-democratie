@@ -1,6 +1,6 @@
 PROD:
   ✔ Ajouter conf pour les styles + extract css + autoprefixer @done (2017-11-6 17:15:48)
-  ☐ Styler la page 404 de façon marrante @high
+  ✔ Styler la page 404 de façon marrante @high @done (2017-11-18 17:18:32)
   ☐ Changer lien API @low
 
 SEO:
@@ -35,7 +35,8 @@ SEARCH:
   ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:41)
   ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:48)
   ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:27)
-  ☐ Changer les select pour un truc custom @low
+  ✔ Changer les select pour un truc custom @high @done (2017-11-18 23:15:12)
+  ✔ Raccourcir lien header @high @done (2017-11-18 22:48:11)
   ☐ Ajouter un petit mot de description ? @low
 
 TOP:
@@ -46,9 +47,10 @@ TOP:
   ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:44)
   ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:54)
   ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:30)
-  ☐ Ajouter un petit mot de description ? @low
-  ☐ Changer les select pour un truc custom @low
+  ✔ Changer les select pour un truc custom @high @done (2017-11-18 23:15:17)
+  ✔ Raccourcir lien heading @high @done (2017-11-18 22:48:09)
   ☐ Ajouter liens spécifiques à chaque tri sur la stat ? @low
+  ☐ Ajouter un petit mot de description ? @low
 
 DEPUTE:
   ✔ Sur le serveur node -> client rechargement entier de la page @done (2017-11-17 00:11:37)
@@ -59,11 +61,12 @@ DEPUTE:
   ✔ Gérer les 404 redirect sur député insoumis @high @done (2017-11-18 15:22:11)
   ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:32)
   ✔ Président et vice-pres pas les mêmes votes @high @done (2017-11-18 17:05:33)
+  ☐ Changer wordcloud pour un truc sans soucis au niveau de node @high
   ☐ Corriger orthographe des votes clés @low
   ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K)@low
 
 PAGE GROUPE:
-  ☐ à faire ou teasing (gaffe aux url)@high
+  ✔ à faire ou teasing (gaffe aux url)@high @done (2017-11-18 17:18:42)
 
 PAGE À PROPOS:
   ☐ À faire @critical

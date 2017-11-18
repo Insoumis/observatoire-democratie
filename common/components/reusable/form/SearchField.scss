@@ -2,9 +2,9 @@
 
 .module {
   border-radius: 35px;
+  display: flex;
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 0;
 
   &:hover {background: $lighter;}
 
@@ -14,11 +14,11 @@
     border-radius: 0;
     border-bottom-left-radius: 35px;
     border-top-left-radius: 35px;
+    display: block;
     font-size: .95em;
     height: 40px;
     padding: 0 15px;
     transition: border .2s;
-    vertical-align: middle;
     width: calc(100% - 45px);
 
     &:focus {
@@ -29,10 +29,10 @@
 
   button {
     background: $main;
+    display: block;
     height: 40px;
     text-indent: -3px;
     transition: background .2s;
-    vertical-align: middle;
     width: 45px;
 
     &:focus,

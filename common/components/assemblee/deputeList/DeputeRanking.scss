@@ -1,37 +1,35 @@
 @import '~styles/colors';
 
-.module {
-  margin-top: 40px;
+.module {margin-top: 40px;}
 
-  select {width: calc(100% / 4 - 15px);}
-}
+.filters > div {width: calc(100% / 4 - 15px);}
 
 .toggleFilters {display: none;}
 
 @media (max-width: 1023px) {
-  .module select {
+  .filters > div {
     margin-bottom: 10px;
     width: calc(100% / 2 - 15px);
   }
 }
 
 @media (max-width: 767px) {
-  .module {
-    select:not(:first-child) {
+  .filters > div {
+    width: 100%;
+
+    &:not(:first-child) {
       max-height: 0;
       margin: 0;
       overflow: hidden;
       transition: max-height .3s;
     }
+  }
 
-    .displayFilters {
-      select:not(:first-child) {
-        max-height: 38px;
-        margin-bottom: 10px;
-      }
+  .displayFilters {
+    > div:not(:first-child) {
+      max-height: 38px;
+      margin-bottom: 10px;
     }
-
-    select {width: 100%;}
   }
 
   .toggleFilters {

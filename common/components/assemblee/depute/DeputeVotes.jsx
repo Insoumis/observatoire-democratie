@@ -24,6 +24,7 @@ const DeputeVotes = ({ depute }) => (
       <div>
         <h3>Absence</h3>
         <DeputeGauge
+          picto="absent"
           number={formatNbr(depute.stats.positions.absent)}
         />
       </div>
@@ -37,6 +38,7 @@ const DeputeVotes = ({ depute }) => (
       <div>
         <h3>Vote pour</h3>
         <DeputeGauge
+          picto="pour"
           color="#25a87e"
           number={formatNbr(depute.stats.positions.pour)}
         />
@@ -44,6 +46,7 @@ const DeputeVotes = ({ depute }) => (
       <div>
         <h3>Vote contre</h3>
         <DeputeGauge
+          picto="contre"
           color="#E23D21"
           number={formatNbr(depute.stats.positions.contre)}
         />
@@ -51,6 +54,7 @@ const DeputeVotes = ({ depute }) => (
       <div>
         <h3>Abstention</h3>
         <DeputeGauge
+          picto="abstention"
           color="#213558"
           number={formatNbr(depute.stats.positions.abstention)}
         />

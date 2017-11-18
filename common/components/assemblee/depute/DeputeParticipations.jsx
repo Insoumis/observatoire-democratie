@@ -17,11 +17,17 @@ const DeputeParticipations = ({ depute }) => (
     <div className={css.stats}>
       <div>
         <h3>Présence en commission</h3>
-        <DeputeGauge number={formatNbr(depute.stats.commissions.present)} />
+        <DeputeGauge
+          picto="commission"
+          number={formatNbr(depute.stats.commissions.present)}
+        />
       </div>
       <div>
         <h3>Absence en commission</h3>
-        <DeputeGauge number={formatNbr(depute.stats.commissions.absent)} />
+        <DeputeGauge
+          picto="absent"
+          number={formatNbr(depute.stats.commissions.absent)}
+        />
         <p><strong>{formatNbr(depute.stats.commissions.excuse)}%</strong> excusées</p>
       </div>
     </div>

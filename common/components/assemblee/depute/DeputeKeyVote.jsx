@@ -9,21 +9,21 @@ const DeputeKeyVote = ({ vote }) => {
     case 'pour':
       result = (
         <div>
-          <span className={css.pour}><i className="fa fa-thumbs-up" /> Pour</span> {vote.nom} (n°{vote.num})
+          <span className={css.pour}><i className="fa fa-check" /> Pour</span> {vote.nom} (n°{vote.num})
         </div>
       );
       break;
     case 'contre':
       result = (
         <div>
-          <span className={css.contre}><i className="fa fa-thumbs-down" /> Contre</span> {vote.nom} (n°{vote.num})
+          <span className={css.contre}><i className="fa fa-times" /> Contre</span> {vote.nom} (n°{vote.num})
         </div>
       );
       break;
     case 'abstention':
       result = (
         <div>
-          <span className={css.abstention}><i className="fa fa-microphone-slash" /> Abstention</span> sur {vote.nom} (n°{vote.num})
+          <span className={css.abstention}><i className="fa fa-ban" /> Abstention</span> sur {vote.nom} (n°{vote.num})
         </div>
       );
       break;

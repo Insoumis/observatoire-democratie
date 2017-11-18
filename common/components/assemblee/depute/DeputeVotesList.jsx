@@ -27,19 +27,19 @@ const DeputeVotesList = ({ error, isPending, newSearch, pagination, refetch, sea
       case 'pour':
         return (
           <div>
-            <span className={css.pour}><i className="fa fa-thumbs-up" /> Pour</span> le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
+            <span className={css.pour}><i className="fa fa-check" /> Pour</span> le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
           </div>
         );
       case 'contre':
         return (
           <div>
-            <span className={css.contre}><i className="fa fa-thumbs-down" /> Contre</span> le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
+            <span className={css.contre}><i className="fa fa-times" /> Contre</span> le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
           </div>
         );
       case 'abstention':
         return (
           <div>
-            <span className={css.abstention}><i className="fa fa-microphone-slash" /> Abstention</span> sur le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
+            <span className={css.abstention}><i className="fa fa-ban" /> Abstention</span> sur le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
           </div>
         );
       case 'absent':

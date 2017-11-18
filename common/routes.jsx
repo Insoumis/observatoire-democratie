@@ -12,7 +12,7 @@ import DeputeVotes from 'components/assemblee/depute/DeputeVotes';
 import DeputeParticipations from 'components/assemblee/depute/DeputeParticipations';
 import DeputeInfos from 'components/assemblee/depute/DeputeInfos';
 
-import GroupeList from 'containers/assemblee/GroupeList';
+import Groupe from 'components/assemblee/groupe/Groupe';
 
 import NotFound from 'components/NotFound';
 
@@ -29,7 +29,7 @@ export default (
       <Route path="/assemblee/deputes/:id/informations" component={DeputeInfos} />
     </Route>
 
-    <Route path="/assemblee/groupes" component={GroupeList} />
+    <Route path="/assemblee/groupes/:id" component={Groupe} />
 
     <Route path="*" component={NotFound} />
   </Route>

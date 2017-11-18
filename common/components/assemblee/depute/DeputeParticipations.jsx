@@ -58,7 +58,7 @@ const DeputeParticipations = ({ depute }) => (
       </div>
     </div>
 
-    <h2>Ses mots</h2>
+    {/* <h2>Ses mots</h2>
     <div className={css.wordCloud}>
       <WordsMap words={depute.depute_nuages.noms} />
     </div>
@@ -66,7 +66,7 @@ const DeputeParticipations = ({ depute }) => (
     <h2>Ses verbes</h2>
     <div className={css.wordCloud}>
       <WordsMap words={depute.depute_nuages.verbes} />
-    </div>
+    </div> */}
 
     <h2>Ses interventions</h2>
     <div className={css.interventions}>

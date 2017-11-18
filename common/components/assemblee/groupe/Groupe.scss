@@ -1,0 +1,11 @@
+@import '~styles/colors';
+
+.module {
+  background: $white;
+  border: 1px solid $border;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+
+  i {color: $lighter;}
+}

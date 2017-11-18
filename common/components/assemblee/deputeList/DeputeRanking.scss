@@ -29,6 +29,7 @@
     > div:not(:first-child) {
       max-height: 38px;
       margin-bottom: 10px;
+      overflow: visible;
     }
   }
 

@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import DropdownList from 'react-widgets/lib/DropdownList';
 
-import 'react-widgets/lib/scss/react-widgets.scss';
-
 const SelectField = ({ data, input, textField, valueField }) => (
   <DropdownList
     {...input}

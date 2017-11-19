@@ -125,6 +125,7 @@ input {
     cursor: pointer;
 
     &.rw-open > .rw-widget-container {
+      border-radius: 0;
       border-top-left-radius: 19px;
       border-top-right-radius: 19px;
     }

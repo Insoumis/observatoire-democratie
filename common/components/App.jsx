@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 import Header from 'components/header/Header';
 
+import 'react-widgets/lib/scss/react-widgets.scss';
 import './App.scss';
 
 const App = ({ children }) => (

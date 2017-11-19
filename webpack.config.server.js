@@ -11,5 +11,7 @@ module.exports = {
     filename: 'server.bundle.js',
   },
   target: 'node',
-  externals: [nodeExternals()],
+  externals: [nodeExternals({
+    whitelist: [/react-widgets\/lib\/scss/],
+  })],
 };

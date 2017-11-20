@@ -15,19 +15,6 @@ const depute = (state = null, action) => {
   }
 };
 
-const lastIntervention = (state = null, action) => {
-  switch (action.type) {
-    case `${ASSEMBLEE.fetchLastIntervention}_REQUEST`:
-      return null;
-    case `${ASSEMBLEE.fetchLastIntervention}_SUCCESS`:
-      return action.payload.items[0];
-    case `${ASSEMBLEE.fetchLastIntervention}_FAILURE`:
-      return false;
-    default:
-      return state;
-  }
-};
-
 const keyVotes = (state = null, action) => {
   switch (action.type) {
     case `${ASSEMBLEE.fetchKeyVotes}_REQUEST`:
@@ -41,10 +28,23 @@ const keyVotes = (state = null, action) => {
   }
 };
 
+const lastIntervention = (state = null, action) => {
+  switch (action.type) {
+    case `${ASSEMBLEE.fetchLastIntervention}_REQUEST`:
+      return null;
+    case `${ASSEMBLEE.fetchLastIntervention}_SUCCESS`:
+      return action.payload.items[0];
+    case `${ASSEMBLEE.fetchLastIntervention}_FAILURE`:
+      return false;
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   depute,
-  lastIntervention,
   keyVotes,
+  lastIntervention,
 });
 
 

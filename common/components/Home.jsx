@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 import DeputeRandom from 'components/assemblee/depute/DeputeRandom';
 import KeyVoteList from 'components/assemblee/keyVoteList/KeyVoteList';
+import DeputeLastIntervention from 'components/assemblee/depute/DeputeLastIntervention';
 
 import illustration from './assets/illu-home.png';
 import css from './Home.scss';
 
-const Home = ({ home, refetchDepute, refetchKeyVotes }) => (
+const Home = ({ home, refetchDepute, refetchKeyVotes, refetchLastIntervention }) => (
   <div className={`container ${css.module}`}>
     <section className={css.presentation}>
       <img src={illustration} alt="Qu'est-ce que l'Observatoire de la Démocratie ?" />
@@ -45,6 +46,10 @@ const Home = ({ home, refetchDepute, refetchKeyVotes }) => (
       </section>
       <section>
         <h1>La dernière intervention</h1>
+        <DeputeLastIntervention
+          intervention={home.lastIntervention}
+          refetch={refetchLastIntervention}
+        />
       </section>
     </div>
   </div>
@@ -57,6 +62,7 @@ Home.propTypes = {
   }).isRequired,
   refetchDepute: PropTypes.func.isRequired,
   refetchKeyVotes: PropTypes.func.isRequired,
+  refetchLastIntervention: PropTypes.func.isRequired,
 };
 
 export default Home;

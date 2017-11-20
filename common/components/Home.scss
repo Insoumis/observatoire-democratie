@@ -18,10 +18,27 @@
     margin-bottom: 30px;
     text-transform: uppercase;
 
-    strong {color: $emphasis;}
-    //color: $emphasis;
+    strong {
+      animation: appear .6s;
+      color: $emphasis;
+      display: inline-block;
+    }
   }
 }
+
+@keyframes appear {
+  0% {
+    color: $main;
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    color: $emphasis;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 .main {
   section > h1 {

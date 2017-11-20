@@ -31,21 +31,21 @@ const Home = ({ home, refetchDepute, refetchKeyVotes, refetchLastIntervention })
     </section>
     <div className={css.main}>
       <section>
-        <h1>Un·e député·e au hasard</h1>
+        <h1>Un·e <strong>député·e</strong> au hasard</h1>
         <DeputeRandom
           depute={home.depute}
           refetch={refetchDepute}
         />
       </section>
       <section>
-        <h1>Les derniers votes clés</h1>
+        <h1>Les derniers <strong>votes</strong> clés</h1>
         <KeyVoteList
           keyVotes={home.keyVotes}
           refetch={refetchKeyVotes}
         />
       </section>
       <section>
-        <h1>La dernière intervention</h1>
+        <h1>La dernière <strong>intervention</strong></h1>
         <DeputeLastIntervention
           intervention={home.lastIntervention}
           refetch={refetchLastIntervention}

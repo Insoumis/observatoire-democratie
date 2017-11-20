@@ -1,13 +1,15 @@
 @import '~styles/colors';
 
 .module {
-  margin-top: 45px;
+  margin-top: 60px;
 }
 
 .presentation {
   align-items: center;
   display: flex;
-  margin-bottom: 75px;
+
+  border-bottom: 1px dashed darken($border, 10%);
+  padding-bottom: 45px;
 
   img {margin-right: 30px;}
 
@@ -17,6 +19,7 @@
     text-transform: uppercase;
 
     strong {color: $emphasis;}
+    //color: $emphasis;
   }
 }
 
@@ -25,8 +28,10 @@
     font-size: 1.5em;
     margin: 60px 0 45px;
     text-transform: uppercase;
+
+    strong {color: $lighter;}
   }
 
-  section {border-bottom: 1px dashed $border;}
+  section {border-bottom: 1px dashed darken($border, 10%);}
 }
 

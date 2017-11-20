@@ -12,15 +12,21 @@ SEO:
 GLOBAL:
   ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)
   ✔ Franciser lien et requêtes @high @done (2017-11-18 15:20:54)
+  ☐ Animation au viewport @low
   ☐ Épurer l'API (liste pour Oro) @low
   ☐ Debounce le HOC de resize @low
+  ☐ Passer tous les graphs sous D3 @low (wordcloud + election)
+  ☐ Réduire le stack D3
 
 HEADER:
   ✔ Liens actifs @done (2017-11-5 14:17:45)
   ✔ Responsive @done (2017-11-6 17:15:41)
 
 HOME:
-  ☐ À faire @critical
+  ☐ Ajouter depute random au fetch static
+  ☐ Ajouter la dernière intervention (+ fetch static)
+  ☐ Rendre la stat du député random
+  ☐ Responsive
 
 SEARCH:
   ✔ Style de RequestError @done (2017-11-6 01:58:04)

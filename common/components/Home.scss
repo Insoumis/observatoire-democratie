@@ -1,3 +1,32 @@
-.module {
+@import '~styles/colors';
 
+.module {
+  margin-top: 45px;
 }
+
+.presentation {
+  align-items: center;
+  display: flex;
+  margin-bottom: 75px;
+
+  img {margin-right: 30px;}
+
+  h1 {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    strong {color: $emphasis;}
+  }
+}
+
+.main {
+  section > h1 {
+    font-size: 1.5em;
+    margin: 60px 0 45px;
+    text-transform: uppercase;
+  }
+
+  section {border-bottom: 1px dashed $border;}
+}
+

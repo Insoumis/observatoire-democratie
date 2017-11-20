@@ -78,9 +78,13 @@ const DeputeRankingListItem = ({ depute, location }) => {
 
   return (
     <article className={css.module}>
-      <div className={css.rank}>
-        <span>{depute.depute_rank}</span>
-      </div>
+      {(depute.depute_rank) ?
+        <div className={css.rank}>
+          <span>{depute.depute_rank}</span>
+        </div>
+        :
+        false
+      }
       <div className={css.photo}>
         <Link to={`/assemblee/deputes/${depute.id}`}>
           <img src={depute.depute_photo_an} alt="député" />

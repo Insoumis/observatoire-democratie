@@ -112,7 +112,7 @@ export const csps = [{
   text: 'Agriculteur·trice·s exploitant·e·s',
   value: 'Agriculteurs exploitants',
 }, {
-  text: 'Artisans, commerçant·e·s et chefs d\'entreprise',
+  text: 'Artisan·e·s, commerçant·e·s et chefs d\'entreprise',
   value: 'Artisans, commerçants et chefs d\'entreprise',
 }, {
   text: 'Autres (y compris inconnu et sans profession déclarée)',

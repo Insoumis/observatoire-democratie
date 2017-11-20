@@ -54,6 +54,7 @@
   nav:last-of-type {
     background: $white;
     border-bottom: 1px solid $border;
+    font-size: 1.1em;
     padding: 16px 0;
 
     ul {
@@ -65,9 +66,8 @@
     li {
       display: inline-block;
       font-size: .9em;
-      margin: 0 10px;
+      margin: 0 15px;
     }
-
 
     a {
       text-decoration: none;
@@ -104,6 +104,12 @@
       &.noHome {
         height: 100px;
       }
+    }
+
+    nav:last-of-type {
+      font-size: 1em;
+
+      li {margin: 0 10px;}
     }
   }
 }

@@ -1,6 +1,9 @@
 import { depute } from './schema';
 
 export const ASSEMBLEE = {
+  fetchDeputeRandom: 'FETCH_DEPUTE_RANDOM',
+  fetchKeyVotes: 'FETCH_KEY_VOTES',
+  fetchLastIntervention: 'FETCH_LAST_INTERVENTION',
   fetchDeputeSearch: 'FETCH_DEPUTE_SEARCH',
   fetchDeputeRanking: 'FETCH_DEPUTE_RANKING',
   fetchDepute: 'FETCH_DEPUTE',
@@ -8,7 +11,27 @@ export const ASSEMBLEE = {
   fetchDeputeVotes: 'FETCH_DEPUTE_VOTES',
   searchDeputeInterventions: 'SEARCH_DEPUTE_INTERVENTIONS',
   fetchDeputeInterventions: 'FETCH_DEPUTE_INTERVENTIONS',
+  fetchGroups: 'FETCH_GROUPS',
 };
+
+
+export const fetchDeputeRandom = () => ({
+  endpoint: '/deputes/hasard',
+  api: 'assemblee',
+  type: ASSEMBLEE.fetchDeputeRandom,
+});
+
+export const fetchKeyVotes = () => ({
+  endpoint: '/scrutins/cles?nb=2',
+  api: 'assemblee',
+  type: ASSEMBLEE.fetchKeyVotes,
+});
+
+export const fetchLastIntervention = () => ({
+  endpoint: '/interventions?itemsperpage=1',
+  api: 'assemblee',
+  type: ASSEMBLEE.fetchLastIntervention,
+});
 
 export const fetchDeputeSearch = search => ({
   endpoint: `/deputes/liste${search}`,
@@ -55,3 +78,8 @@ export const fetchDeputeInterventions = search => ({
   type: ASSEMBLEE.fetchDeputeInterventions,
 });
 
+export const fetchGroups = () => ({
+  endpoint: '/groupes',
+  api: 'assemblee',
+  type: ASSEMBLEE.fetchGroups,
+});

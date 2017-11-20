@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { createSelector } from 'reselect';
 import { reducer as form } from 'redux-form';
 
+import home, * as fromHome from './home';
 import deputes, * as fromDeputes from './deputes';
 import deputeSearch, * as fromDeputeSearch from './deputeSearch';
 import deputeRanking, * as fromDeputeRanking from './deputeRanking';
@@ -9,6 +10,7 @@ import deputeVotes, * as fromDeputeVotes from './deputeVotes';
 import deputeInterventions, * as fromDeputeInterventions from './deputeInterventions';
 
 const app = combineReducers({
+  home,
   deputes,
   deputeSearch,
   deputeRanking,
@@ -19,6 +21,8 @@ const app = combineReducers({
 
 export default app;
 
+
+export const getHome = state => fromHome.getHome(state.home);
 
 const getAllDeputes = state => fromDeputes.getDeputes(state.deputes);
 
@@ -46,3 +50,4 @@ export const getDeputeVotes = state => fromDeputeVotes.getDeputeVotes(state.depu
 
 export const getDeputeInterventions = state =>
   fromDeputeInterventions.getDeputeInterventions(state.deputeInterventions);
+

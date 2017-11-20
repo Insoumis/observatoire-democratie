@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect, Route, IndexRoute } from 'react-router';
 
 import App from 'components/App';
-import Home from 'components/Home';
+import Home from 'containers/Home';
 
 import DeputeSearch from 'containers/assemblee/DeputeSearch';
 import DeputeRanking from 'containers/assemblee/DeputeRanking';

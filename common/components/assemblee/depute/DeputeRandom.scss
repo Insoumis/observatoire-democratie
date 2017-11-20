@@ -1,0 +1,15 @@
+@import '~styles/colors';
+
+.whiteBlock {
+  background: $white;
+  border: 1px solid $border;
+  padding: 25px;
+}
+
+.retry {
+  composes: whiteBlock;
+
+  > div {margin-top: 0;}
+}
+
+.module > article {margin-bottom: 60px;}

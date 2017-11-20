@@ -1,0 +1,57 @@
+@import '~styles/colors';
+
+.whiteBlock {
+  background: $white;
+  border: 1px solid $border;
+  padding: 25px;
+}
+
+.retry {
+  composes: whiteBlock;
+
+  > div {margin-top: 0;}
+}
+
+.module {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  article {
+    background: $white;
+    border: 1px solid $border;
+    padding: 25px;
+    width: calc(100% / 2 - 15px);
+  }
+
+  h2 {
+    font-size: .9em;
+
+    span {
+      background: $emphasis;
+      color: $white;
+      display: inline-block;
+      padding: 2px 5px;
+    }
+  }
+
+  h3 {
+    background: $main;
+    color: $white;
+    display: inline-block;
+    font-size: 1em;
+    margin-bottom: 20px;
+    padding: 4px 6px;
+  }
+}
+
+.graph > div {
+  height: auto !important;
+  margin: 45px 45px 15px;
+}
+
+.legend {
+  fill: $main;
+  font-size: .9em;
+}

@@ -2,120 +2,129 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router';
 
-import { formatNbr } from 'utility';
+import { formatNbr, tris } from 'utility';
 
 import css from './DeputeRankingListItem.scss';
 
 const DeputeRankingListItem = ({ depute, location }) => {
   let stat;
   let rank;
-  switch (location.query.tri) {
-    case 'stats.positions.dissidence':
-      stat = (
-        <div className={css.stats}>
-          <h3>Contre son groupe</h3>
-          <div className={css.dissidence}>
-            <span>
-              {(depute.groupe_abrev === 'NI') ?
-                'Non disponible'
-                :
-                `${formatNbr(depute.stats.positions.dissidence)} %`
-              }
-            </span>
+
+  const initContent = (tri) => {
+    switch (tri) {
+      case 'stats.positions.dissidence':
+        stat = (
+          <div className={css.stats}>
+            <h3>Contre son groupe</h3>
+            <div className={css.dissidence}>
+              <span>
+                {(depute.groupe_abrev === 'NI') ?
+                  'Non disponible'
+                  :
+                  `${formatNbr(depute.stats.positions.dissidence)} %`
+                }
+              </span>
+            </div>
           </div>
-        </div>
-      );
+        );
 
-      if (location.query.ordre === 'asc') {
-        rank = depute.stats.ranks.up.dissidence;
-      } else {
-        rank = depute.stats.ranks.down.dissidence;
-      }
+        if (location.query.ordre === 'asc') {
+          rank = depute.stats.ranks.up.dissidence;
+        } else {
+          rank = depute.stats.ranks.down.dissidence;
+        }
 
-      break;
-    case 'stats.nbitvs':
-      stat = (
-        <div className={css.stats}>
-          <h3>Nombre d&apos;interventions</h3>
-          <div className={css.talk}>
-            <span>{formatNbr(depute.stats.nbitvs)}</span>
+        break;
+      case 'stats.nbitvs':
+        stat = (
+          <div className={css.stats}>
+            <h3>Nombre d&apos;interventions</h3>
+            <div className={css.talk}>
+              <span>{formatNbr(depute.stats.nbitvs)}</span>
+            </div>
           </div>
-        </div>
-      );
+        );
 
-      if (location.query.ordre === 'asc') {
-        rank = depute.stats.ranks.up.nbitvs;
-      } else {
-        rank = depute.stats.ranks.down.nbitvs;
-      }
+        if (location.query.ordre === 'asc') {
+          rank = depute.stats.ranks.up.nbitvs;
+        } else {
+          rank = depute.stats.ranks.down.nbitvs;
+        }
 
-      break;
-    case 'stats.nbmots':
-      stat = (
-        <div className={css.stats}>
-          <h3>Nombre de mots</h3>
-          <div className={css.words}>
-            <span>{formatNbr(depute.stats.nbmots)}</span>
+        break;
+      case 'stats.nbmots':
+        stat = (
+          <div className={css.stats}>
+            <h3>Nombre de mots</h3>
+            <div className={css.words}>
+              <span>{formatNbr(depute.stats.nbmots)}</span>
+            </div>
           </div>
-        </div>
-      );
+        );
 
-      if (location.query.ordre === 'asc') {
-        rank = depute.stats.ranks.up.nbmots;
-      } else {
-        rank = depute.stats.ranks.down.nbmots;
-      }
+        if (location.query.ordre === 'asc') {
+          rank = depute.stats.ranks.up.nbmots;
+        } else {
+          rank = depute.stats.ranks.down.nbmots;
+        }
 
-      break;
-    case 'stats.amendements.rediges':
-      stat = (
-        <div className={css.stats}>
-          <h3>Amendements rédigés</h3>
-          <div className={css.law}>
-            <span>{formatNbr(depute.stats.amendements.rediges)}</span>
+        break;
+      case 'stats.amendements.rediges':
+        stat = (
+          <div className={css.stats}>
+            <h3>Amendements rédigés</h3>
+            <div className={css.law}>
+              <span>{formatNbr(depute.stats.amendements.rediges)}</span>
+            </div>
           </div>
-        </div>
-      );
+        );
 
-      if (location.query.ordre === 'asc') {
-        rank = depute.stats.ranks.up.nbamendements;
-      } else {
-        rank = depute.stats.ranks.down.nbamendements;
-      }
+        if (location.query.ordre === 'asc') {
+          rank = depute.stats.ranks.up.nbamendements;
+        } else {
+          rank = depute.stats.ranks.down.nbamendements;
+        }
 
-      break;
-    case 'stats.commissions.present':
-      stat = (
-        <div className={css.stats}>
-          <h3>Présence en commission</h3>
-          <div className={css.commission}>
-            <span>{formatNbr(depute.stats.commissions.present)} %</span>
+        break;
+      case 'stats.commissions.present':
+        stat = (
+          <div className={css.stats}>
+            <h3>Présence en commission</h3>
+            <div className={css.commission}>
+              <span>{formatNbr(depute.stats.commissions.present)} %</span>
+            </div>
           </div>
-        </div>
-      );
+        );
 
-      if (location.query.ordre === 'asc') {
-        rank = depute.stats.ranks.up.pctcommissions;
-      } else {
-        rank = depute.stats.ranks.down.pctcommissions;
-      }
+        if (location.query.ordre === 'asc') {
+          rank = depute.stats.ranks.up.pctcommissions;
+        } else {
+          rank = depute.stats.ranks.down.pctcommissions;
+        }
 
-      break;
-    default:
-      stat = (
-        <div className={css.stats}>
-          <h3>Participation aux scrutins publics</h3>
-          <div>
-            <span>{formatNbr(depute.stats.positions.exprimes)} %</span>
+        break;
+      default:
+        stat = (
+          <div className={css.stats}>
+            <h3>Participation aux scrutins publics</h3>
+            <div>
+              <span>{formatNbr(depute.stats.positions.exprimes)} %</span>
+            </div>
           </div>
-        </div>
-      );
+        );
 
-      if (location.query.ordre === 'asc') {
-        rank = depute.stats.ranks.up.exprimes;
-      } else {
-        rank = depute.stats.ranks.down.exprimes;
-      }
+        if (location.query.ordre === 'asc') {
+          rank = depute.stats.ranks.up.exprimes;
+        } else {
+          rank = depute.stats.ranks.down.exprimes;
+        }
+    }
+  };
+
+  if (location.pathname === '/') {
+    initContent(tris[Math.floor(Math.random() * tris.length)].value);
+  } else {
+    initContent(location.query.tri);
   }
 
   return (

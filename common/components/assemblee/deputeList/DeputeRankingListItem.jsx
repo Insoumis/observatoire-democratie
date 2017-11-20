@@ -8,6 +8,7 @@ import css from './DeputeRankingListItem.scss';
 
 const DeputeRankingListItem = ({ depute, location }) => {
   let stat;
+  let rank;
   switch (location.query.tri) {
     case 'stats.positions.dissidence':
       stat = (
@@ -24,6 +25,13 @@ const DeputeRankingListItem = ({ depute, location }) => {
           </div>
         </div>
       );
+
+      if (location.query.ordre === 'asc') {
+        rank = depute.stats.ranks.up.dissidence;
+      } else {
+        rank = depute.stats.ranks.down.dissidence;
+      }
+
       break;
     case 'stats.nbitvs':
       stat = (
@@ -34,6 +42,13 @@ const DeputeRankingListItem = ({ depute, location }) => {
           </div>
         </div>
       );
+
+      if (location.query.ordre === 'asc') {
+        rank = depute.stats.ranks.up.nbitvs;
+      } else {
+        rank = depute.stats.ranks.down.nbitvs;
+      }
+
       break;
     case 'stats.nbmots':
       stat = (
@@ -44,6 +59,13 @@ const DeputeRankingListItem = ({ depute, location }) => {
           </div>
         </div>
       );
+
+      if (location.query.ordre === 'asc') {
+        rank = depute.stats.ranks.up.nbmots;
+      } else {
+        rank = depute.stats.ranks.down.nbmots;
+      }
+
       break;
     case 'stats.amendements.rediges':
       stat = (
@@ -54,6 +76,13 @@ const DeputeRankingListItem = ({ depute, location }) => {
           </div>
         </div>
       );
+
+      if (location.query.ordre === 'asc') {
+        rank = depute.stats.ranks.up.nbamendements;
+      } else {
+        rank = depute.stats.ranks.down.nbamendements;
+      }
+
       break;
     case 'stats.commissions.present':
       stat = (
@@ -64,6 +93,13 @@ const DeputeRankingListItem = ({ depute, location }) => {
           </div>
         </div>
       );
+
+      if (location.query.ordre === 'asc') {
+        rank = depute.stats.ranks.up.pctcommissions;
+      } else {
+        rank = depute.stats.ranks.down.pctcommissions;
+      }
+
       break;
     default:
       stat = (
@@ -74,17 +110,19 @@ const DeputeRankingListItem = ({ depute, location }) => {
           </div>
         </div>
       );
+
+      if (location.query.ordre === 'asc') {
+        rank = depute.stats.ranks.up.exprimes;
+      } else {
+        rank = depute.stats.ranks.down.exprimes;
+      }
   }
 
   return (
     <article className={css.module}>
-      {(depute.depute_rank) ?
-        <div className={css.rank}>
-          <span>{depute.depute_rank}</span>
-        </div>
-        :
-        false
-      }
+      <div className={css.rank}>
+        <span>{rank}</span>
+      </div>
       <div className={css.photo}>
         <Link to={`/assemblee/deputes/${depute.id}`}>
           <img src={depute.depute_photo_an} alt="député" />

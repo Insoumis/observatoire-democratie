@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 const config = require('./webpack.config');
+const env = require('./config');
 
 module.exports = {
   ...config,
@@ -11,6 +12,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify('production') },
+      BASE_URL: JSON.stringify(env[process.env.ENV].BASE_URL),
+      API_URL: JSON.stringify(env[process.env.ENV].API_URL),
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({

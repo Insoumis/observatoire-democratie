@@ -19,8 +19,8 @@ const App = ({ children }) => (
 
       <meta property="og:title" content="Observatoire de la Démocratie" />
       <meta property="og:description" content="" />
-      <meta property="og:image" content={`http://dev.observatoire-democratie.fr${test}`} />
-      <meta property="og:url" content="http://dev.observatoire-democratie.fr" />
+      <meta property="og:image" content={`${BASE_URL}${test}`} />
+      <meta property="og:url" content={BASE_URL} />
       <meta name="twitter:image:alt" content="Un outil simple pour comprendre une démocratie complexe." />
       <meta name="twitter:card" content="summary_large_image" />
     </Helmet>

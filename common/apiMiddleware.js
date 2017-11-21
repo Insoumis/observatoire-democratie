@@ -22,9 +22,7 @@ export default ({ dispatch }) => next => (action) => {
     throw error;
   };
 
-  const api = 'http://api.observatoire-democratie.fr';
-
-  return fetch(api + action.endpoint, {
+  return fetch(API_URL + action.endpoint, {
     method: 'get',
   })
     .then(checkStatus)

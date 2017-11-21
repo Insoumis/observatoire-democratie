@@ -76,6 +76,7 @@ export const fetchDeputeInterventions = search => ({
   endpoint: `/interventions${search}`,
   api: 'assemblee',
   type: ASSEMBLEE.fetchDeputeInterventions,
+  meta: { search },
 });
 
 export const fetchGroups = () => ({

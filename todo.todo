@@ -28,7 +28,7 @@ HOME:
   ✔ Ajouter la dernière intervention (+ fetch static) @done (2017-11-20 17:02:03)
   ✔ Rendre la stat du député random @done (2017-11-20 17:02:04)
   ✔ Améliorer le graph des votes clés @critical @done (2017-11-21 01:42:18)
-  ☐ Responsive @critical
+  ✔ Responsive @critical @done (2017-11-21 02:48:20)
   ☐ Ajouter message d'intro @critical
   ☐ Permettre de selectionner les param du graphe vote clé @low
 

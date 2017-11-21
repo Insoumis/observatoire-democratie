@@ -10,7 +10,7 @@ import View from 'components/assemblee/depute/DeputeInterventionsList';
 
 class DeputeInterventionsList extends Component {
   componentDidMount() {
-    this.fetchDeputeInterventions(this.props.deputeInterventions.search);
+    this.fetchDeputeInterventions();
   }
 
   componentWillReceiveProps({ deputeInterventions }) {

@@ -10,7 +10,7 @@ import View from 'components/assemblee/depute/DeputeVotesList';
 
 class DeputeVotesList extends Component {
   componentDidMount() {
-    this.fetchDeputeVotes(this.props.deputeVotes.search);
+    this.fetchDeputeVotes();
   }
 
   componentWillReceiveProps({ deputeVotes }) {

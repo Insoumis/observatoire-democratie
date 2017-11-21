@@ -5,6 +5,11 @@ import { RouterContext } from 'react-router';
 import Helmet from 'react-helmet';
 import serialize from 'serialize-javascript';
 
+import appleTouchIcon from './assets/apple-touch-icon.png';
+import fav32 from './assets/favicon-32x32.png';
+import fav16 from './assets/favicon-16x16.png';
+import safariTab from './assets/safari-pinned-tab.svg';
+
 export default (store, props) => {
   const head = Helmet.rewind();
   const html = renderToString(
@@ -27,6 +32,15 @@ export default (store, props) => {
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/styles.css" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="${appleTouchIcon}">
+        <link rel="icon" type="image/png" sizes="32x32" href="${fav32}">
+        <link rel="icon" type="image/png" sizes="16x16" href="${fav16}">
+        <link rel="manifest" href="/assets/manifest.json">
+        <link rel="mask-icon" href="${safariTab}" color="#213558">
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <meta name="msapplication-config" content="/assets/browserconfig.xml">
+        <meta name="theme-color" content="#213558">
       </head>
       <body>
         <div id='root'>${html}</div>

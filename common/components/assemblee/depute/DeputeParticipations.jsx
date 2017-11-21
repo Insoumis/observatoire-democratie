@@ -41,7 +41,7 @@ const DeputeParticipations = ({ depute }) => (
           <h3>Amendements rédigés</h3>
           <strong><AnimatedNumber value={depute.stats.amendements.rediges} /></strong>
           <p>
-            <strong>{depute.stats.amendements.adoptes}%</strong> adopté
+            <strong>{depute.stats.amendements.adoptes || 0}%</strong> adopté
             {(depute.stats.amendements.adoptes > 1) ? 's' : ''}
           </p>
         </div>

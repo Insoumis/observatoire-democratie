@@ -4,29 +4,31 @@ PROD:
   ☐ Changer lien API @low
 
 SEO:
-  ☐ Ajouter une description @high
-  ☐ Ajouter les images de share @high
-  ☐ Ajouter favicon @high
+  ☐ Ajouter une description @critical
+  ☐ Ajouter les images de share @critical
+  ☐ Ajouter favicon @critical
   ☐ Images particulières pour page député et groupe @low
 
 GLOBAL:
   ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)
   ✔ Franciser lien et requêtes @high @done (2017-11-18 15:20:54)
-  ☐ Animation au viewport @low
-  ☐ Épurer l'API (liste pour Oro) @low
-  ☐ Debounce le HOC de resize @low
-  ☐ Passer tous les graphs sous D3 @low (wordcloud + election)
-  ☐ Réduire le stack D3
+  ☐ Animation au viewport @high
+  ☐ Épurer l'API (liste pour Oro) @high
+  ☐ Debounce le HOC de resize @high
+  ☐ Passer tous les graphs sous D3 @high (wordcloud + election)
+  ☐ Réduire le stack D3 @high
 
 HEADER:
   ✔ Liens actifs @done (2017-11-5 14:17:45)
   ✔ Responsive @done (2017-11-6 17:15:41)
 
 HOME:
-  ☐ Ajouter depute random au fetch static
-  ☐ Ajouter la dernière intervention (+ fetch static)
-  ☐ Rendre la stat du député random
-  ☐ Responsive
+  ✔ Ajouter depute random au fetch static @done (2017-11-20 17:02:01)
+  ✔ Ajouter la dernière intervention (+ fetch static) @done (2017-11-20 17:02:03)
+  ✔ Rendre la stat du député random @done (2017-11-20 17:02:04)
+  ☐ Responsive @critical
+  ☐ Améliorer le graph des votes clés @critical
+  ☐ Ajouter message d'intro @critical
 
 SEARCH:
   ✔ Style de RequestError @done (2017-11-6 01:58:04)
@@ -43,7 +45,6 @@ SEARCH:
   ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:27)
   ✔ Changer les select pour un truc custom @high @done (2017-11-18 23:15:12)
   ✔ Raccourcir lien header @high @done (2017-11-18 22:48:11)
-  ☐ Ajouter un petit mot de description ? @low
 
 TOP:
   ✔ Tester le formulaire de tri @done (2017-11-7 16:21:57)
@@ -55,8 +56,8 @@ TOP:
   ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:30)
   ✔ Changer les select pour un truc custom @high @done (2017-11-18 23:15:17)
   ✔ Raccourcir lien heading @high @done (2017-11-18 22:48:09)
+  ☐ Bug sur les select quand multi select @critical
   ☐ Ajouter liens spécifiques à chaque tri sur la stat ? @low
-  ☐ Ajouter un petit mot de description ? @low
 
 DEPUTE:
   ✔ Sur le serveur node -> client rechargement entier de la page @done (2017-11-17 00:11:37)
@@ -67,9 +68,10 @@ DEPUTE:
   ✔ Gérer les 404 redirect sur député insoumis @high @done (2017-11-18 15:22:11)
   ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:32)
   ✔ Président et vice-pres pas les mêmes votes @high @done (2017-11-18 17:05:33)
-  ☐ Changer wordcloud pour un truc sans soucis au niveau de node @high
-  ☐ Corriger orthographe des votes clés @low
-  ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K)@low
+  ☐ Changer wordcloud pour un truc sans soucis au niveau de node @critical
+  ☐ Corriger orthographe des votes clés @critical
+  ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K) @critical
+  ☐ Bug sur les select quand multi select @critical
   ☐ Ajouter le calendrier @low
   ☐ Ajouter l'hémicycle et la circo @low
 

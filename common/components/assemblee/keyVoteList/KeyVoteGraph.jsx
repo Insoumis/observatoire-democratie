@@ -28,7 +28,8 @@ class KeyVoteGraph extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.width !== this.props.width) {
-      d3.select(this.node).select('g').remove();
+      d3.select(this.wrapper).selectAll('div').remove();
+      d3.select(this.node).selectAll('g').remove();
       this.drawPie();
     }
   }
@@ -52,7 +53,7 @@ class KeyVoteGraph extends Component {
       .value(d => d.value)
       .sort(null);
 
-    svg.selectAll('path')
+    const path = svg.selectAll('path')
       .data(pie(this.data))
       .enter()
       .append('path')
@@ -85,22 +86,49 @@ class KeyVoteGraph extends Component {
       .attr('x', legendRectSize + legendSpacing)
       .attr('y', legendRectSize - legendSpacing)
       .text(d => d);
+
+    const tooltip = d3.select(this.wrapper)
+      .append('div')
+      .attr('class', css.tooltip);
+
+    const wrapper = tooltip.append('div');
+
+    wrapper.append('h4').attr('class', 'label');
+    wrapper.append('strong').attr('class', 'percent');
+    wrapper.append('div').attr('class', 'count');
+
+    path.on('mouseover', (d) => {
+      tooltip.attr('style', `height:${height / 2}px;width:${width / 2}px;border-color:${color(d.data.label)}`);
+      tooltip.attr('class', `${css.tooltip} ${css.displayed}`);
+
+      tooltip.select('.label').html(d.data.label);
+
+      tooltip.select('.percent')
+        .attr('style', `color:${color(d.data.label)}`)
+        .html(`${Math.ceil((d.data.value / this.props.data.total) * 100)}%`);
+
+      tooltip.select('.count').html(`(${d.data.value} / ${this.props.data.total})`);
+    });
+
+    path.on('mouseout', () => tooltip.attr('class', css.tooltip));
   }
 
   render() {
     return (
-      <svg
-        height={this.props.width}
-        ref={(node) => { this.node = node; }}
-        width={this.props.width}
-      />
+      <div ref={(node) => { this.wrapper = node; }}>
+        <svg
+          height={this.props.width}
+          ref={(node) => { this.node = node; }}
+          width={this.props.width}
+        />
+      </div>
     );
   }
 }
 
 KeyVoteGraph.propTypes = {
   data: PropTypes.shape({
-
+    total: PropTypes.number.isRequired,
   }).isRequired,
   width: PropTypes.number.isRequired,
 };

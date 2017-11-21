@@ -4,5 +4,5 @@ branches:
   only: master
 addons:
   ssh_known_hosts: 163.172.60.184
-script: npm run lint
+install: true
 after_success: bash .travis/deploy.sh

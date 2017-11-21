@@ -52,7 +52,6 @@ const error = (state = false, action) => {
 const search = (state = {}, action) => {
   switch (action.type) {
     case `${ASSEMBLEE.fetchDeputeInterventions}_REQUEST`:
-      console.log(action.meta.search);
       return state;
     case ASSEMBLEE.searchDeputeInterventions:
       return action.payload;

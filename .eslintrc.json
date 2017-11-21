@@ -7,6 +7,10 @@
   "settings": {
     "import/resolver": "webpack"
   },
+  "globals": {
+    "BASE_URL": true,
+    "API_URL": true
+  },
   "rules": {
     "function-paren-newline": ["error", "consistent"],
     "object-curly-newline": "off",

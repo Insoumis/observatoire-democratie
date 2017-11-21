@@ -23,9 +23,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
-        BASE_URL: JSON.stringify(env[process.env.ENV].BASE_URL),
-        API_URL: JSON.stringify(env[process.env.ENV].API_URL),
       },
+      BASE_URL: JSON.stringify(env[process.env.ENV].BASE_URL),
+      API_URL: JSON.stringify(env[process.env.ENV].API_URL),
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({

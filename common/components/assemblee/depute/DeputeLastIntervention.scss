@@ -69,3 +69,7 @@
     i {color: $lighter;}
   }
 }
+
+@media (max-width: 767px) {
+  .module blockquote {margin: 20px 0 0;}
+}

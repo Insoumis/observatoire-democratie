@@ -1,14 +1,11 @@
 @import '~styles/colors';
 
-.module {
-  margin-top: 60px;
-}
+.module {margin-top: 60px;}
 
 .presentation {
   align-items: center;
-  display: flex;
-
   border-bottom: 1px dashed darken($border, 10%);
+  display: flex;
   padding-bottom: 45px;
 
   img {margin-right: 30px;}
@@ -25,7 +22,6 @@
     }
   }
 }
-
 @keyframes appear {
   0% {
     color: $main;
@@ -39,7 +35,6 @@
   }
 }
 
-
 .main {
   section > h1 {
     font-size: 1.5em;
@@ -52,3 +47,15 @@
   section {border-bottom: 1px dashed darken($border, 10%);}
 }
 
+@media (max-width: 767px) {
+  .module {margin-top: 45px;}
+
+  .presentation {
+    font-size: .93em;
+    padding-bottom: 30px;
+
+    img {display: none;}
+  }
+
+  .main section > h1 {font-size: 1.4em;}
+}

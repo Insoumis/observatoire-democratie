@@ -1,6 +1,7 @@
 PROD:
   ✔ Ajouter conf pour les styles + extract css + autoprefixer @done (2017-11-6 17:15:48)
   ✔ Styler la page 404 de façon marrante @high @done (2017-11-18 17:18:32)
+  ☐ Configuration nginx ddos @critical
   ☐ Changer lien API @low
 
 SEO:
@@ -26,9 +27,10 @@ HOME:
   ✔ Ajouter depute random au fetch static @done (2017-11-20 17:02:01)
   ✔ Ajouter la dernière intervention (+ fetch static) @done (2017-11-20 17:02:03)
   ✔ Rendre la stat du député random @done (2017-11-20 17:02:04)
+  ✔ Améliorer le graph des votes clés @critical @done (2017-11-21 01:42:18)
   ☐ Responsive @critical
-  ☐ Améliorer le graph des votes clés @critical
   ☐ Ajouter message d'intro @critical
+  ☐ Permettre de selectionner les param du graphe vote clé @low
 
 SEARCH:
   ✔ Style de RequestError @done (2017-11-6 01:58:04)

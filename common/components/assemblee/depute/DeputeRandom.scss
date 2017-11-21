@@ -13,3 +13,7 @@
 }
 
 .module > article {margin-bottom: 60px;}
+
+@media (max-width: 767px) {
+  .module > article {margin-bottom: 45px;}
+}

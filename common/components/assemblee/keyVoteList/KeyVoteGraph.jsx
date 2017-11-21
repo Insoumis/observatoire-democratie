@@ -98,7 +98,7 @@ class KeyVoteGraph extends Component {
     wrapper.append('div').attr('class', 'count');
 
     path.on('mouseover', (d) => {
-      tooltip.attr('style', `height:${height / 2}px;width:${width / 2}px;border-color:${color(d.data.label)}`);
+      tooltip.attr('style', `height:${(height / 2) + 15}px;width:${(width / 2) + 15}px;border-color:${color(d.data.label)}`);
       tooltip.attr('class', `${css.tooltip} ${css.displayed}`);
 
       tooltip.select('.label').html(d.data.label);

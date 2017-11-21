@@ -70,7 +70,7 @@
   opacity: 0;
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: calc(50% - 3px);
   transform: translate(-50%, -50%) scale(.5);
   transition: .2s;
 
@@ -85,5 +85,33 @@
     font-size: 2.3em;
     display: inline-block;
     margin: 10px 0;
+  }
+}
+
+.disclaimer {
+  font-size: .95em;
+  margin-top: 30px;
+  text-align: center;
+
+  i {color: $emphasis;}
+}
+
+@media (max-width: 1023px) {
+  .graph > div {margin: 30px 15px 15px;}
+
+  .tooltip strong {
+    font-size: 1.8em;
+    margin: 6px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .module {
+    margin-bottom: 45px;
+
+    article {
+      margin-bottom: 30px;
+      width: 100%;
+    }
   }
 }

@@ -35,6 +35,9 @@ const KeyVoteList = ({ keyVotes, refetch }) => {
           <div className={css.graph}>
             <KeyVoteGraph data={vote.positions} />
           </div>
+          <div className={css.disclaimer}>
+            <i className="fa fa-question-circle" /> Survolez le graphique pour plus de détails
+          </div>
         </article>
       ))}
     </div>

@@ -108,8 +108,17 @@
 
     nav:last-of-type {
       font-size: 1em;
+      padding: 10px 0;
 
-      li {margin: 0 10px;}
+      ul {
+        margin: auto;
+        width: 80%;
+      }
+
+      li {
+        margin: 5px 0;
+        width: 50%;
+      }
     }
   }
 }

@@ -47,6 +47,11 @@ const Header = ({ location }) => (
             <i className="fa fa-bar-chart" aria-hidden="true" /> Tops / Flops
           </ActiveLink>
         </li>
+        <li>
+          <ActiveLink to="/assemblee/about">
+            <i className="fa fa-question-circle" aria-hidden="true" /> À propos
+          </ActiveLink>
+        </li>
       </ul>
     </nav>
   </div>

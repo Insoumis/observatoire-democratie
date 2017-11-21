@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { tris } from 'utility';
+
 import Spinner from 'components/reusable/Spinner';
 import RequestError from 'components/reusable/RequestError';
 import DeputeRankingListItem from 'components/assemblee/deputeList/DeputeRankingListItem';
@@ -24,11 +26,19 @@ const DeputeRandom = ({ depute, refetch }) => {
     );
   }
 
-  return (
-    <div className={css.module}>
-      <DeputeRankingListItem depute={depute} />
-    </div>
-  );
+  if (typeof window !== 'undefined') {
+    return (
+      <div className={css.module}>
+        <DeputeRankingListItem
+          depute={depute}
+          stat={tris[Math.floor(Math.random() * tris.length)].value}
+        />
+      </div>
+    );
+  }
+
+  // SSR no random
+  return false;
 };
 
 DeputeRandom.propTypes = {

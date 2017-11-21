@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router';
 
-import { formatNbr, tris } from 'utility';
+import { formatNbr } from 'utility';
 
 import css from './DeputeRankingListItem.scss';
 
-const DeputeRankingListItem = ({ depute, location }) => {
-  let stat;
+const DeputeRankingListItem = ({ depute, location, stat }) => {
+  let content;
   let rank;
 
-  const initContent = (tri) => {
-    switch (tri) {
+  const initContent = (param) => {
+    switch (param) {
       case 'stats.positions.dissidence':
-        stat = (
+        content = (
           <div className={css.stats}>
             <h3>Contre son groupe</h3>
             <div className={css.dissidence}>
@@ -36,7 +36,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
 
         break;
       case 'stats.nbitvs':
-        stat = (
+        content = (
           <div className={css.stats}>
             <h3>Nombre d&apos;interventions</h3>
             <div className={css.talk}>
@@ -53,7 +53,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
 
         break;
       case 'stats.nbmots':
-        stat = (
+        content = (
           <div className={css.stats}>
             <h3>Nombre de mots</h3>
             <div className={css.words}>
@@ -70,7 +70,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
 
         break;
       case 'stats.amendements.rediges':
-        stat = (
+        content = (
           <div className={css.stats}>
             <h3>Amendements rédigés</h3>
             <div className={css.law}>
@@ -87,7 +87,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
 
         break;
       case 'stats.commissions.present':
-        stat = (
+        content = (
           <div className={css.stats}>
             <h3>Présence en commission</h3>
             <div className={css.commission}>
@@ -104,7 +104,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
 
         break;
       default:
-        stat = (
+        content = (
           <div className={css.stats}>
             <h3>Participation aux scrutins publics</h3>
             <div>
@@ -121,11 +121,8 @@ const DeputeRankingListItem = ({ depute, location }) => {
     }
   };
 
-  if (location.pathname === '/') {
-    initContent(tris[Math.floor(Math.random() * tris.length)].value);
-  } else {
-    initContent(location.query.tri);
-  }
+
+  initContent(stat || location.query.tri);
 
   return (
     <article className={css.module}>
@@ -152,7 +149,7 @@ const DeputeRankingListItem = ({ depute, location }) => {
             <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
           </Link>
 
-          {stat}
+          {content}
 
           {(depute.depute_bureau) ?
             <div className={css.role}>
@@ -174,6 +171,9 @@ DeputeRankingListItem.propTypes = {
       sort: PropTypes.string,
     }).isRequired,
   }).isRequired,
+  stat: PropTypes.string,
 };
+
+DeputeRankingListItem.defaultProps = { stat: null };
 
 export default withRouter(DeputeRankingListItem);

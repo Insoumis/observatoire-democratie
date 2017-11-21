@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const env = require('./config');
-
 module.exports = {
   devtool: 'cheap-module-source-map',
   entry: ['react-hot-loader/patch', './client/index.jsx'],
@@ -24,9 +22,11 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify('development') },
-      BASE_URL: JSON.stringify(env[process.env.ENV].BASE_URL),
-      API_URL: JSON.stringify(env[process.env.ENV].API_URL),
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+        BASE_URL: JSON.stringify('http://dev.observatoire-democratie.fr'),
+        API_URL: JSON.stringify('http://api.dev.observatoire-democratie.fr'),
+      },
     }),
     new webpack.NamedModulesPlugin(),
   ],

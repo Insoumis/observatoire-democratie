@@ -3,7 +3,17 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 const config = require('./webpack.config');
-const env = require('./config');
+
+const env = {
+  development: {
+    BASE_URL: 'http://dev.observatoire-democratie.fr',
+    API_URL: 'http://api.dev.observatoire-democratie.fr',
+  },
+  production: {
+    BASE_URL: 'htpp://observatoire-democratie.fr',
+    API_URL: 'htpp://api.observatoire-democratie.fr',
+  },
+};
 
 module.exports = {
   ...config,
@@ -11,9 +21,11 @@ module.exports = {
   entry: ['babel-polyfill', './client/index.jsx'],
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify('production') },
-      BASE_URL: JSON.stringify(env[process.env.ENV].BASE_URL),
-      API_URL: JSON.stringify(env[process.env.ENV].API_URL),
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+        BASE_URL: JSON.stringify(env[process.env.ENV].BASE_URL),
+        API_URL: JSON.stringify(env[process.env.ENV].API_URL),
+      },
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({

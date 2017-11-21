@@ -15,17 +15,20 @@ const Home = ({ home, refetchDepute, refetchKeyVotes, refetchLastIntervention })
       <div>
         <h1>L&apos;Observatoire de la <strong>Démocratie</strong> ?</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ducimus
-          amet magnam sint tempora corporis distinctio? Ipsa ipsam numquam magnam
-          maiores praesentium autem. Alias sed hic nesciunt asperiores possimus neque.
+          L&apos;Observatoire de la démocratie est une initiative citoyenne. Ce site
+          présente et met en forme les données publiques de l&apos;Assemblée nationale de la
+          République Française.
+          <br />
+          L&apos;objectif de cet outil est de permettre à chacun·e
+          de trouver facilement des informations pertinentes - bien que non-exhaustives -
+          à propos des député·e·s siégeant à l&apos;Assemblée.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nisi!
-          Voluptatum minus, explicabo excepturi nulla ex tempore laborum voluptas
-          sint maiores optio, natus temporibus fugiat fugit ad laudantium est alias.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
-          non, voluptatibus excepturi soluta cupiditate tempora reiciendis quidem
-          ullam nihil voluptas quae dolorum officia est inventore. Fuga quos nobis ullam praesentium.
+          D&pos;autres initiatives concernant divers secteurs de
+          la vie démocratique seront également ajoutées dans les mois à venir.
+        </p>
+        <p>
+          En savoir plus ...
         </p>
       </div>
     </section>

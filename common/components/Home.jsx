@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 import DeputeRandom from 'components/assemblee/depute/DeputeRandom';
 import KeyVoteList from 'components/assemblee/keyVoteList/KeyVoteList';
@@ -15,20 +16,22 @@ const Home = ({ home, refetchDepute, refetchKeyVotes, refetchLastIntervention })
       <div>
         <h1>L&apos;Observatoire de la <strong>Démocratie</strong> ?</h1>
         <p>
-          L&apos;Observatoire de la démocratie est une initiative citoyenne. Ce site
-          présente et met en forme les données publiques de l&apos;Assemblée nationale de la
+          L&apos;Observatoire de la démocratie est <strong>une initiative citoyenne</strong>. Ce site
+          présente et met en forme les <strong>données publiques de l&apos;Assemblée nationale</strong> de la
           République Française.
-          <br />
+        </p>
+        <p>
           L&apos;objectif de cet outil est de permettre à chacun·e
-          de trouver facilement des informations pertinentes - bien que non-exhaustives -
-          à propos des député·e·s siégeant à l&apos;Assemblée.
+          de <strong>trouver facilement des informations pertinentes</strong> - bien que non-exhaustives -
+          à propos des député·e·s siégeant à l&apos;Assemblée. Il sera enrichi au fur et à mesure.
         </p>
         <p>
-          D&pos;autres initiatives concernant divers secteurs de
-          la vie démocratique seront également ajoutées dans les mois à venir.
+          D&apos;autres initiatives concernant divers secteurs de
+          la vie démocratique seront également ajoutées dans les mois à
+          venir <i className="fa fa-smile-o" />.
         </p>
         <p>
-          En savoir plus ...
+          <i className="fa fa-arrow-circle-o-right" /> <Link to="/assemblee/about">En savoir plus ?</Link>
         </p>
       </div>
     </section>

@@ -14,6 +14,8 @@ import DeputeInfos from 'components/assemblee/depute/DeputeInfos';
 
 import Groupe from 'components/assemblee/groupe/Groupe';
 
+import AssembleeAbout from 'components/assemblee/about/About';
+
 import NotFound from 'components/NotFound';
 
 export default (
@@ -30,6 +32,8 @@ export default (
     </Route>
 
     <Route path="/assemblee/groupes/:id" component={Groupe} />
+
+    <Route path="/assemblee/about" component={AssembleeAbout} />
 
     <Route path="*" component={NotFound} />
   </Route>

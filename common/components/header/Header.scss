@@ -33,7 +33,7 @@
 
   header {
     background: #89d6ec;
-    height: 300px;
+    height: 250px;
     overflow: hidden;
 
     div {
@@ -45,9 +45,9 @@
     }
 
     &.noHome {
-      height: 138px;
+      height: 130px;
 
-      div {transform: scale(1.4);}
+      div {transform: scale(1.2);}
     }
   }
 

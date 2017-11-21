@@ -1,7 +1,9 @@
 language: node_js
 node_js: node
 branches:
-  only: master
+  only:
+    - master
+    - deployed
 addons:
   ssh_known_hosts: 163.172.60.184
 install: true

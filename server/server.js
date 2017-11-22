@@ -4,7 +4,7 @@ import Express from 'express';
 import univervalMiddleware from './universalMiddleware';
 
 const app = new Express();
-const port = 3030;
+const port = SSR_PORT;
 
 app.use(Express.static('build'));
 

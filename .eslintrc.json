@@ -9,7 +9,8 @@
   },
   "globals": {
     "BASE_URL": true,
-    "API_URL": true
+    "API_URL": true,
+    "SSR_PORT": true
   },
   "rules": {
     "function-paren-newline": ["error", "consistent"],

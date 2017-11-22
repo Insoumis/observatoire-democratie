@@ -85,6 +85,10 @@ module.exports = {
           limit: 10000,
           name: 'assets/[name].[hash:8].[ext]',
         },
+      }, {
+        test: /\.ico$/i,
+        loader: 'file-loader',
+        options: { name: 'assets/[name].[hash:8].[ext]' },
       },
     ],
   },

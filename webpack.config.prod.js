@@ -28,6 +28,7 @@ module.exports = {
       },
       BASE_URL: JSON.stringify(env[process.env.ENV].BASE_URL),
       API_URL: JSON.stringify(env[process.env.ENV].API_URL),
+      SSR_PORT: JSON.stringify(env[process.env.ENV].SSR_PORT),
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({

@@ -7,10 +7,6 @@ const AboutInformations = () => (
       <a href="http://discord-insoumis.fr" rel="noopener noreferrer" target="_blank">
         Discord Insoumis
       </a>.
-      {' '}Cette section du site est dédiée à l&apos;Assemblée nationale et plus
-      particulièrement au travail parlementaire.
-      Cependant, nous prévoyons d&apos;ajouter d&apos;autres rubriques se penchant sur des
-      secteurs divers de la vie démocratique dans les mois à venir.
     </p>
     <p>
       Le Discord Insoumis est une communauté en ligne de militant•e•s soutenant
@@ -21,7 +17,7 @@ const AboutInformations = () => (
       .
       En accord avec nos principes de démocratie ouverte et de participation citoyenne,
       ce site n&apos;a pas vocation à être partisan ou au service de nos engagements
-      politiques&nbsp;: les données sont récoltées automatiquement sur le site de{' '}
+      politiques. Les données sont récoltées automatiquement sur le site de{' '}
       <a href="http://data.assemblee-nationale.fr/" rel="noopener noreferrer" target="_blank">
         l&apos;Assemblée nationale
       </a>
@@ -29,6 +25,8 @@ const AboutInformations = () => (
       La démarche se veut objective et nous souhaitons avant tout que chacun•e puisse
       obtenir des informations concrètes et facilement disponibles sur l&apos;activité
       des parlementaires à l&apos;Assemblée nationale.
+      Pour le moment, seul le module consacré à l&apos;Assemblée nationale est disponible.
+      D&pos;autres éclairages de la vie démocratique seront mis en ligne dans les mois à venir.
     </p>
     <p>
       Notre travail est bénévole et les coûts d&apos;hébergement et d&apos;infrastructure
@@ -39,8 +37,8 @@ const AboutInformations = () => (
       il est important de noter que le taux de participation aux scrutins publics
       n&apos;est pas le seul indicateur à prendre en compte pour évaluer le travail
       d&apos;un•e parlementaire.
-      Cet indicateur est très souvent utilisé pour commenter l&apos;activité des parlementaires,
-      mais des commissions ou des auditions sont souvent programmées en même
+      Cet indicateur est le plus souvent utilisé pour commenter l&apos;activité des parlementaires,
+      cependant, des commissions ou des auditions sont souvent programmées en même
       temps que les séances en hémicycle.
       D&apos;ailleurs, les différentes commissions ne se réunissent pas à la même
       fréquence et les absences des député•e•s à ces commissions peuvent être excusées.
@@ -74,9 +72,9 @@ const AboutInformations = () => (
         contact@observatoire-democratie.fr
       </a>
     </p>
-    <p>Et si vous souhaitez suivre notre progression, n&apos;hésitez pas à{' '}
+    <p>Et si vous souhaitez suivre notre progression{' '}
       <a href="https://twitter.com/Obs_Democratie" rel="noopener noreferrer" target="_blank">
-        nous suivre sur Twitter
+        suivez-nous sur Twitter
       </a>
       {' '}<i className="fa fa-smile-o" />.
     </p>

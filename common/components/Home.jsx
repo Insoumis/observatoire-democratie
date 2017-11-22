@@ -16,20 +16,16 @@ const Home = ({ home, refetchDepute, refetchKeyVotes, refetchLastIntervention })
       <div>
         <h1>L&apos;Observatoire de la <strong>Démocratie</strong> ?</h1>
         <p>
-          L&apos;Observatoire de la Démocratie est <strong>une initiative citoyenne</strong>.
-          Ce site présente et met en forme
-          les <strong>données publiques de l&apos;Assemblée nationale</strong> de la
-          République Française.
-          <br />
+          L&apos;Observatoire de la Démocratie est <strong>une initiative citoyenne</strong>.<br />
+          Ce site présente des <strong>données publiques de l&apos;Assemblée nationale</strong> de
+          la République française.
           L&apos;objectif de cet outil est de permettre à chacun·e
           de <strong>trouver facilement des informations pertinentes</strong> -&nbsp;bien
-          que non-exhaustives&nbsp;- à propos des député·e·s siégeant à l&apos;Assemblée.
+          que non-exhaustives&nbsp;- concernant les député·e·s siégeant à l&apos;Assemblée.
         </p>
         <p>
-          Il sera rapidement enrichi avec de nouvelles données et d&apos;autres initiatives
-          concernant divers secteurs de la vie démocratique seront également ajoutées
+          D&apos;autres éclairages à propos de la vie démocratique seront déployés
           dans les mois à venir.
-          <br />
           Pour suivre ces évolutions, n&apos;hésitez donc pas à{' '}
           <a href="https://twitter.com/Obs_Democratie" rel="noopener noreferrer" target="_blank">
             nous suivre sur Twitter

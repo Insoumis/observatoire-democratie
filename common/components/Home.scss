@@ -4,7 +4,7 @@
 
 .presentation {
   align-items: center;
-  border-bottom: 1px dashed darken($border, 10%);
+  border-bottom: 1px dashed darken($border, 15%);
   display: flex;
   padding-bottom: 45px;
 
@@ -46,7 +46,7 @@
     strong {color: $lighter;}
   }
 
-  section {border-bottom: 1px dashed darken($border, 10%);}
+  section {border-bottom: 1px dashed darken($border, 15%);}
 }
 
 @media (max-width: 767px) {

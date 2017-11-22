@@ -29,6 +29,7 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
     <div className={`container ${css.module}`}>
       <Helmet>
         <title>{depute.depute_nom}</title>
+        <meta property="og:title" content={`${depute.depute_nom} | Observatoire de la Démocratie`} />
       </Helmet>
 
       <div className={css.header}>

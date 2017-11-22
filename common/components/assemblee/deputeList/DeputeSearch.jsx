@@ -12,6 +12,7 @@ const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => (
   <div className={`container ${css.module}`}>
     <Helmet>
       <title>Les députés</title>
+      <meta property="og:title" content="Les députés | Observatoire de la Démocratie" />
     </Helmet>
 
     <DeputeSearchForm

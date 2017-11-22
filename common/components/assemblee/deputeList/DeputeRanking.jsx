@@ -14,6 +14,7 @@ const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => (
   <div className={`container ${css.module}`}>
     <Helmet>
       <title>Tops / Flops</title>
+      <meta property="og:title" content="Tops / Flops | Observatoire de la Démocratie" />
     </Helmet>
 
     <DeputeRankingForm

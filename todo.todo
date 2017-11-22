@@ -72,6 +72,8 @@ DEPUTE:
   ✔ Président et vice-pres pas les mêmes votes @high @done (2017-11-18 17:05:33)
   ☐ Corriger orthographe des votes clés + sources @critical
   ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K) @critical
+  ☐ Revoir le système de fetch des votes (load à chaque changement d'onglet) @critical
+  ☐ Revoir le système de fetch des interventions (load à chaque changement d'onglet) @critical
   ☐ Changer wordcloud pour un truc sans soucis au niveau de node @high
   ☐ Bug sur les select quand multi select @high
   ☐ Ajouter le calendrier @low

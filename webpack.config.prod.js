@@ -11,8 +11,8 @@ const env = {
     SSR_PORT: 3030,
   },
   production: {
-    BASE_URL: 'htpp://observatoire-democratie.fr',
-    API_URL: 'htpp://api.observatoire-democratie.fr',
+    BASE_URL: 'http://observatoire-democratie.fr',
+    API_URL: 'http://api.observatoire-democratie.fr',
     SSR_PORT: 3000,
   },
 };

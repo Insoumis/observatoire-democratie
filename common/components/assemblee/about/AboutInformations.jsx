@@ -26,10 +26,10 @@ const AboutInformations = () => (
       obtenir des informations concrètes et facilement disponibles sur l&apos;activité
       des parlementaires à l&apos;Assemblée nationale.
       Pour le moment, seul le module consacré à l&apos;Assemblée nationale est disponible.
-      D&pos;autres éclairages de la vie démocratique seront mis en ligne dans les mois à venir.
+      D&apos;autres éclairages de la vie démocratique seront mis en ligne dans les mois à venir.
     </p>
     <p>
-      Notre travail est bénévole et les coûts d&apos;hébergement et d&apos;infrastructure
+      Notre travail est bénévole, les coûts d&apos;hébergement et d&apos;infrastructure
       sont couverts par des dons.
     </p>
     <p>
@@ -37,8 +37,8 @@ const AboutInformations = () => (
       il est important de noter que le taux de participation aux scrutins publics
       n&apos;est pas le seul indicateur à prendre en compte pour évaluer le travail
       d&apos;un•e parlementaire.
-      Cet indicateur est le plus souvent utilisé pour commenter l&apos;activité des parlementaires,
-      cependant, des commissions ou des auditions sont souvent programmées en même
+      Cet indicateur est le plus souvent utilisé pour commenter l&apos;activité des parlementaires.
+      Cependant, des commissions ou des auditions sont souvent programmées en même
       temps que les séances en hémicycle.
       D&apos;ailleurs, les différentes commissions ne se réunissent pas à la même
       fréquence et les absences des député•e•s à ces commissions peuvent être excusées.

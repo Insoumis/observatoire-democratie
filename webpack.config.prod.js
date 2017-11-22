@@ -86,7 +86,7 @@ module.exports = {
           name: 'assets/[name].[hash:8].[ext]',
         },
       }, {
-        test: /^(favicon\.ico|manifest\.json|browserconfig\.xml)$/i,
+        test: /(favicon\.ico|manifest\.json|browserconfig\.xml)$/i,
         loader: 'file-loader',
         options: { name: 'assets/[name].[hash:8].[ext]' },
       },

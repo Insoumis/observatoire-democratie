@@ -38,30 +38,30 @@ const ElectionGraph = ({ depute }) => {
           Élu·e au <strong>{election.tour}{election.tour > 1 ? 'ème' : 'er'} tour</strong>
         </li>
         <li>
-          <i className="fa fa-li fa-dot-circle-o" /><strong>Inscrits :</strong> {election.inscrits}
+          <i className="fa fa-li fa-dot-circle-o" /><strong>Inscrits :</strong> {formatNbr(election.inscrits)}
         </li>
         <li>
-          <i className="fa fa-li fa-dot-circle-o" /><strong>Abstention :</strong> {election.abstentions}
+          <i className="fa fa-li fa-dot-circle-o" /><strong>Abstention :</strong> {formatNbr(election.abstentions)}
           {' '}
           (&nbsp;{formatNbr((election.abstentions / election.inscrits) * 100)}% des inscrits&nbsp;)
         </li>
         <li>
-          <i className="fa fa-li fa-dot-circle-o" /><strong>Votants :</strong> {election.votants}
+          <i className="fa fa-li fa-dot-circle-o" /><strong>Votants :</strong> {formatNbr(election.votants)}
           {' '}
           (&nbsp;{formatNbr((election.votants / election.inscrits) * 100)}% des inscrits&nbsp;)
         </li>
         <li>
-          <i className="fa fa-li fa-dot-circle-o" /><strong>Exprimés :</strong> {election.exprimes}
+          <i className="fa fa-li fa-dot-circle-o" /><strong>Exprimés :</strong> {formatNbr(election.exprimes)}
           {' '}
           (&nbsp;{formatNbr((election.exprimes / election.votants) * 100)}% des votants&nbsp;)
         </li>
         <li>
-          <i className="fa fa-li fa-dot-circle-o" /><strong>Blancs :</strong> {election.blancs}
+          <i className="fa fa-li fa-dot-circle-o" /><strong>Blancs :</strong> {formatNbr(election.blancs)}
           {' '}
           (&nbsp;{formatNbr((election.blancs / election.votants) * 100)}% des votants&nbsp;)
         </li>
         <li>
-          <i className="fa fa-li fa-dot-circle-o" /><strong>Nuls :</strong> {election.nuls}
+          <i className="fa fa-li fa-dot-circle-o" /><strong>Nuls :</strong> {formatNbr(election.nuls)}
           {' '}
           (&nbsp;{formatNbr((election.nuls / election.votants) * 100)}% des votants&nbsp;)
         </li>

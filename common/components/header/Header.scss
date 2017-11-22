@@ -6,6 +6,7 @@
     background: $main;
     display: flex;
     height: 70px;
+    justify-content: space-between;
     padding: 10px 15px 15px;
 
     h1 {
@@ -16,19 +17,25 @@
       width: 210px;
     }
 
-    // ul {
-    //   display: none;
-    //   padding: 0 20px;
-    // }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
 
-    // li {
-    //   display: inline-block;
-    //   color: $white;
-    //   font-size: .9em;
-    //   font-weight: 600;
-    //   margin: 2px 20px 0 0;
-    //   text-transform: uppercase;
-    // }
+    li {
+      display: inline-block;
+
+      a {
+        color: $white;
+        display: inline-block;
+        font-size: 1.2em;
+        margin-left: 5px;
+        padding: 10px;
+        transition: color .2s;
+
+        &:hover {color: $lighter;}
+      }
+    }
   }
 
   header {
@@ -96,6 +103,8 @@
         height: 30px;
         width: 140px;
       }
+
+      li a {padding: 5px 10px;}
     }
 
     header {

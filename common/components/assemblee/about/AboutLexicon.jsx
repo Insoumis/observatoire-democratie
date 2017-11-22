@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutLexicon = () => (
   <dl>
-    <dt>CSP :</dt>
+    <dt>CSP&nbsp;:</dt>
     <dd>
       Ce sont les professions et catégories socioprofessionnelles.
       Aussi appelées PCS, ce sigle désigne le découpage des professions
@@ -29,7 +29,7 @@ const AboutLexicon = () => (
       </ul>
     </dd>
 
-    <dt>PLF :</dt>
+    <dt>PLF&nbsp;:</dt>
     <dd>
       Le PLF désigne le Projet de Loi de Finances, étudié généralement durant
       le second semestre par l&apos;Assemblée nationale et le Sénat qui ont un délai
@@ -42,7 +42,7 @@ const AboutLexicon = () => (
       </a>
     </dd>
 
-    <dt>PLFSS :</dt>
+    <dt>PLFSS&nbsp;:</dt>
     <dd>
       Similaire au Projet de Loi de Finances, le PLFSS est le Projet de Loi de
       Finances de la Sécurité Sociale. Il est présenté à l&apos;automne par l&apos;exécutif
@@ -55,13 +55,13 @@ const AboutLexicon = () => (
       </a>
     </dd>
 
-    <dt>Commission :</dt>
+    <dt>Commission&nbsp;:</dt>
     <dd>
       À l&apos;Assemblée nationale, les député•e•s doivent faire partie d&apos;une
       ou plusieurs commissions. Il y a huit commissions permanentes à l&apos;Assemblée
       nationale afin d&apos;examiner les projets et les propositions de loi ainsi
       que leurs amendements avant leur vote définitif dans l&apos;hémicycle.
-      Voici la liste des huit commissions permanentes de l&apos;Assemblée :
+      Voici la liste des huit commissions permanentes de l&apos;Assemblée&nbsp;:
       <ul className="fa-ul">
         <li>
           <i className="fa fa-li fa-dot-circle-o" /> Affaires culturelles et éducation
@@ -97,7 +97,7 @@ const AboutLexicon = () => (
       </a>
     </dd>
 
-    <dt>Amendement :</dt>
+    <dt>Amendement&nbsp;:</dt>
     <dd>
       Un amendement peut être déposé par n&apos;importe quel parlementaire.
       Il lui permet de modifier, corriger ou supprimer une partie du projet ou
@@ -106,7 +106,7 @@ const AboutLexicon = () => (
       un scrutin public ordinaire.
     </dd>
 
-    <dt>Scrutin public :</dt>
+    <dt>Scrutin public&nbsp;:</dt>
     <dd>
       La majorité des scrutins publics se font à main levée pour accélérer le travail
       de l&apos;Assemblée, il n&apos;y a donc pas d&apos;enregistrement systématique des votes
@@ -118,7 +118,7 @@ const AboutLexicon = () => (
       ne signifie pas nécessairement son absence dans l&apos;hémicycle durant toute la séance.
     </dd>
 
-    <dt>Groupe parlementaire :</dt>
+    <dt>Groupe parlementaire&nbsp;:</dt>
     <dd>
       Les parlementaires peuvent se rassembler et former un groupe d&apos;au moins 15 députés.
       Cela permet au groupe de se déclarer dans l&apos;opposition ou dans la majorité

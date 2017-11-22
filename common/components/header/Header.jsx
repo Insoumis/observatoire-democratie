@@ -13,11 +13,28 @@ const Header = ({ location }) => (
       <Link title="Accueil" to="/">
         <h1>Observatoire de la Démocratie</h1>
       </Link>
-      {/* <ul>
-        <li>Programme Présidentiel</li>
-        <li>Gouvernement</li>
-        <li>Assemblée Nationale</li>
-      </ul> */}
+      <ul>
+        <li>
+          <a
+            href="https://twitter.com/obs_democratie"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Suivez-nous sur Twitter"
+          >
+            <i className="fa fa-twitter" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:contact@observatoire-democratie.fr"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Contactez-nous par e-mail"
+          >
+            <i className="fa fa-envelope" />
+          </a>
+        </li>
+      </ul>
     </nav>
     <header className={classNames({
       [css.noHome]: location.pathname !== '/',

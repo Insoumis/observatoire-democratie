@@ -8,8 +8,10 @@ import serialize from 'serialize-javascript';
 import appleTouchIcon from './assets/apple-touch-icon.png';
 import fav32 from './assets/favicon-32x32.png';
 import fav16 from './assets/favicon-16x16.png';
+import manifest from './assets/manifest.json';
 import safariTab from './assets/safari-pinned-tab.svg';
 import favicon from './assets/favicon.ico';
+import browserConfig from './assets/browserconfig.xml';
 
 export default (store, props) => {
   const head = Helmet.rewind();
@@ -37,10 +39,10 @@ export default (store, props) => {
         <link rel="apple-touch-icon" sizes="180x180" href="${appleTouchIcon}">
         <link rel="icon" type="image/png" sizes="32x32" href="${fav32}">
         <link rel="icon" type="image/png" sizes="16x16" href="${fav16}">
-        <link rel="manifest" href="/assets/manifest.json">
+        <link rel="manifest" href="${manifest}">
         <link rel="mask-icon" href="${safariTab}" color="#213558">
         <link rel="shortcut icon" href="${favicon}">
-        <meta name="msapplication-config" content="/assets/browserconfig.xml">
+        <meta name="msapplication-config" content="${browserConfig}">
         <meta name="theme-color" content="#213558">
       </head>
       <body>

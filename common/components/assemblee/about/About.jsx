@@ -1,28 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const About = () => (
-  <div>
-    <div>
-      <div>
-        <h1>L&apos;Observatoire de la <strong>Démocratie</strong> ?</h1>
-        <p>
-          L&apos;Observatoire de la démocratie est <strong>une initiative citoyenne</strong>. Ce site
-          présente et met en forme les <strong>données publiques de l&apos;Assemblée nationale</strong> de la
-          République Française.
-        </p>
-        <p>
-          L&apos;objectif de cet outil est de permettre à chacun·e
-          de <strong>trouver facilement des informations pertinentes</strong> - bien que non-exhaustives -
-          à propos des député·e·s siégeant à l&apos;Assemblée. Il sera enrichi au fur et à mesure.
-        </p>
-        <p>
-          D&apos;autres initiatives concernant divers secteurs de
-          la vie démocratique seront également ajoutées dans les mois à
-          venir <i className="fa fa-smile-o" />.
-        </p>
-      </div>
+import ActiveLink from 'components/reusable/ActiveLink';
+
+import css from './About.scss';
+
+const About = ({ children }) => (
+  <div className={`container ${css.module}`}>
+    <h1>L&apos;Observatoire de la <strong>Démocratie</strong> ?</h1>
+
+    <div className={css.content}>
+      <nav>
+        <ActiveLink to="/assemblee/a-propos/informations">L&apos;initiative</ActiveLink>
+        <ActiveLink to="/assemblee/a-propos/lexique">Lexique</ActiveLink>
+        <ActiveLink to="/assemblee/a-propos/donnees">Calculs et données</ActiveLink>
+      </nav>
+
+      {children}
     </div>
   </div>
 );
+
+About.propTypes = { children: PropTypes.node.isRequired };
 
 export default About;

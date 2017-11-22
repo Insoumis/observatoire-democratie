@@ -15,10 +15,10 @@ const App = ({ children }) => (
       defaultTitle="Observatoire de la Démocratie"
       titleTemplate="%s | Observatoire de la Démocratie"
     >
-      <meta name="description" content="L'Observatoire de la démocratie est une initiative citoyenne présentant l'activité des parlementaires à l'Assemblée nationale. Un outil simple pour comprendre une démocratie complexe." />
+      <meta name="description" content="L'Observatoire de la Démocratie est une initiative citoyenne présentant l'activité des parlementaires à l'Assemblée nationale. Un outil simple pour comprendre une démocratie complexe." />
 
       <meta property="og:title" content="Observatoire de la Démocratie" />
-      <meta property="og:description" content="L'Observatoire de la démocratie est une initiative citoyenne présentant l'activité des parlementaires à l'Assemblée nationale. Un outil simple pour comprendre une démocratie complexe." />
+      <meta property="og:description" content="L'Observatoire de la Démocratie est une initiative citoyenne présentant l'activité des parlementaires à l'Assemblée nationale. Un outil simple pour comprendre une démocratie complexe." />
       <meta property="og:image" content={`${BASE_URL}/${share}`} />
       <meta property="og:url" content={BASE_URL} />
       <meta property="og:site_name" content="Observatoire de la Démocratie" />

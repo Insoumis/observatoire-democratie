@@ -1,6 +1,6 @@
 @import '~styles/colors';
 
-.module {padding-top: 60px;}
+.module {margin-top: 60px;}
 
 .header {
   align-items: flex-start;
@@ -156,8 +156,8 @@
     > nav a {width: calc(100% / 2 - 5px);}
 
     > div {
-      padding: 15px 20px;
       font-size: .95em;
+      padding: 15px 20px;
     }
 
     h2 {

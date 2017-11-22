@@ -48,7 +48,7 @@ const Header = ({ location }) => (
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink to="/assemblee/about">
+          <ActiveLink to="/assemblee/a-propos">
             <i className="fa fa-question-circle" aria-hidden="true" /> À propos
           </ActiveLink>
         </li>

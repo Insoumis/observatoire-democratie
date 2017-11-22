@@ -5,9 +5,9 @@ PROD:
   ☐ Changer lien API @low
 
 SEO:
-  ☐ Ajouter une description @critical
+  ✔ Ajouter une description @critical @done (2017-11-22 05:37:58)
+  ✔ Ajouter favicon @critical @done (2017-11-22 05:38:01)
   ☐ Ajouter les images de share @critical
-  ☐ Ajouter favicon @critical
   ☐ Images particulières pour page député et groupe @low
 
 GLOBAL:
@@ -29,7 +29,7 @@ HOME:
   ✔ Rendre la stat du député random @done (2017-11-20 17:02:04)
   ✔ Améliorer le graph des votes clés @critical @done (2017-11-21 01:42:18)
   ✔ Responsive @critical @done (2017-11-21 02:48:20)
-  ☐ Ajouter message d'intro @critical
+  ✔ Ajouter message d'intro @critical @done (2017-11-22 05:38:11)
   ☐ Permettre de selectionner les param du graphe vote clé @low
 
 SEARCH:
@@ -58,7 +58,7 @@ TOP:
   ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:30)
   ✔ Changer les select pour un truc custom @high @done (2017-11-18 23:15:17)
   ✔ Raccourcir lien heading @high @done (2017-11-18 22:48:09)
-  ☐ Bug sur les select quand multi select @critical
+  ☐ Bug sur les select quand multi select @high
   ☐ Ajouter liens spécifiques à chaque tri sur la stat ? @low
 
 DEPUTE:
@@ -70,10 +70,10 @@ DEPUTE:
   ✔ Gérer les 404 redirect sur député insoumis @high @done (2017-11-18 15:22:11)
   ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:32)
   ✔ Président et vice-pres pas les mêmes votes @high @done (2017-11-18 17:05:33)
-  ☐ Changer wordcloud pour un truc sans soucis au niveau de node @critical
-  ☐ Corriger orthographe des votes clés @critical
+  ☐ Corriger orthographe des votes clés + sources @critical
   ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K) @critical
-  ☐ Bug sur les select quand multi select @critical
+  ☐ Changer wordcloud pour un truc sans soucis au niveau de node @high
+  ☐ Bug sur les select quand multi select @high
   ☐ Ajouter le calendrier @low
   ☐ Ajouter l'hémicycle et la circo @low
 
@@ -81,4 +81,4 @@ PAGE GROUPE:
   ✔ à faire ou teasing (gaffe aux url)@high @done (2017-11-18 17:18:42)
 
 PAGE À PROPOS:
-  ☐ À faire @critical
+  ✔ À faire @critical @done (2017-11-22 05:38:58)

@@ -127,7 +127,7 @@ const DeputeRankingListItem = ({ depute, location, stat }) => {
   return (
     <article className={css.module}>
       <div className={css.rank}>
-        <span>{rank}</span>
+        <span className={`rank${rank}`}>{rank}</span>
       </div>
       <div className={css.photo}>
         <Link to={`/assemblee/deputes/${depute.id}`}>

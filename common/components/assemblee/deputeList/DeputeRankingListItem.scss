@@ -52,6 +52,20 @@
     text-align: center;
     width: 62px;
   }
+
+  :global {
+    .rank1,
+    .rank2,
+    .rank3 {
+      height: 66px;
+      margin-top: -4px;
+      padding-top: 4px;
+    }
+
+    .rank1 {background: url('./assets/ico-rank1.svg');}
+    .rank2 {background: url('./assets/ico-rank2.svg');}
+    .rank3 {background: url('./assets/ico-rank3.svg');}
+  }
 }
 
 .photo {

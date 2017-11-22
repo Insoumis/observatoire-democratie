@@ -8,7 +8,7 @@ module.exports = {
   entry: ['babel-polyfill', './server/server.js'],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'server.bundle.js',
+    filename: `server.${process.env.ENV}.bundle.js`,
   },
   target: 'node',
   externals: [nodeExternals({

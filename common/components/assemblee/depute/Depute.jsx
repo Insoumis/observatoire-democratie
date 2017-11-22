@@ -30,7 +30,7 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
       <Helmet>
         <title>{depute.depute_nom}</title>
         <meta property="og:title" content={`${depute.depute_nom} | Observatoire de la Démocratie`} />
-        <meta property="og:image" content={`${API_URL}/visuels/obs2?depute=${depute.id}`} />
+        {/* <meta property="og:image" content={`${API_URL}/visuels/obs2?depute=${depute.id}`} /> */}
       </Helmet>
 
       <div className={css.header}>

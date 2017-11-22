@@ -44,12 +44,22 @@ const DeputeKeyVote = ({ vote }) => {
       {result}
       <p>
         {vote.desc}<br />
-        <i className="fa fa-university" />{' '}
-        <a href={vote.lien_texte} target="_blank">Le texte à l&apos;Assemblée</a><br />
-        <i className="fa fa-newspaper-o" />{' '}
-        <a href={vote.lien_source} target="_blank">On en parle dans la presse</a><br />
-        <i className="fa fa-arrow-circle-o-right" />{' '}
-        <a href={vote.lien} target="_blank">Voir les résultats du vote</a><br />
+        <div>
+          <i className="fa fa-university" />{' '}
+          <a href={vote.lien_texte} target="_blank">Le texte à l&apos;Assemblée</a>
+        </div>
+        {(vote.lien_source) ?
+          <div>
+            <i className="fa fa-newspaper-o" />{' '}
+            <a href={vote.lien_source} target="_blank">On en parle dans la presse</a>
+          </div>
+          :
+          false
+        }
+        <div>
+          <i className="fa fa-arrow-circle-o-right" />{' '}
+          <a href={vote.lien} target="_blank">Voir les résultats du vote</a>
+        </div>
       </p>
     </div>
   );

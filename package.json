@@ -8,7 +8,7 @@
     "build:prod": "cross-env ENV=production npm run build",
     "build": "npm run clean && npm run build:client && npm run build:server",
     "build:client": "webpack --config webpack.config.prod.js",
-    "build:server": "webpack --config webpack.config.server.js",
+    "build:server": "cross-env ENV=production webpack --config webpack.config.server.js",
     "start:prod": "node build/server.production.bundle.js",
     "clean": "rimraf build",
     "lint": "eslint ."

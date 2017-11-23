@@ -29,8 +29,8 @@ const AboutInformations = () => (
       D&apos;autres éclairages de la vie démocratique seront mis en ligne dans les mois à venir.
     </p>
     <p>
-      Notre travail est bénévole, les coûts d&apos;hébergement et d&apos;infrastructure
-      sont couverts par des dons.
+      Notre travail est <strong>bénévole</strong>, les coûts d&apos;hébergement et d&apos;infrastructure
+      sont couverts par des <strong>dons</strong>.
     </p>
     <p>
       Concernant les données présentées dans la section dédiée à l&apos;Assemblée nationale,

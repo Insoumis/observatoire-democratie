@@ -14,12 +14,12 @@ import favicon from './assets/favicon.ico';
 import browserConfig from './assets/browserconfig.xml';
 
 export default (store, props) => {
-  const head = Helmet.rewind();
   const html = renderToString(
     <Provider store={store}>
       <RouterContext {...props} />
     </Provider>,
   );
+  const head = Helmet.renderStatic();
 
   return `
     <!doctype html>
@@ -51,7 +51,7 @@ export default (store, props) => {
         <script>
           window.__PRELOADED_STATE__ = ${serialize(store.getState())}
         </script>
-        <script src="/client.bundle.js"></script>
+        <script src="/_client.bundle.js"></script>
       </body>
     </html>
   `;

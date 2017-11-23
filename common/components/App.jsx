@@ -20,7 +20,6 @@ const App = ({ children }) => (
       <meta property="og:title" content="Observatoire de la Démocratie" />
       <meta property="og:description" content="L'Observatoire de la Démocratie est une initiative citoyenne présentant l'activité des parlementaires à l'Assemblée nationale. Un outil simple pour comprendre une démocratie complexe." />
       <meta property="og:image" content={`${BASE_URL}/${share}`} />
-      <meta property="og:url" content={BASE_URL} />
       <meta property="og:site_name" content="Observatoire de la Démocratie" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@Obs_Democratie" />

@@ -1,14 +1,14 @@
 PROD:
   ✔ Ajouter conf pour les styles + extract css + autoprefixer @done (2017-11-6 17:15:48)
   ✔ Styler la page 404 de façon marrante @high @done (2017-11-18 17:18:32)
+  ✔ Changer lien API @low @done (2017-11-23 15:43:02)
   ☐ Configuration nginx ddos @critical
-  ☐ Changer lien API @low
 
 SEO:
   ✔ Ajouter une description @critical @done (2017-11-22 05:37:58)
   ✔ Ajouter favicon @critical @done (2017-11-22 05:38:01)
-  ☐ Ajouter les images de share @critical
-  ☐ Images particulières pour page député et groupe @low
+  ✔ Ajouter les images de share @critical @done (2017-11-23 15:43:09)
+  ✔ Images particulières pour page député et groupe @low @done (2017-11-23 15:43:13)
 
 GLOBAL:
   ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)

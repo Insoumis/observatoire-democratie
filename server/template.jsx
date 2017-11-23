@@ -51,7 +51,7 @@ export default (store, props) => {
         <script>
           window.__PRELOADED_STATE__ = ${serialize(store.getState())}
         </script>
-        <script src="/_client.bundle.js"></script>
+        <script src="/client.bundle.js"></script>
       </body>
     </html>
   `;

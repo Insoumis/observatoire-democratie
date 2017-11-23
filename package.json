@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run build:client && npm run build:server",
     "build:client": "webpack --config webpack.config.prod.js",
     "build:server": "webpack --config webpack.config.server.js",
-    "start:prod": "node build/server.production.bundle.js",
+    "start:prod": "node build/server.development.bundle.js",
     "clean": "rimraf build",
     "lint": "eslint ."
   },

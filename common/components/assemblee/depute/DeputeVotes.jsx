@@ -5,7 +5,7 @@ import { formatNbr } from 'utility';
 
 import DeputeVotesList from 'containers/assemblee/DeputeVotesList';
 import DeputeGauge from './DeputeGauge';
-import DeputeKeyVote from './DeputeKeyVote';
+import DeputeKeyVoteList from './DeputeKeyVoteList';
 import DeputeVotesForm from './DeputeVotesForm';
 
 import css from './DeputeVotes.scss';
@@ -75,16 +75,7 @@ const DeputeVotes = ({ depute }) => {
       </div>
 
       <h2>Les votes clés</h2>
-      <div>
-        {Object.keys(depute.votes_cles).map(cat => (
-          <div className={css.keyVotes} key={cat}>
-            <h3><span>{cat}</span></h3>
-            {depute.votes_cles[cat].map(vote => (
-              <DeputeKeyVote key={vote.scrutin_num} vote={vote} />
-            ))}
-          </div>
-        ))}
-      </div>
+      <DeputeKeyVoteList keyVotes={depute.votes_cles} />
 
       <h2>Tous les votes</h2>
       <div className={css.votesList}>

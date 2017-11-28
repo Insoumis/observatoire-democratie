@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import css from './DeputeVotes.scss';
 
-const DeputeKeyVote = ({ vote }) => {
+const DeputeKeyVoteListItem = ({ vote }) => {
   let result;
   switch (vote.vote_position) {
     case 'pour':
@@ -40,7 +40,7 @@ const DeputeKeyVote = ({ vote }) => {
 
   return (
     <div>
-      <h4>{vote.scrutin_dossierLibelle}</h4>
+      <h3>{vote.scrutin_dossierLibelle}</h3>
       {result}
       <p>
         {vote.desc}<br />
@@ -65,10 +65,10 @@ const DeputeKeyVote = ({ vote }) => {
   );
 };
 
-DeputeKeyVote.propTypes = {
+DeputeKeyVoteListItem.propTypes = {
   vote: PropTypes.shape({
     vote_position: PropTypes.string.isRequired,
   }).isRequired,
 };
 
-export default DeputeKeyVote;
+export default DeputeKeyVoteListItem;

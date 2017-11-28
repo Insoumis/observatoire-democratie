@@ -29,7 +29,7 @@ const DeputeParticipations = ({ depute }) => (
             picto="absent"
             number={formatNbr(depute.stats.commissions.absent)}
           />
-          <p><strong>{formatNbr(depute.stats.commissions.excuse)}%</strong> excusées</p>
+          <p>+ <strong>{formatNbr(depute.stats.commissions.excuse)}%</strong> excusées</p>
         </div>
       </div>
       :

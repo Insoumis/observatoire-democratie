@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import qs from 'qs';
 
-import { fetchDeputeInterventions } from 'actions/assemblee';
-import { getDeputeInterventions } from 'reducers';
+import { fetchDeputeVotes } from 'actions/assemblee';
+import { getDeputeVotes } from 'reducers';
 
-import Form from 'components/assemblee/depute/DeputeInterventionsForm';
-import List from 'components/assemblee/depute/DeputeInterventionsList';
+import Form from 'components/assemblee/depute/DeputeVotesForm';
+import List from 'components/assemblee/depute/DeputeVotesList';
 
-class DeputeInterventions extends Component {
+class DeputeVotesSearch extends Component {
   state = { currentSearch: this.getSearch() };
 
   componentDidMount() {
-    const { search } = this.props.deputeInterventions;
+    const { search } = this.props.deputeVotes;
     if (search !== this.state.currentSearch) {
-      this.props.fetchDeputeInterventions(this.state.currentSearch);
+      this.props.fetchDeputeVotes(this.state.currentSearch);
     }
   }
 
@@ -29,11 +29,11 @@ class DeputeInterventions extends Component {
 
   newSearch(newSearch) {
     this.setState({ currentSearch: this.getSearch(newSearch) });
-    this.props.fetchDeputeInterventions(this.getSearch(newSearch));
+    this.props.fetchDeputeVotes(this.getSearch(newSearch));
   }
 
   render() {
-    const { error, isPending, pagination, search, interventions } = this.props.deputeInterventions;
+    const { error, isPending, pagination, search, votes } = this.props.deputeVotes;
 
     return (
       <div>
@@ -44,31 +44,31 @@ class DeputeInterventions extends Component {
           newSearch={newSearch => this.newSearch(newSearch)}
           pagination={pagination}
           refetch={
-            () => this.props.fetchDeputeInterventions(this.state.currentSearch)
+            () => this.props.fetchDeputeVotes(this.state.currentSearch)
           }
           search={qs.parse(search, { ignoreQueryPrefix: true })}
-          interventions={interventions}
+          votes={votes}
         />
       </div>
     );
   }
 }
 
-DeputeInterventions.propTypes = {
+DeputeVotesSearch.propTypes = {
   deputeId: PropTypes.string.isRequired,
-  deputeInterventions: PropTypes.shape({
-    interventions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  deputeVotes: PropTypes.shape({
+    votes: PropTypes.arrayOf(PropTypes.object).isRequired,
     error: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
     isPending: PropTypes.bool.isRequired,
     pagination: PropTypes.shape({}).isRequired,
     search: PropTypes.string.isRequired,
   }).isRequired,
-  fetchDeputeInterventions: PropTypes.func.isRequired,
+  fetchDeputeVotes: PropTypes.func.isRequired,
 };
 
 export default connect(
   state => ({
-    deputeInterventions: getDeputeInterventions(state),
+    deputeVotes: getDeputeVotes(state),
   }),
-  { fetchDeputeInterventions },
-)(DeputeInterventions);
+  { fetchDeputeVotes },
+)(DeputeVotesSearch);

@@ -49,10 +49,10 @@ const error = (state = false, action) => {
   }
 };
 
-const search = (state = {}, action) => {
+const search = (state = '', action) => {
   switch (action.type) {
-    case ASSEMBLEE.searchDeputeVotes:
-      return action.payload;
+    case `${ASSEMBLEE.fetchDeputeVotes}_SUCCESS`:
+      return action.meta.search;
     default:
       return state;
   }

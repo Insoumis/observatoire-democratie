@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 
 import { formatNbr } from 'utility';
 
-import DeputeVotesList from 'containers/assemblee/DeputeVotesList';
+import DeputeVotesSearch from 'containers/assemblee/DeputeVotesSearch';
 import DeputeGauge from './DeputeGauge';
 import DeputeKeyVoteList from './DeputeKeyVoteList';
-import DeputeVotesForm from './DeputeVotesForm';
 
 import css from './DeputeVotes.scss';
 
@@ -79,8 +78,7 @@ const DeputeVotes = ({ depute }) => {
 
       <h2>Tous les votes</h2>
       <div className={css.votesList}>
-        <DeputeVotesForm />
-        <DeputeVotesList deputeId={depute.id} />
+        <DeputeVotesSearch deputeId={depute.id} />
       </div>
     </div>
   );

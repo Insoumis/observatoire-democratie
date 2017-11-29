@@ -1,86 +1,23 @@
 PROD:
-  ✔ Ajouter conf pour les styles + extract css + autoprefixer @done (2017-11-6 17:15:48)
-  ✔ Styler la page 404 de façon marrante @high @done (2017-11-18 17:18:32)
-  ✔ Changer lien API @low @done (2017-11-23 15:43:02)
   ☐ Configuration nginx ddos @critical
 
-SEO:
-  ✔ Ajouter une description @critical @done (2017-11-22 05:37:58)
-  ✔ Ajouter favicon @critical @done (2017-11-22 05:38:01)
-  ✔ Ajouter les images de share @critical @done (2017-11-23 15:43:09)
-  ✔ Images particulières pour page député et groupe @low @done (2017-11-23 15:43:13)
-
 GLOBAL:
-  ✔ Debug sur chrome iOS @done (2017-11-8 19:48:27)
-  ✔ Franciser lien et requêtes @high @done (2017-11-18 15:20:54)
   ☐ Animation au viewport @high
-  ☐ Épurer l'API (liste pour Oro) @high
   ☐ Debounce le HOC de resize @high
   ☐ Passer tous les graphs sous D3 @high (wordcloud + election)
   ☐ Réduire le stack D3 @high
-
-HEADER:
-  ✔ Liens actifs @done (2017-11-5 14:17:45)
-  ✔ Responsive @done (2017-11-6 17:15:41)
+  ☐ Bug sur les select quand multi select @high
+  ☐ Ajouter reset sur le SearchField @high
 
 HOME:
-  ✔ Ajouter depute random au fetch static @done (2017-11-20 17:02:01)
-  ✔ Ajouter la dernière intervention (+ fetch static) @done (2017-11-20 17:02:03)
-  ✔ Rendre la stat du député random @done (2017-11-20 17:02:04)
-  ✔ Améliorer le graph des votes clés @critical @done (2017-11-21 01:42:18)
-  ✔ Responsive @critical @done (2017-11-21 02:48:20)
-  ✔ Ajouter message d'intro @critical @done (2017-11-22 05:38:11)
   ☐ Permettre de selectionner les param du graphe vote clé @low
 
-SEARCH:
-  ✔ Style de RequestError @done (2017-11-6 01:58:04)
-  ✔ Ne pas charger la liste si déjà chargée @done (2017-11-6 16:04:58)
-  ✔ Vérifier le lien pour le groupe @done (2017-11-6 16:05:00)
-  ✔ Ajouter la variable pour la photo @done (2017-11-6 16:05:01)
-  ✔ Ajouter la variable pour le CSP @done (2017-11-6 16:05:01)
-  ✔ Responsive @done (2017-11-6 17:15:05)
-  ✔ Baisser le nombre de députés à 15 @done (2017-11-7 02:03:25)
-  ✔ Ajouter d'autres stats ? @done (2017-11-7 16:21:55)
-  ✔ Ajouter un bouton pour cacher/montrer les filtres en mode mobile @done (2017-11-8 19:48:33)
-  ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:41)
-  ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:48)
-  ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:27)
-  ✔ Changer les select pour un truc custom @high @done (2017-11-18 23:15:12)
-  ✔ Raccourcir lien header @high @done (2017-11-18 22:48:11)
-
-TOP:
-  ✔ Tester le formulaire de tri @done (2017-11-7 16:21:57)
-  ✔ Ajouter numbers sur nbr interventions et mots @done (2017-11-7 16:22:00)
-  ✔ Ajouter le champ de recherche @done (2017-11-8 16:51:03)
-  ✔ Ajouter un bouton pour cacher/montrer les filtres en mode mobile @done (2017-11-8 19:48:35)
-  ✔ En mode mobile le link autour de l'image devient un block ... :/ @done (2017-11-9 00:26:44)
-  ✔ Reset de la pagination au changement de filtres @done (2017-11-9 13:29:54)
-  ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:30)
-  ✔ Changer les select pour un truc custom @high @done (2017-11-18 23:15:17)
-  ✔ Raccourcir lien heading @high @done (2017-11-18 22:48:09)
-  ☐ Bug sur les select quand multi select @high
-  ☐ Ajouter liens spécifiques à chaque tri sur la stat ? @low
-
 DEPUTE:
-  ✔ Sur le serveur node -> client rechargement entier de la page @done (2017-11-17 00:11:37)
-  ✔ Vérifier valeurs entre liste/top et fiche @done (2017-11-17 04:38:12)
-  ✔ Responsive @done (2017-11-17 04:38:19)
-  ✔ Changer les pictos de la page de vote @critical @done (2017-11-18 15:22:09)
-  ✔ Changer les pictos de la page de participation @critical @done (2017-11-18 15:22:10)
-  ✔ Gérer les 404 redirect sur député insoumis @high @done (2017-11-18 15:22:11)
-  ✔ Virer la stat dissidence pour les non inscrits @high @done (2017-11-18 17:05:32)
-  ✔ Président et vice-pres pas les mêmes votes @high @done (2017-11-18 17:05:33)
+  ✔ Revoir le système de fetch des interventions (load à chaque changement d'onglet) @critical @done (2017-11-29 17:42:36)
+  ☐ Revoir le système de fetch des votes (load à chaque changement d'onglet) @critical
+  ☐ Ajouter les filtres sur le vote @critical
   ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K) @high
-  ☐ Revoir le système de fetch des votes (load à chaque changement d'onglet) @high
-  ☐ Revoir le système de fetch des interventions (load à chaque changement d'onglet) @high
-  ☐ Ajouter sources votes clé @high
   ☐ Changer wordcloud pour un truc sans soucis au niveau de node @high
-  ☐ Bug sur les select quand multi select @high
-  ☐ Ajouter le calendrier @low
-  ☐ Ajouter l'hémicycle et la circo @low
 
-PAGE GROUPE:
-  ✔ à faire ou teasing (gaffe aux url)@high @done (2017-11-18 17:18:42)
-
-PAGE À PROPOS:
-  ✔ À faire @critical @done (2017-11-22 05:38:58)
+ABOUT:
+  ☐ Ajouter page mentions légales @critical

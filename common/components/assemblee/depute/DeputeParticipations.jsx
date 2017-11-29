@@ -5,9 +5,8 @@ import { formatNbr } from 'utility';
 
 import WordsMap from 'components/reusable/WordsMap';
 import AnimatedNumber from 'components/reusable/AnimatedNumber';
-import DeputeInterventionsList from 'containers/assemblee/DeputeInterventionsList';
+import DeputeInterventions from 'containers/assemblee/DeputeInterventions';
 import DeputeGauge from './DeputeGauge';
-import DeputeInterventionsForm from './DeputeInterventionsForm';
 
 import css from './DeputeParticipations.scss';
 
@@ -82,8 +81,7 @@ const DeputeParticipations = ({ depute }) => (
 
     <h2>Ses interventions</h2>
     <div className={css.interventions}>
-      <DeputeInterventionsForm />
-      <DeputeInterventionsList deputeId={depute.id} />
+      <DeputeInterventions deputeId={depute.id} />
     </div>
   </div>
 );

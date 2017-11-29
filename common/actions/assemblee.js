@@ -9,7 +9,6 @@ export const ASSEMBLEE = {
   fetchDepute: 'FETCH_DEPUTE',
   searchDeputeVotes: 'SEARCH_DEPUTE_VOTES',
   fetchDeputeVotes: 'FETCH_DEPUTE_VOTES',
-  searchDeputeInterventions: 'SEARCH_DEPUTE_INTERVENTIONS',
   fetchDeputeInterventions: 'FETCH_DEPUTE_INTERVENTIONS',
   fetchGroups: 'FETCH_GROUPS',
 };
@@ -65,11 +64,6 @@ export const fetchDeputeVotes = search => ({
   endpoint: `/votes${search}`,
   api: 'assemblee',
   type: ASSEMBLEE.fetchDeputeVotes,
-});
-
-export const searchDeputeInterventions = search => ({
-  type: ASSEMBLEE.searchDeputeInterventions,
-  payload: search,
 });
 
 export const fetchDeputeInterventions = search => ({

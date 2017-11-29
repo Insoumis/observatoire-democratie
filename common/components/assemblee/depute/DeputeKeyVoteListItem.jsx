@@ -42,7 +42,7 @@ const DeputeKeyVoteListItem = ({ vote }) => {
     <div>
       <h3>{vote.scrutin_dossierLibelle}</h3>
       {result}
-      <p>
+      <div className={css.content}>
         {vote.desc}<br />
         <div>
           <i className="fa fa-university" />{' '}
@@ -60,7 +60,7 @@ const DeputeKeyVoteListItem = ({ vote }) => {
           <i className="fa fa-arrow-circle-o-right" />{' '}
           <a href={vote.lien} target="_blank">Voir les résultats du vote</a>
         </div>
-      </p>
+      </div>
     </div>
   );
 };

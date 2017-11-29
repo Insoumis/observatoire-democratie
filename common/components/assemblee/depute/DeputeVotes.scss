@@ -38,19 +38,22 @@
     }
 
     h3 + div {
-      text-transform: uppercase;
+      align-items: flex-start;
+      display: flex;
       font-weight: 700;
+      padding-top: 8px;
+      text-transform: uppercase;
 
       span {
         color: $white;
         display: inline-block;
         font-size: .85em;
         font-weight: 600;
-        margin-right: 8px;
+        margin: -8px 8px 0 0;
         padding: 8px 0;
         text-align: center;
         text-transform: none;
-        width: 130px;
+        min-width: 130px;
       }
     }
 
@@ -59,10 +62,10 @@
     .abstention {background: $abstention;}
     .absent {background: $absent;}
 
-    p {
+    .content {
       font-size: .93em;
       line-height: 1.8em;
-      margin-left: 20px;
+      margin: 1em 0 1em 20px;
 
       i {
         color: $lighter;
@@ -100,15 +103,24 @@
     padding: 2px 6px;
   }
 
-  div > span {
-    color: $white;
-    display: inline-block;
-    font-size: .85em;
-    font-weight: 00;
-    margin-right: 8px;
-    padding: 8px 0;
-    text-align: center;
-    width: 130px;
+  h3 + div {
+    align-items: flex-start;
+    display: flex;
+    font-weight: 700;
+    padding-top: 8px;
+    text-transform: uppercase;
+
+    > span {
+      color: $white;
+      display: inline-block;
+      font-size: .85em;
+      font-weight: 600;
+      margin: -8px 8px 0 0;
+      padding: 8px 0;
+      text-align: center;
+      text-transform: none;
+      width: 130px;
+    }
   }
 
   .pour {background: $pour;}

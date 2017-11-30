@@ -39,7 +39,7 @@ class DeputeVotesSearch extends Component {
       <div>
         <Form
           newSearch={newSearch => this.newSearch(newSearch)}
-          initialValues={{ dissidence: false }}
+          initialValues={{ dissidence: 0 }}
         />
         <List
           error={error}

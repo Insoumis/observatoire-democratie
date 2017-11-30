@@ -28,6 +28,7 @@ const DeputeVotesForm = ({ handleSubmit, newSearch }) => {
         <Field
           name="dissidence"
           component={CheckboxField}
+          format={value => value === 1}
           label="Contre son groupe"
           onChange={() => setTimeout(handleSubmit(data => newSearch(data)), 0)}
           parse={value => (value ? 1 : 0)}

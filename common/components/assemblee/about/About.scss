@@ -14,6 +14,8 @@
       display: inline-block;
     }
   }
+
+  h2 {margin-top: 30px;}
 }
 @keyframes wordAnim {
   0% {
@@ -48,7 +50,7 @@
       text-align: center;
       text-decoration: none;
       transition: background .2s;
-      width: calc(100% / 3 - 5px);
+      width: calc(100% / 4 - 5px);
 
       &:global(.active),
       &:hover {

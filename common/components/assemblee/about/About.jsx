@@ -20,6 +20,7 @@ const About = ({ children }) => (
         <ActiveLink to="/assemblee/a-propos/informations">L&apos;initiative</ActiveLink>
         <ActiveLink to="/assemblee/a-propos/lexique">Lexique</ActiveLink>
         <ActiveLink to="/assemblee/a-propos/donnees">Calculs et données</ActiveLink>
+        <ActiveLink to="/assemblee/a-propos/mentions-legales">Mentions légales</ActiveLink>
       </nav>
 
       {children}

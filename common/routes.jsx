@@ -18,6 +18,7 @@ import AssembleeAbout from 'components/assemblee/about/About';
 import AssembleeInfos from 'components/assemblee/about/AboutInformations';
 import AssembleeLexicon from 'components/assemblee/about/AboutLexicon';
 import AssembleeData from 'components/assemblee/about/AboutData';
+import AssembleeLegal from 'components/assemblee/about/AboutLegal';
 
 import NotFound from 'components/NotFound';
 
@@ -41,6 +42,7 @@ export default (
       <Route path="/assemblee/a-propos/informations" component={AssembleeInfos} />
       <Route path="/assemblee/a-propos/lexique" component={AssembleeLexicon} />
       <Route path="/assemblee/a-propos/donnees" component={AssembleeData} />
+      <Route path="/assemblee/a-propos/mentions-legales" component={AssembleeLegal} />
     </Route>
 
     <Route path="*" component={NotFound} />

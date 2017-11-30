@@ -37,7 +37,10 @@ class DeputeVotesSearch extends Component {
 
     return (
       <div>
-        <Form newSearch={newSearch => this.newSearch(newSearch)} />
+        <Form
+          newSearch={newSearch => this.newSearch(newSearch)}
+          initialValues={{ dissidence: true }}
+        />
         <List
           error={error}
           isPending={isPending}

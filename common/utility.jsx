@@ -59,9 +59,6 @@ export const groups = [{
   text: 'Gauche Démocrate et Républicaine',
   value: 'GDR',
 }, {
-  text: 'Les Constructifs',
-  value: 'LC',
-}, {
   text: 'Les Républicains',
   value: 'LR',
 }, {
@@ -76,6 +73,9 @@ export const groups = [{
 }, {
   text: 'La République en Marche',
   value: 'REM',
+}, {
+  text: 'UDI, Agir et Indépendants',
+  value: 'UAI',
 }];
 
 export const regions = [
@@ -143,7 +143,7 @@ export const ages = [
   '70-80 ans',
 ];
 
-export const tris = [{
+export const deputeTri = [{
   text: 'Participation aux scrutins publics',
   value: 'stats.positions.exprimes',
 }, {
@@ -161,4 +161,21 @@ export const tris = [{
 }, {
   text: 'Présence en commission',
   value: 'stats.commissions.present',
+}];
+
+export const votesTri = [{
+  text: 'Tous les scrutins publics',
+  value: '',
+}, {
+  text: 'Vote pour',
+  value: 'pour',
+}, {
+  text: 'Vote contre',
+  value: 'contre',
+}, {
+  text: 'Abstention',
+  value: 'abstention',
+}, {
+  text: 'Absent',
+  value: 'absent',
 }];

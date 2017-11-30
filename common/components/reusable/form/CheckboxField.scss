@@ -1,0 +1,56 @@
+@import '~styles/colors';
+
+.module {
+  position: relative;
+  text-align: left;
+
+  input {
+    left: -9999px;
+    position: absolute;
+
+    &:checked + label::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &:checked + label::before {
+      border: 2px solid $main;
+    }
+
+  }
+
+  label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: .98em;
+    line-height: 20px;
+    padding-left: 25px;
+    position: relative;
+    vertical-align: middle;
+
+    &::before {
+      background: #fff;
+      border: 2px solid $main;
+      border-radius: 5px;
+      content: '';
+      height: 20px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 20px;
+    }
+
+    &::after {
+      background: url('./assets/ico-check.png') no-repeat center;
+      content: '';
+      height: 16px;
+      left: 2px;
+      opacity: 0;
+      position: absolute;
+      top: 2px;
+      transform: scale(0);
+      transition: .2s;
+      width: 16px;
+    }
+  }
+}

@@ -64,21 +64,19 @@ const DeputeVotesList = ({ error, isPending, newSearch, pagination, refetch, sea
         {pagination.totalItems} scrutin
         {(pagination.totalItems > 1) ? 's' : ''}
       </div>
-      <ul>
-        {votes.map(vote => (
-          <li key={vote.scrutin_num}>
-            <h3>
-              {vote.scrutin_dossierLibelle} - {vote.scrutin_typedetail}
-            </h3>
-            {getResult(vote)}
-            <p>
-              {parseHTML(vote.scrutin_desc)}<br />
-              <i className="fa fa-arrow-circle-o-right" />{' '}
-              <a href={getLink(vote.scrutin_id)} target="_blank">Voir les résultats du vote</a>
-            </p>
-          </li>
-        ))}
-      </ul>
+      {votes.map(vote => (
+        <article key={vote.scrutin_num}>
+          <h3>
+            {vote.scrutin_dossierLibelle} - {vote.scrutin_typedetail}
+          </h3>
+          {getResult(vote)}
+          <p>
+            {parseHTML(vote.scrutin_desc)}<br />
+            <i className="fa fa-arrow-circle-o-right" />{' '}
+            <a href={getLink(vote.scrutin_id)} target="_blank">Voir les résultats du vote</a>
+          </p>
+        </article>
+      ))}
       {(pagination.nbrPages > 1) ?
         <ActionPagination
           action={newSearch}

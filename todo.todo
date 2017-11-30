@@ -15,9 +15,9 @@ HOME:
 DEPUTE:
   ✔ Revoir le système de fetch des interventions (load à chaque changement d'onglet) @critical @done (2017-11-29 17:42:36)
   ✔ Revoir le système de fetch des votes (load à chaque changement d'onglet) @critical @done (2017-11-29 18:04:10)
-  ☐ Ajouter les filtres sur le vote @critical
+  ✔ Ajouter les filtres sur le vote @critical @done (2017-11-30 02:53:04)
   ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K) @high
   ☐ Changer wordcloud pour un truc sans soucis au niveau de node @high
 
 ABOUT:
-  ☐ Ajouter page mentions légales @critical
+  ✔ Ajouter page mentions légales @critical @done (2017-11-30 02:53:05)

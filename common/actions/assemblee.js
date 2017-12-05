@@ -26,7 +26,7 @@ export const fetchKeyVotes = () => ({
 });
 
 export const fetchLastIntervention = () => ({
-  endpoint: '/interventions?itemsperpage=1',
+  endpoint: '/interventions/derniere',
   api: 'assemblee',
   type: ASSEMBLEE.fetchLastIntervention,
 });

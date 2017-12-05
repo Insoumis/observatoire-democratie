@@ -33,7 +33,7 @@ const lastIntervention = (state = null, action) => {
     case `${ASSEMBLEE.fetchLastIntervention}_REQUEST`:
       return null;
     case `${ASSEMBLEE.fetchLastIntervention}_SUCCESS`:
-      return action.payload.items[0];
+      return action.payload[0];
     case `${ASSEMBLEE.fetchLastIntervention}_FAILURE`:
       return false;
     default:

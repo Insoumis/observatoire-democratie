@@ -30,7 +30,7 @@ const AboutLegal = () => (
       est la société <a href="https://www.ovh.com/fr/">OVH</a>, dont le siège social se situe à <strong>Roubaix</strong>, qui est
       accessoirement{' '}
       <a href="http://www.lavoixdunord.fr/95041/article/2016-12-25/en-2013-roubaix-etait-toujours-la-ville-la-plus-pauvre-de-france">
-        la ville la plus pauvre de France
+        l&apos;une des villes les plus pauvres de France
       </a> et dont les habitants
       ont tout particulièrement intérêt à se préoccuper de ce que leurs représentants
       votent à l&apos;Assemblée nationale. On dit ça, on dit rien.
@@ -84,7 +84,7 @@ const AboutLegal = () => (
       L&apos;utilisateur est conscient de la nature d&apos;Internet. Il lui incombe de
       prendre toutes les mesures appropriées pour protéger ses propres données
       et accéder aux services de façon appropriée. La responsabilité de
-      observatoire-democratie.fr, limitée aux dommages directs, ne pourrra être
+      observatoire-democratie.fr, limitée aux dommages directs, ne pourra être
       engagée qu&apos;en cas d&apos;erreur manifeste ou de faute lourde.
     </p>
     <p>
@@ -92,7 +92,7 @@ const AboutLegal = () => (
       Aucunes données personnelles ne sont collectées ni traitées par le biais
       du site observatoire-democratie.fr autre que les données de trafic sur le
       site (logs de requêtes serveurs) qui sont collectées afin de maintenir un
-      niveau de service adéquate pour les utilisateurs.<br />
+      niveau de service adéquat pour les utilisateurs.<br />
       Toutes ces informations recueillies lors de l&apos;utilisation de ce site sont
       traitées avec la confidentialité la plus stricte, dans la limite des
       connaissances de l&apos;équipe technique.<br />

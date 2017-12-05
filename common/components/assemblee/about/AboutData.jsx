@@ -41,7 +41,7 @@ const AboutData = () => (
 
     <dt>Nuages de mots :</dt>
     <dd>
-      Dans les nuages de mots présents sur la page "participations" sont d&pos;autant
+      Dans les nuages de mots présents sur la page "participations" sont d&apos;autant
       plus mis en avant qu&apos;ils ont été employés souvent.
       Néanmoins pour que ceux-ci puissent rester pertinents nous avons
       écarté certains mots de nos listes.<br />

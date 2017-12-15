@@ -13,8 +13,14 @@ numeral.locale('fr');
 
 export const formatNbr = (value, format = '0,0') => numeral(value).format(format);
 
-export const parseHTML = html => (
-  <span dangerouslySetInnerHTML={{ __html: sanitizeHtml(html) }} />
+const options = {
+  allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'h2' ]),
+};
+export const parseHTML = (html, inline = false) => (
+  (inline) ?
+    <span dangerouslySetInnerHTML={{ __html: sanitizeHtml(html, options) }} />
+    :
+    <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(html, options) }} />
 );
 
 export const withResize = WrappedComponent => (

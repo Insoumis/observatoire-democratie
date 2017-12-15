@@ -1,4 +1,4 @@
-import { depute } from './schema';
+import { depute, groupe } from './schema';
 
 export const ASSEMBLEE = {
   fetchDeputeRandom: 'FETCH_DEPUTE_RANDOM',
@@ -9,7 +9,7 @@ export const ASSEMBLEE = {
   fetchDepute: 'FETCH_DEPUTE',
   fetchDeputeVotes: 'FETCH_DEPUTE_VOTES',
   fetchDeputeInterventions: 'FETCH_DEPUTE_INTERVENTIONS',
-  fetchGroups: 'FETCH_GROUPS',
+  fetchGroupe: 'FETCH_GROUPE',
 };
 
 
@@ -68,8 +68,9 @@ export const fetchDeputeInterventions = search => ({
   meta: { search },
 });
 
-export const fetchGroups = () => ({
-  endpoint: '/groupes',
+export const fetchGroupe = groupId => ({
+  endpoint: `/groupes/${groupId}`,
   api: 'assemblee',
-  type: ASSEMBLEE.fetchGroups,
+  type: ASSEMBLEE.fetchGroupe,
+  schema: groupe,
 });

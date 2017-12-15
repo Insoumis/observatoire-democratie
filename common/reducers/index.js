@@ -8,6 +8,7 @@ import deputeSearch, * as fromDeputeSearch from './deputeSearch';
 import deputeRanking, * as fromDeputeRanking from './deputeRanking';
 import deputeVotes, * as fromDeputeVotes from './deputeVotes';
 import deputeInterventions, * as fromDeputeInterventions from './deputeInterventions';
+import groupes, * as fromGroupes from './groupes';
 
 const app = combineReducers({
   home,
@@ -16,6 +17,7 @@ const app = combineReducers({
   deputeRanking,
   deputeVotes,
   deputeInterventions,
+  groupes,
   form,
 });
 
@@ -51,3 +53,7 @@ export const getDeputeVotes = state => fromDeputeVotes.getDeputeVotes(state.depu
 export const getDeputeInterventions = state =>
   fromDeputeInterventions.getDeputeInterventions(state.deputeInterventions);
 
+
+const getAllGroupes = state => fromGroupes.getGroupes(state.groupes);
+
+export const getGroupe = (state, groupeId) => getAllGroupes(state)[groupeId];

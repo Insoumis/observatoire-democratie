@@ -71,7 +71,7 @@ const DeputeVotesList = ({ error, isPending, newSearch, pagination, refetch, sea
           </h3>
           {getResult(vote)}
           <p>
-            {parseHTML(vote.scrutin_desc)}<br />
+            {parseHTML(vote.scrutin_desc, true)}<br />
             <i className="fa fa-arrow-circle-o-right" />{' '}
             <a href={getLink(vote.scrutin_id)} target="_blank">Voir les résultats du vote</a>
           </p>

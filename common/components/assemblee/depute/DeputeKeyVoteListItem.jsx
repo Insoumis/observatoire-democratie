@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { parseHTML } from 'utility';
+
 import css from './DeputeVotes.scss';
 
 const DeputeKeyVoteListItem = ({ vote }) => {
@@ -43,7 +45,7 @@ const DeputeKeyVoteListItem = ({ vote }) => {
       <h3>{vote.scrutin_dossierLibelle}</h3>
       {result}
       <div className={css.content}>
-        {vote.desc}<br />
+        {parseHTML(vote.desc)}
         <div>
           <i className="fa fa-university" />{' '}
           <a href={vote.lien_texte} target="_blank">Le texte à l&apos;Assemblée</a>

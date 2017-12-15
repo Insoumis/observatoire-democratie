@@ -24,9 +24,15 @@ const DeputeSearchListItem = ({ depute }) => (
       </Link>
 
       <div className={css.infos}>
-        <Link to={`/assemblee/groupes/${depute.groupe_abrev}`}>
-          <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
-        </Link>
+        {(depute.groupe_abrev !== 'NI') ?
+          <Link to={`/assemblee/groupes/${depute.groupe_abrev}`}>
+            <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+          </Link>
+          :
+          <div>
+            <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+          </div>
+        }
         <div>
           <i className="fa fa-briefcase" aria-hidden="true" />
           {' '}

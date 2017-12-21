@@ -6,7 +6,7 @@ import { formatNbr } from 'utility';
 import WordsMap from 'components/reusable/WordsMap';
 import AnimatedNumber from 'components/reusable/AnimatedNumber';
 import DeputeInterventionsSearch from 'containers/assemblee/DeputeInterventionsSearch';
-import DeputeGauge from './DeputeGauge';
+import Gauge from 'components/assemblee/reusable/Gauge';
 
 import css from './DeputeParticipations.scss';
 
@@ -17,14 +17,14 @@ const DeputeParticipations = ({ depute }) => (
       <div className={css.stats}>
         <div>
           <h3>Présence en commission</h3>
-          <DeputeGauge
+          <Gauge
             picto="commission"
             number={formatNbr(depute.stats.commissions.present)}
           />
         </div>
         <div>
           <h3>Absence en commission</h3>
-          <DeputeGauge
+          <Gauge
             picto="absent"
             number={formatNbr(depute.stats.commissions.absent)}
           />

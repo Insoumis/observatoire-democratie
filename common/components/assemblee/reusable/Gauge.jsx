@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import * as pictos from './assets/gauges';
 
-class DeputeGauge extends Component {
+class Gauge extends Component {
   static polarToCartesian(centerX, centerY, radius, angleInDegrees) {
     const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180;
     return {
@@ -13,8 +13,8 @@ class DeputeGauge extends Component {
   }
 
   static describeArc(x, y, radius, startAngle, endAngle) {
-    const start = DeputeGauge.polarToCartesian(x, y, radius, endAngle);
-    const end = DeputeGauge.polarToCartesian(x, y, radius, startAngle);
+    const start = Gauge.polarToCartesian(x, y, radius, endAngle);
+    const end = Gauge.polarToCartesian(x, y, radius, startAngle);
 
     const largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1';
 
@@ -45,13 +45,13 @@ class DeputeGauge extends Component {
   animate() {
     if (this.nextval < this.limit) {
       this.setState({
-        animatedArc: DeputeGauge.describeArc(110, 110, 100, 220, 220 + this.nextval),
+        animatedArc: Gauge.describeArc(110, 110, 100, 220, 220 + this.nextval),
       });
       this.nextval += this.limit / 20;
       this.animation = setTimeout(() => this.animate(), 30);
     } else {
       this.setState({
-        animatedArc: DeputeGauge.describeArc(110, 110, 100, 220, 220 + this.limit),
+        animatedArc: Gauge.describeArc(110, 110, 100, 220, 220 + this.limit),
       });
     }
   }
@@ -65,7 +65,7 @@ class DeputeGauge extends Component {
           {this.props.number}%
         </text>
         <path
-          d={DeputeGauge.describeArc(110, 110, 100, 220, 500)}
+          d={Gauge.describeArc(110, 110, 100, 220, 500)}
           fill="none"
           stroke={this.props.color || '#82cde2'}
           strokeOpacity="0.33"
@@ -83,15 +83,15 @@ class DeputeGauge extends Component {
   }
 }
 
-DeputeGauge.propTypes = {
+Gauge.propTypes = {
   color: PropTypes.string,
   number: PropTypes.string.isRequired,
   picto: PropTypes.string,
 };
 
-DeputeGauge.defaultProps = {
+Gauge.defaultProps = {
   color: undefined,
   picto: 'participation',
 };
 
-export default DeputeGauge;
+export default Gauge;

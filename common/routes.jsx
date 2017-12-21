@@ -14,6 +14,7 @@ import DeputeInfos from 'components/assemblee/depute/DeputeInfos';
 
 import Groupe from 'containers/assemblee/Groupe';
 import GroupeInfos from 'components/assemblee/groupe/GroupeInfos';
+import GroupeVotes from 'components/assemblee/groupe/GroupeVotes';
 
 import AssembleeAbout from 'components/assemblee/about/About';
 import AssembleeInfos from 'components/assemblee/about/AboutInformations';
@@ -39,6 +40,7 @@ export default (
     <Route component={Groupe}>
       <Redirect from="/assemblee/groupes/:id" to="/assemblee/groupes/:id/informations" />
       <Route path="/assemblee/groupes/:id/informations" component={GroupeInfos} />
+      <Route path="/assemblee/groupes/:id/votes" component={GroupeVotes} />
     </Route>
 
     <Redirect from="/assemblee/a-propos" to="/assemblee/a-propos/informations" />

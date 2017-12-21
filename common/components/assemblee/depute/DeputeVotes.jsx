@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { formatNbr } from 'utility';
 
 import DeputeVotesSearch from 'containers/assemblee/DeputeVotesSearch';
-import DeputeGauge from './DeputeGauge';
+import Gauge from 'components/assemblee/reusable/Gauge';
 import DeputeKeyVoteList from './DeputeKeyVoteList';
 
 import css from './DeputeVotes.scss';
@@ -24,14 +24,14 @@ const DeputeVotes = ({ depute }) => {
       <div className={css.stats}>
         <div>
           <h3>Participation</h3>
-          <DeputeGauge
+          <Gauge
             picto="participation"
             number={formatNbr(depute.stats.positions.exprimes)}
           />
         </div>
         <div>
           <h3>Absence</h3>
-          <DeputeGauge
+          <Gauge
             picto="absent"
             number={formatNbr(depute.stats.positions.absent)}
           />
@@ -41,7 +41,7 @@ const DeputeVotes = ({ depute }) => {
           {(depute.groupe_abrev === 'NI') ?
             <div className={css.notAvailable}>Non disponible</div>
             :
-            <DeputeGauge
+            <Gauge
               picto="dissidence"
               number={formatNbr(depute.stats.positions.dissidence)}
             />
@@ -49,7 +49,7 @@ const DeputeVotes = ({ depute }) => {
         </div>
         <div>
           <h3>Vote pour</h3>
-          <DeputeGauge
+          <Gauge
             picto="pour"
             color="#25a87e"
             number={formatNbr(depute.stats.positions.pour)}
@@ -57,7 +57,7 @@ const DeputeVotes = ({ depute }) => {
         </div>
         <div>
           <h3>Vote contre</h3>
-          <DeputeGauge
+          <Gauge
             picto="contre"
             color="#E23D21"
             number={formatNbr(depute.stats.positions.contre)}
@@ -65,7 +65,7 @@ const DeputeVotes = ({ depute }) => {
         </div>
         <div>
           <h3>Abstention</h3>
-          <DeputeGauge
+          <Gauge
             picto="abstention"
             color="#213558"
             number={formatNbr(depute.stats.positions.abstention)}

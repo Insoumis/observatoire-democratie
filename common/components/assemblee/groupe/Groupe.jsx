@@ -40,7 +40,7 @@ const Groupe = ({ children, error, fetchGroupe, groupe }) => {
       <div className={css.content}>
         <nav>
           <ActiveLink to={`/assemblee/groupes/${groupe.groupe_abrev}/informations`}>Informations</ActiveLink>
-          <ActiveLink>Scrutins publics</ActiveLink>
+          <ActiveLink to={`/assemblee/groupes/${groupe.groupe_abrev}/votes`}>Scrutins publics</ActiveLink>
           <ActiveLink>Participations</ActiveLink>
         </nav>
 

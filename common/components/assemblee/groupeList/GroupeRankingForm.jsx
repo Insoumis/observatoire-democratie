@@ -4,14 +4,13 @@ import { Field, reduxForm } from 'redux-form';
 import qs from 'qs';
 import classNames from 'classnames';
 
-import { groups, regions, statsTri } from 'utility';
+import { statsTri } from 'utility';
 
-import SearchField from 'components/reusable/form/SearchField';
 import SelectField from 'components/reusable/form/SelectField';
 
-import css from './DeputeRanking.scss';
+import css from './GroupeRanking.scss';
 
-class DeputeRankingForm extends Component {
+class GroupeRankingForm extends Component {
   state = { displayFilters: false };
 
   goTo(data) {
@@ -23,20 +22,26 @@ class DeputeRankingForm extends Component {
       return acc;
     }, {});
 
-    this.props.router.push(`/assemblee/deputes/classement?${qs.stringify(search)}`);
+    this.props.router.push(`/assemblee/groupes?${qs.stringify(search)}`);
   }
 
   render() {
+    const groupeStatsTri = [...statsTri];
+    groupeStatsTri.pop();
+    groupeStatsTri.push({
+      text: 'Présence en commission',
+      value: 'stats.commissions.toutes.present',
+    });
+
     return (
       <form onSubmit={this.props.handleSubmit(data => this.goTo(data))}>
-        <Field component={SearchField} name="requete" placeholder="Rechercher un député ..." />
         <div className={classNames('flex wrap space-between', css.filters, {
           [css.displayFilters]: this.state.displayFilters,
         })}
         >
           <Field
             component={SelectField}
-            data={statsTri}
+            data={groupeStatsTri}
             name="tri"
             onChange={(e, tri) => this.goTo({ ...this.props.router.location.query, tri })}
             textField="text"
@@ -56,25 +61,6 @@ class DeputeRankingForm extends Component {
             textField="text"
             valueField="value"
           />
-          <Field
-            component={SelectField}
-            data={groups}
-            name="groupe"
-            onChange={(e, groupe) => this.goTo({ ...this.props.router.location.query, groupe })}
-            textField="text"
-            valueField="value"
-          />
-          <Field
-            component={SelectField}
-            data={[
-              { text: 'Toutes les régions', value: '' },
-              ...regions.map(region => ({ text: region, value: region })),
-            ]}
-            name="region"
-            onChange={(e, region) => this.goTo({ ...this.props.router.location.query, region })}
-            textField="text"
-            valueField="value"
-          />
         </div>
         <button
           className={css.toggleFilters}
@@ -88,7 +74,7 @@ class DeputeRankingForm extends Component {
   }
 }
 
-DeputeRankingForm.propTypes = {
+GroupeRankingForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   router: PropTypes.shape({
     location: PropTypes.shape({
@@ -100,5 +86,5 @@ DeputeRankingForm.propTypes = {
 
 export default reduxForm({
   enableReinitialize: true,
-  form: 'deputeRanking',
-})(DeputeRankingForm);
+  form: 'groupeRanking',
+})(GroupeRankingForm);

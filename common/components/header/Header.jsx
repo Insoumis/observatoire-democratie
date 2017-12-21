@@ -49,11 +49,11 @@ const Header = ({ location }) => (
             <i className="fa fa-home" aria-hidden="true" /> Accueil
           </ActiveLink>
         </li>
-        {/* <li>
+        <li>
           <ActiveLink to="/assemblee/groupes">
             <i className="fa fa-group" aria-hidden="true" /> Groupes
           </ActiveLink>
-        </li> */}
+        </li>
         <li>
           <ActiveLink to="/assemblee/deputes/recherche">
             <i className="fa fa-user-circle-o" aria-hidden="true" /> Député&middot;e&middot;s

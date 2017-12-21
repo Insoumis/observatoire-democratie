@@ -15,7 +15,7 @@ class Groupe extends Component {
   state = { error: false };
 
   componentDidMount() {
-    if (!this.props.groupe) {
+    if (!this.props.groupe || !this.props.groupe.groupe_nuages) {
       this.fetchGroupe();
     }
   }
@@ -51,7 +51,9 @@ class Groupe extends Component {
 Groupe.propTypes = {
   children: PropTypes.node.isRequired,
   dispatch: PropTypes.func.isRequired,
-  groupe: PropTypes.shape({}),
+  groupe: PropTypes.shape({
+    groupe_nuages: PropTypes.shape({}).isRequired,
+  }),
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,

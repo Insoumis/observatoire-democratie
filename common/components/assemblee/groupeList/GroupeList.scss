@@ -1,0 +1,33 @@
+@import '~styles/colors';
+
+.module {
+  margin-top: 20px;
+
+  > ul {
+    animation: appear .4s;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+@keyframes appear {
+  0% {transform: translateY(-30px);}
+  100% {transform: translate(0);}
+}
+
+.count {
+  border-bottom: 1px dashed $lighter;
+  display: inline-block;
+  font-size: .9em;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+  .count {
+    display: block;
+    text-align: center;
+    margin: 0 auto 40px;
+    width: 50%;
+  }
+}

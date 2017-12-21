@@ -14,7 +14,7 @@ const Groupe = ({ children, error, fetchGroupe, groupe }) => {
     return <RequestError retry={fetchGroupe} />;
   }
 
-  if (!groupe) {
+  if (!groupe || !groupe.groupe_nuages) {
     return <Spinner />;
   }
 
@@ -39,9 +39,9 @@ const Groupe = ({ children, error, fetchGroupe, groupe }) => {
 
       <div className={css.content}>
         <nav>
-          <ActiveLink to={`/assemblee/groupes/${groupe.groupe_abrev}/informations`}>Informations</ActiveLink>
           <ActiveLink to={`/assemblee/groupes/${groupe.groupe_abrev}/votes`}>Scrutins publics</ActiveLink>
-          <ActiveLink>Participations</ActiveLink>
+          <ActiveLink to={`/assemblee/groupes/${groupe.groupe_abrev}/participations`}>Participations</ActiveLink>
+          <ActiveLink to={`/assemblee/groupes/${groupe.groupe_abrev}/informations`}>Informations</ActiveLink>
         </nav>
 
         {React.cloneElement(children, { groupe })}

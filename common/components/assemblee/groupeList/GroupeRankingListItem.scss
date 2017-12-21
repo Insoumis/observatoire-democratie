@@ -7,38 +7,25 @@
 
   > div:last-of-type {width: 100%;}
 
-  a:hover > header {
-    h1,
-    h2 span {background: $lighter;}
-  }
+  a:hover > header h1 {background: $lighter;}
 
   header {
     color: $white;
     display: inline-block;
   }
 
-  h2 {
-    font-size: 1em;
-
-    span {
-      background: $emphasis;
-      display: inline-block;
-      padding: 3px 6px;
-      transition: background .2s;
-    }
-  }
-
   h1 {
-    background: $main;
+    background: $emphasis;
     display: inline-block;
-    font-size: 1.13em;
-    padding: 1px 5px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    padding: 2px 5px;
     transition: background .2s;
   }
 }
 
 .rank {
-  margin: 30px 10px 0 0;
+  margin-right: 10px;
   width: 62px;
 
   span {
@@ -62,21 +49,14 @@
       padding-top: 4px;
     }
 
-    .rank1 {background: url('../assets/ico-rank1.svg');}
     .rank2 {background: url('../assets/ico-rank2.svg');}
     .rank3 {background: url('../assets/ico-rank3.svg');}
+    .rank1 {background: url('../assets/ico-rank1.svg');}
   }
-}
-
-.photo {
-  margin-top: 30px;
-
-  img {display: block;}
 }
 
 .infos {
   font-size: .85em;
-  margin: 5px 0 0 15px;
 
   i {color: $lighter;}
 
@@ -149,6 +129,7 @@
 @media (max-width: 767px) {
   .module {
     display: block;
+    padding-top: 72px;
     position: relative;
 
     header {
@@ -162,13 +143,8 @@
     left: 50%;
     margin: 0;
     position: absolute;
-    transform: translateX(-145px);
-  }
-
-  .photo {
-    text-align: center;
-
-    img {display: inline-block;}
+    top: 0;
+    transform: translateX(-50%);
   }
 
   .infos {margin: 0 0 0 5px;}

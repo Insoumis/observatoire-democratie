@@ -149,7 +149,7 @@ export const ages = [
   '70-80 ans',
 ];
 
-export const deputeTri = [{
+export const statsTri = [{
   text: 'Participation aux scrutins publics',
   value: 'stats.positions.exprimes',
 }, {

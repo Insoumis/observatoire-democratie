@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { deputeTri } from 'utility';
+import { statsTri } from 'utility';
 
 import Spinner from 'components/reusable/Spinner';
 import RequestError from 'components/reusable/RequestError';
@@ -31,7 +31,7 @@ const DeputeRandom = ({ depute, refetch }) => {
       <div className={css.module}>
         <DeputeRankingListItem
           depute={depute}
-          stat={deputeTri[Math.floor(Math.random() * deputeTri.length)].value}
+          stat={statsTri[Math.floor(Math.random() * statsTri.length)].value}
         />
       </div>
     );

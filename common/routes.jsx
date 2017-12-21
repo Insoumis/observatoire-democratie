@@ -12,9 +12,12 @@ import DeputeVotes from 'components/assemblee/depute/DeputeVotes';
 import DeputeParticipations from 'components/assemblee/depute/DeputeParticipations';
 import DeputeInfos from 'components/assemblee/depute/DeputeInfos';
 
+import GroupeRanking from 'containers/assemblee/GroupeRanking';
+
 import Groupe from 'containers/assemblee/Groupe';
-import GroupeInfos from 'components/assemblee/groupe/GroupeInfos';
 import GroupeVotes from 'components/assemblee/groupe/GroupeVotes';
+import GroupeParticipations from 'components/assemblee/groupe/GroupeParticipations';
+import GroupeInfos from 'components/assemblee/groupe/GroupeInfos';
 
 import AssembleeAbout from 'components/assemblee/about/About';
 import AssembleeInfos from 'components/assemblee/about/AboutInformations';
@@ -37,10 +40,12 @@ export default (
       <Route path="/assemblee/deputes/:id/informations" component={DeputeInfos} />
     </Route>
 
+    <Route path="/assemblee/groupes" component={GroupeRanking} />
     <Route component={Groupe}>
-      <Redirect from="/assemblee/groupes/:id" to="/assemblee/groupes/:id/informations" />
-      <Route path="/assemblee/groupes/:id/informations" component={GroupeInfos} />
+      <Redirect from="/assemblee/groupes/:id" to="/assemblee/groupes/:id/votes" />
       <Route path="/assemblee/groupes/:id/votes" component={GroupeVotes} />
+      <Route path="/assemblee/groupes/:id/participations" component={GroupeParticipations} />
+      <Route path="/assemblee/groupes/:id/informations" component={GroupeInfos} />
     </Route>
 
     <Redirect from="/assemblee/a-propos" to="/assemblee/a-propos/informations" />

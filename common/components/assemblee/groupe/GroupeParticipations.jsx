@@ -34,6 +34,11 @@ const GroupeParticipations = ({ groupe }) => (
         <h3>Amendements rédigés</h3>
         <strong><AnimatedNumber value={groupe.stats.amendements.rediges} /></strong>
         <p>
+          <strong>
+            {formatNbr(groupe.stats.amendements.rediges_depute) || 0}
+          </strong> en moyenne par député
+        </p>
+        <p>
           <strong>{groupe.stats.amendements.adoptes || 0}%</strong> adopté
           {(groupe.stats.amendements.adoptes > 1) ? 's' : ''}
         </p>
@@ -41,10 +46,16 @@ const GroupeParticipations = ({ groupe }) => (
       <div>
         <h3>Nombre d&apos;interventions</h3>
         <strong><AnimatedNumber value={groupe.stats.nbitvs} /></strong>
+        <p>
+          <strong>{formatNbr(groupe.stats.nbitvs_depute) || 0}</strong> en moyenne par député
+        </p>
       </div>
       <div>
         <h3>Nombre de mots</h3>
         <strong><AnimatedNumber value={groupe.stats.nbmots} /></strong>
+        <p>
+          <strong>{formatNbr(groupe.stats.nbmots_depute) || 0}</strong> en moyenne par député
+        </p>
       </div>
     </div>
 

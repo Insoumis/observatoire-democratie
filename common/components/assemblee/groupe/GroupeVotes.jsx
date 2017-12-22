@@ -9,7 +9,7 @@ import css from './GroupeVotes.scss';
 
 const GroupeVotes = ({ groupe }) => (
   <div className={css.module}>
-    <h2>Votes aux scrutins publics</h2>
+    <h2>Votes aux scrutins publics (moyenne)</h2>
     <div className={css.stats}>
       <div>
         <h3>Participation</h3>

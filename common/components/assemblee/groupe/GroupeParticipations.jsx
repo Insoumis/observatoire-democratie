@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import { formatNbr } from 'utility';
 
+import Gauge from 'components/assemblee/reusable/Gauge';
 import WordsMap from 'components/reusable/WordsMap';
 import AnimatedNumber from 'components/reusable/AnimatedNumber';
-import Gauge from 'components/assemblee/reusable/Gauge';
+import GroupeInterventionsSearch from 'containers/assemblee/GroupeInterventionsSearch';
 
 import css from './GroupeParticipations.scss';
 
@@ -80,6 +81,11 @@ const GroupeParticipations = ({ groupe }) => (
       :
       false
     }
+
+    <h2>Les interventions</h2>
+    <div className={css.interventions}>
+      <GroupeInterventionsSearch groupeId={groupe.groupe_abrev} />
+    </div>
   </div>
 );
 

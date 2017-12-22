@@ -11,6 +11,7 @@ export const ASSEMBLEE = {
   fetchDeputeInterventions: 'FETCH_DEPUTE_INTERVENTIONS',
   fetchGroupeRanking: 'FETCH_GROUPE_RANKING',
   fetchGroupe: 'FETCH_GROUPE',
+  fetchGroupeInterventions: 'FETCH_GROUPE_INTERVENTIONS',
 };
 
 
@@ -82,4 +83,11 @@ export const fetchGroupe = groupId => ({
   api: 'assemblee',
   type: ASSEMBLEE.fetchGroupe,
   schema: groupe,
+});
+
+export const fetchGroupeInterventions = search => ({
+  endpoint: `/interventions${search}`,
+  api: 'assemblee',
+  type: ASSEMBLEE.fetchGroupeInterventions,
+  meta: { search },
 });

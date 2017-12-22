@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import { formatNbr } from 'utility';
 
+import Gauge from 'components/assemblee/reusable/Gauge';
 import WordsMap from 'components/reusable/WordsMap';
 import AnimatedNumber from 'components/reusable/AnimatedNumber';
 import DeputeInterventionsSearch from 'containers/assemblee/DeputeInterventionsSearch';
-import Gauge from 'components/assemblee/reusable/Gauge';
 
 import css from './DeputeParticipations.scss';
 

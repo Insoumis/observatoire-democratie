@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { statsTri } from 'utility';
+import { groupesTri } from 'utility';
 
 import GroupeRankingForm from './GroupeRankingForm';
 import GroupeList from './GroupeList';
@@ -20,7 +20,7 @@ const GroupeRanking = ({ groupeRanking, fetchGroupeRanking, router }) => (
     <GroupeRankingForm
       initialValues={{
         ...router.location.query,
-        tri: router.location.query.tri || statsTri[0].value,
+        tri: router.location.query.tri || groupesTri[0].value,
         ordre: router.location.query.ordre || 'desc',
       }}
       router={router}

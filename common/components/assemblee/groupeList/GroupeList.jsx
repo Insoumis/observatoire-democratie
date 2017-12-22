@@ -20,12 +20,10 @@ const GroupeList = ({ baseLink, groupes, error, isPending, ListItem, pagination,
     );
   }
 
-  console.log(groupes);
-
   return (
     <div className={css.module}>
       <div className={css.count}>
-        {pagination.totalItems} député
+        {pagination.totalItems} groupe
         {(pagination.totalItems > 1) ? 's' : ''}
       </div>
       <ul>

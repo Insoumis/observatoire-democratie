@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { statsTri } from 'utility';
+import { deputesTri } from 'utility';
 
 import DeputeRankingForm from './DeputeRankingForm';
 import DeputeList from './DeputeList';
@@ -20,7 +20,7 @@ const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => (
     <DeputeRankingForm
       initialValues={{
         ...router.location.query,
-        tri: router.location.query.tri || statsTri[0].value,
+        tri: router.location.query.tri || deputesTri[0].value,
         ordre: router.location.query.ordre || 'desc',
       }}
       router={router}

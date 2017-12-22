@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import qs from 'qs';
-import classNames from 'classnames';
 
-import { statsTri } from 'utility';
+import { groupesTri } from 'utility';
 
 import SelectField from 'components/reusable/form/SelectField';
 
 import css from './GroupeRanking.scss';
 
 class GroupeRankingForm extends Component {
-  state = { displayFilters: false };
-
   goTo(data) {
     const search = Object.keys(data).reduce((acc, key) => {
       if (key !== 'page' && data[key].length) {
@@ -26,22 +23,12 @@ class GroupeRankingForm extends Component {
   }
 
   render() {
-    const groupeStatsTri = [...statsTri];
-    groupeStatsTri.pop();
-    groupeStatsTri.push({
-      text: 'Présence en commission',
-      value: 'stats.commissions.toutes.present',
-    });
-
     return (
       <form onSubmit={this.props.handleSubmit(data => this.goTo(data))}>
-        <div className={classNames('flex wrap space-between', css.filters, {
-          [css.displayFilters]: this.state.displayFilters,
-        })}
-        >
+        <div className={`flex wrap space-between ${css.filters}`}>
           <Field
             component={SelectField}
-            data={groupeStatsTri}
+            data={groupesTri}
             name="tri"
             onChange={(e, tri) => this.goTo({ ...this.props.router.location.query, tri })}
             textField="text"
@@ -62,13 +49,6 @@ class GroupeRankingForm extends Component {
             valueField="value"
           />
         </div>
-        <button
-          className={css.toggleFilters}
-          onClick={() => this.setState({ displayFilters: !this.state.displayFilters })}
-          type="button"
-        >
-          {(this.state.displayFilters) ? 'Réduire les filtres' : 'Voir plus de filtres'}
-        </button>
       </form>
     );
   }

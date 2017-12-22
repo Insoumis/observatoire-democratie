@@ -149,7 +149,7 @@ export const ages = [
   '70-80 ans',
 ];
 
-export const statsTri = [{
+export const deputesTri = [{
   text: 'Participation aux scrutins publics',
   value: 'stats.positions.exprimes',
 }, {
@@ -167,6 +167,35 @@ export const statsTri = [{
 }, {
   text: 'Présence en commission',
   value: 'stats.commissions.present',
+}];
+
+export const groupesTri = [{
+  text: 'Participation moyenne aux scrutins publics',
+  value: 'stats.positions.exprimes',
+}, {
+  text: 'Moyenne contre son groupe',
+  value: 'stats.positions.dissidence',
+}, {
+  text: 'Nombre moyen d\'interventions',
+  value: 'stats.nbitvs',
+}, {
+  text: 'Nombre moyen d\'interventions par députés',
+  value: 'stats.nbitvs_depute',
+}, {
+  text: 'Nombre moyen de mots',
+  value: 'stats.nbmots',
+}, {
+  text: 'Nombre moyen de mots par députés',
+  value: 'stats.nbmots_depute',
+}, {
+  text: 'Amendements rédigés en moyenne',
+  value: 'stats.amendements.rediges',
+}, {
+  text: 'Amendements rédigés en moyenne par députés',
+  value: 'stats.amendements.rediges_depute',
+}, {
+  text: 'Présence moyenne en commission',
+  value: 'stats.commissions.toutes.present',
 }];
 
 export const votesTri = [{

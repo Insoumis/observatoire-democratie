@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import qs from 'qs';
 import classNames from 'classnames';
 
-import { groups, regions, statsTri } from 'utility';
+import { groups, regions, deputesTri } from 'utility';
 
 import SearchField from 'components/reusable/form/SearchField';
 import SelectField from 'components/reusable/form/SelectField';
@@ -36,7 +36,7 @@ class DeputeRankingForm extends Component {
         >
           <Field
             component={SelectField}
-            data={statsTri}
+            data={deputesTri}
             name="tri"
             onChange={(e, tri) => this.goTo({ ...this.props.router.location.query, tri })}
             textField="text"

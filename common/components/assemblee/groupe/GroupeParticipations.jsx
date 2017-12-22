@@ -12,7 +12,7 @@ import css from './GroupeParticipations.scss';
 
 const GroupeParticipations = ({ groupe }) => (
   <div>
-    <h2>Les participations en chiffres</h2>
+    <h2>Les participations en chiffres (moyenne)</h2>
     <div className={css.stats}>
       <div>
         <h3>Présence en commission</h3>

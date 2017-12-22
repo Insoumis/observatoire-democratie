@@ -9,7 +9,9 @@
     background: $main;
     color: $white;
     display: inline-block;
-    padding: 8px 10px;
+    font-size: 2.2em;
+    line-height: 1.2em;
+    padding: 6px 12px;
   }
 
   h1 + div {
@@ -96,6 +98,8 @@
 
 @media (max-width: 767px) {
   .module {margin-top: 45px;}
+
+  .header h1 {font-size: 1.5em;}
 
   .content {
     > nav a {width: calc(100% / 2 - 5px);}

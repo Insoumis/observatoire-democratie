@@ -173,19 +173,19 @@ export const groupesTri = [{
   text: 'Participation moyenne aux scrutins publics',
   value: 'stats.positions.exprimes',
 }, {
-  text: 'Moyenne contre son groupe',
+  text: 'En moyenne contre son groupe',
   value: 'stats.positions.dissidence',
 }, {
   text: 'Nombre d\'interventions',
   value: 'stats.nbitvs',
 }, {
-  text: 'Nombre moyen d\'interventions par député',
+  text: 'Nombre d\'interventions en moyenne par député',
   value: 'stats.nbitvs_depute',
 }, {
   text: 'Nombre de mots',
   value: 'stats.nbmots',
 }, {
-  text: 'Nombre moyen de mots par député',
+  text: 'Nombre de mots en moyenne par député',
   value: 'stats.nbmots_depute',
 }, {
   text: 'Amendements rédigés',

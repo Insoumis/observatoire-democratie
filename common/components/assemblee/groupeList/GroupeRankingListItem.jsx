@@ -34,7 +34,7 @@ const GroupeRankingListItem = ({ groupe, location, stat }) => {
       case 'stats.nbitvs':
         content = (
           <div className={css.stats}>
-            <h3>Nombre moyen d&apos;interventions</h3>
+            <h3>Nombre d&apos;interventions</h3>
             <div className={css.talk}>
               <span>{formatNbr(groupe.stats.nbitvs)}</span>
             </div>
@@ -51,7 +51,7 @@ const GroupeRankingListItem = ({ groupe, location, stat }) => {
       case 'stats.nbitvs_depute':
         content = (
           <div className={css.stats}>
-            <h3>Nombre moyen d&apos;interventions par députés</h3>
+            <h3>Nombre moyen d&apos;interventions par député</h3>
             <div className={css.talk}>
               <span>{formatNbr(groupe.stats.nbitvs_depute)}</span>
             </div>
@@ -68,7 +68,7 @@ const GroupeRankingListItem = ({ groupe, location, stat }) => {
       case 'stats.nbmots':
         content = (
           <div className={css.stats}>
-            <h3>Nombre moyen de mots</h3>
+            <h3>Nombre de mots</h3>
             <div className={css.words}>
               <span>{formatNbr(groupe.stats.nbmots)}</span>
             </div>
@@ -85,7 +85,7 @@ const GroupeRankingListItem = ({ groupe, location, stat }) => {
       case 'stats.nbmots_depute':
         content = (
           <div className={css.stats}>
-            <h3>Nombre moyen de mots par députés</h3>
+            <h3>Nombre moyen de mots par député</h3>
             <div className={css.words}>
               <span>{formatNbr(groupe.stats.nbmots_depute)}</span>
             </div>
@@ -102,7 +102,7 @@ const GroupeRankingListItem = ({ groupe, location, stat }) => {
       case 'stats.amendements.rediges':
         content = (
           <div className={css.stats}>
-            <h3>Amendements rédigés en moyenne</h3>
+            <h3>Amendements rédigés</h3>
             <div className={css.law}>
               <span>{formatNbr(groupe.stats.amendements.rediges)}</span>
             </div>
@@ -119,7 +119,7 @@ const GroupeRankingListItem = ({ groupe, location, stat }) => {
       case 'stats.amendements.rediges_depute':
         content = (
           <div className={css.stats}>
-            <h3>Amendements rédigés en moyenne par députés</h3>
+            <h3>Amendements rédigés en moyenne par député</h3>
             <div className={css.law}>
               <span>{formatNbr(groupe.stats.amendements.rediges_depute)}</span>
             </div>
@@ -136,7 +136,7 @@ const GroupeRankingListItem = ({ groupe, location, stat }) => {
       case 'stats.commissions.toutes.present':
         content = (
           <div className={css.stats}>
-            <h3>Présence en commission</h3>
+            <h3>Présence moyenne en commission</h3>
             <div className={css.commission}>
               <span>{formatNbr(groupe.stats.commissions.toutes.present)} %</span>
             </div>

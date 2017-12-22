@@ -176,22 +176,22 @@ export const groupesTri = [{
   text: 'Moyenne contre son groupe',
   value: 'stats.positions.dissidence',
 }, {
-  text: 'Nombre moyen d\'interventions',
+  text: 'Nombre d\'interventions',
   value: 'stats.nbitvs',
 }, {
-  text: 'Nombre moyen d\'interventions par députés',
+  text: 'Nombre moyen d\'interventions par député',
   value: 'stats.nbitvs_depute',
 }, {
-  text: 'Nombre moyen de mots',
+  text: 'Nombre de mots',
   value: 'stats.nbmots',
 }, {
-  text: 'Nombre moyen de mots par députés',
+  text: 'Nombre moyen de mots par député',
   value: 'stats.nbmots_depute',
 }, {
-  text: 'Amendements rédigés en moyenne',
+  text: 'Amendements rédigés',
   value: 'stats.amendements.rediges',
 }, {
-  text: 'Amendements rédigés en moyenne par députés',
+  text: 'Amendements rédigés en moyenne par député',
   value: 'stats.amendements.rediges_depute',
 }, {
   text: 'Présence moyenne en commission',

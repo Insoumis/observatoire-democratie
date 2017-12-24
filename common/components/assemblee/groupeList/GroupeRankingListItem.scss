@@ -135,6 +135,7 @@
 @media (max-width: 767px) {
   .module {
     display: block;
+    padding-top: 72px;
     position: relative;
 
     header {
@@ -148,7 +149,8 @@
     left: 50%;
     margin: 0;
     position: absolute;
-    transform: translateX(-145px);
+    top: 0;
+    transform: translateX(-50%);
   }
 
   .photo {

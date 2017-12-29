@@ -47,7 +47,11 @@
   }
 }
 
-.photo {margin-top: 32px;}
+.photo {
+  margin-top: 32px;
+
+  img {display: block;}
+}
 
 .infos {margin: 0 15px;}
 
@@ -223,7 +227,7 @@
     button {
       font-size: .85em;
       line-height: 1.2em;
-      padding: 6px 0;
+      padding: 6px;
     }
   }
 
@@ -270,7 +274,11 @@
     header {text-align: center;}
   }
 
-  .photo {text-align: center;}
+  .photo {
+    text-align: center;
+
+    img {display: inline-block;}
+  }
 
   .contacts {
     text-align: center;

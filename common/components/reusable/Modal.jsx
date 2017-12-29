@@ -20,7 +20,7 @@ const Modal = ({ children, className, handleClose, isOpen, title }) => (
   >
     <div className={`${css.module} ${className}`} onClick={(e) => e.stopPropagation()}>
       <button className={css.close} onClick={handleClose}>
-        <span>×</span>
+        <i className="fa fa-times" />
       </button>
       {children}
     </div>

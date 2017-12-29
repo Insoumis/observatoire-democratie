@@ -12,7 +12,7 @@ import css from './Depute.scss';
 
 class DeputeShare extends Component {
   state = {
-    isModalOpen: false,
+    isModalOpen: true,
     stat1: 'participation',
     stat2: '',
     clean: false,

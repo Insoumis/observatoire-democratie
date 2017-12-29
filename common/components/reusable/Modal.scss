@@ -41,8 +41,7 @@
 .close {
   background: $emphasis;
   color: $white;
-  font-family: sans-serif;
-  font-size: 2em;
+  font-size: 1.25em;
   font-weight: 700;
   height: 35px;
   padding: 0;
@@ -56,11 +55,6 @@
   &:hover {
     background: $lighter;
     outline: 0;
-  }
-
-  span {
-    position: relative;
-    top: -3px;
   }
 }
 

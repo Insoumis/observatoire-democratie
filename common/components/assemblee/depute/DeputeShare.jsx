@@ -23,14 +23,18 @@ class DeputeShare extends Component {
   }
 
   render() {
-    const { depute } = this.props;
+    const { depute, pathname } = this.props;
     const { clean, stat1, stat2 } = this.state;
 
-    const imgURL = `${API_URL}/visuels/stat21?${qs.stringify({
+    const query = qs.stringify({
       depute: depute.id,
       stat: `${stat1}${(stat2 !== '' ? `,${stat2}` : '')}`,
       clean: clean ? true : undefined,
-    })}`;
+    });
+
+    const imgURL = `${API_URL}/visuels/stat21?${query}`;
+
+    const shareURL = `${BASE_URL}${pathname}?${query}`;
 
     return (
       <button onClick={() => this.toggleModal()}>
@@ -81,8 +85,20 @@ class DeputeShare extends Component {
                 <img src={imgURL} alt={depute.depute_nom} />
               </div>
               <div>
-                <a href=""><i className="fa fa-twitter fa-fw" /> Partager sur Twitter</a>
-                <a href=""><i className="fa fa-facebook fa-fw" />  Partager sur Facebook</a>
+                <a
+                  href={`http://twitter.com/home/?status=${encodeURIComponent(`Via @Obs_Democratie : ${shareURL}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa fa-twitter fa-fw" /> Partager sur Twitter
+                </a>
+                <a
+                  href={`http://www.facebook.com/sharer.php?u=${encodeURIComponent(shareURL)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa fa-facebook fa-fw" />  Partager sur Facebook
+                </a>
               </div>
             </div>
           </div>
@@ -93,7 +109,10 @@ class DeputeShare extends Component {
   }
 }
 
-DeputeShare.propTypes = { depute: PropTypes.shape({}).isRequired };
+DeputeShare.propTypes = {
+  depute: PropTypes.shape({}).isRequired,
+  pathname: PropTypes.string.isRequired,
+};
 
 export default reduxForm({
   form: 'deputeShare',

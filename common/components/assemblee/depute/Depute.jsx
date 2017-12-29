@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 import RequestError from 'components/reusable/RequestError';
 import Spinner from 'components/reusable/Spinner';
@@ -10,7 +10,7 @@ import Share from './DeputeShare';
 
 import css from './Depute.scss';
 
-const Depute = ({ children, depute, error, fetchDepute }) => {
+const Depute = ({ children, depute, error, fetchDepute, location }) => {
   if (error) {
     return <RequestError retry={fetchDepute} />;
   }
@@ -26,12 +26,17 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
     twitter: <i className="fa fa-twitter" />,
   };
 
+  let shareImgURL = `${API_URL}/visuels/obs2?depute=${depute.id}`;
+  if (location.query.stat) {
+    shareImgURL = `${API_URL}/visuels/stat21${location.search}`;
+  }
+
   return (
     <div className={`container ${css.module}`}>
       <Helmet>
         <title>{depute.depute_nom}</title>
         <meta property="og:title" content={`${depute.depute_nom} | Observatoire de la Démocratie`} />
-        <meta property="og:image" content={`${API_URL}/visuels/obs2?depute=${depute.id}`} />
+        <meta property="og:image" content={shareImgURL} />
       </Helmet>
 
       <div className={css.header}>
@@ -80,7 +85,7 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
           </div>
         </div>
 
-        <Share depute={depute} />
+        <Share depute={depute} pathname={location.pathname} />
       </div>
 
       <div className={css.content}>
@@ -101,8 +106,11 @@ Depute.propTypes = {
   depute: PropTypes.shape({}),
   error: PropTypes.bool.isRequired,
   fetchDepute: PropTypes.func.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 Depute.defaultProps = { depute: undefined };
 
-export default Depute;
+export default withRouter(Depute);

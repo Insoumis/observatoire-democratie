@@ -33,7 +33,7 @@ class DeputeShare extends Component {
 
     const query = qs.stringify({
       depute: depute.id,
-      stat: `${stat1}${(stat2 !== '' ? `,${stat2}` : '')}`,
+      stat: `${stat1}${stat2.length ? `,${stat2}` : stat2}`,
       clean: clean ? true : undefined,
     });
 
@@ -126,7 +126,6 @@ export default reduxForm({
   form: 'deputeShare',
   initialValues: {
     stat1: 'participation',
-    stat2: '',
     style: 'Standard',
   },
 })(DeputeShare);

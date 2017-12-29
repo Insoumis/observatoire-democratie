@@ -6,7 +6,7 @@ const SelectField = ({ data, input, textField, valueField }) => (
   <DropdownList
     {...input}
     data={data}
-    onChange={val => input.onChange(val[valueField] || val)}
+    onChange={val => input.onChange(valueField ? val[valueField] : val)}
     textField={textField}
     valueField={valueField}
   />

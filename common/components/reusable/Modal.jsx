@@ -4,7 +4,9 @@ import RModal from 'react-modal';
 
 import css from './Modal.scss';
 
-RModal.setAppElement('#root');
+if (typeof document !== 'undefined') {
+  RModal.setAppElement('#root');
+}
 
 const Modal = ({ children, className, handleClose, isOpen, title }) => (
   <RModal

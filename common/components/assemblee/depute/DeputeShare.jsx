@@ -34,7 +34,7 @@ class DeputeShare extends Component {
 
     const imgURL = `${API_URL}/visuels/stat21?${query}`;
 
-    const shareURL = `${BASE_URL}${pathname}?${query}`;
+    const shareURL = encodeURIComponent(`${BASE_URL}${pathname}?${query}`);
 
     return (
       <button onClick={() => this.toggleModal()}>
@@ -84,14 +84,14 @@ class DeputeShare extends Component {
               <img src={imgURL} alt={depute.depute_nom} />
               <div>
                 <a
-                  href={`http://twitter.com/home/?status=${encodeURIComponent(`Via @Obs_Democratie : ${shareURL}`)}`}
+                  href={`http://twitter.com/share/?text=${encodeURIComponent('Via @Obs_Democratie :')}&url=${shareURL}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="fa fa-twitter fa-fw" /> Partager sur Twitter
                 </a>
                 <a
-                  href={`http://www.facebook.com/sharer.php?u=${encodeURIComponent(shareURL)}`}
+                  href={`http://www.facebook.com/sharer.php?u=${shareURL}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

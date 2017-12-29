@@ -1,5 +1,10 @@
 @import '~styles/colors';
 
+:global(.ReactModal__Body--open) {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .overlay {
   animation: fadein .3s;
   background: transparentize($lighter, .1);
@@ -8,6 +13,8 @@
   position: fixed;
   right: 0px;
   top: 0px;
+  max-height: 100vh;
+  overflow: auto;
 }
 @keyframes fadein {
   0% {opacity: 0;}
@@ -20,7 +27,7 @@
   animation: appear .3s;
   background: $background;
   box-shadow: 4px 4px 0 $main;
-  margin-top: 90px;
+  margin: 90px 0 45px;
   padding: 30px;
   position: relative;
 }
@@ -36,6 +43,7 @@
   font-size: 2em;
   font-weight: 700;
   height: 35px;
+  padding: 0;
   position: absolute;
   right: 20px;
   top: -10px;
@@ -64,4 +72,8 @@
 @keyframes disappear {
   0% {transform: scale(1);}
   100% {transform: scale(.8);}
+}
+
+@media (max-width: 767px) {
+  .module {margin: 15px 4px 15px 0;}
 }

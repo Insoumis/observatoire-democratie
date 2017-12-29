@@ -46,10 +46,10 @@ class DeputeShare extends Component {
           isOpen={this.state.isModalOpen}
           title="Formulaire de partage des données du député"
         >
-          <h1>Partager les données de <strong>{depute.depute_nom}</strong></h1>
+          <h1>Partager les&nbsp;données&nbsp;de <strong>{depute.depute_nom}</strong></h1>
 
           <div>
-            <h2>Quelles <strong>données</strong> vous intéressent ?</h2>
+            <h2>Quelles <strong>données</strong> vous intéressent&nbsp;?</h2>
             <div className={css.filters}>
               <Field
                 name="stat1"
@@ -69,7 +69,7 @@ class DeputeShare extends Component {
               />
             </div>
 
-            <h2>Quel <strong>style</strong> souhaitez-vous ?</h2>
+            <h2>Quel <strong>style</strong> souhaitez-vous&nbsp;?</h2>
             <div className={css.filters}>
               <Field
                 name="style"

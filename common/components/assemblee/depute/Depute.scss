@@ -101,7 +101,7 @@
     }
   }
 
-  h1 + div {margin: 0 30px 30px};
+  h1 + div {margin: 0 30px 30px;}
 
   h2 {
     border-bottom: 1px dashed $lighter;
@@ -217,7 +217,35 @@
 }
 
 @media (max-width: 1023px) {
-  .header {margin-bottom: 50px;}
+  .header {
+    margin-bottom: 45px;
+
+    button {
+      font-size: .85em;
+      line-height: 1.2em;
+      padding: 6px 0;
+    }
+  }
+
+  .share {
+    h1 {font-size: 1.2em;}
+
+    h1 + div {margin: 0 15px 15px;}
+  }
+
+  .shareChoice {
+    img {
+      margin-right: 10px;
+      height: 195px;
+      width: 390px;
+    }
+
+    a {
+      font-size: .85em;
+      margin-bottom: 10px;
+      padding: 6px 12px;
+    }
+  }
 
   .content > nav a {
     font-size: .9em;
@@ -229,7 +257,15 @@
   .module {
     margin-top: 45px;
 
-    .header {display: block;}
+    .header {
+      display: block;
+
+      button {
+        display: block;
+        margin: 15px auto 0;
+        padding: 10px 12px;
+      }
+    }
 
     header {text-align: center;}
   }
@@ -239,6 +275,39 @@
   .contacts {
     text-align: center;
     margin-bottom: 25px;
+  }
+
+  .share {
+    h1 {
+      margin-bottom: 15px;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    h1 + div {margin: 0;}
+
+    h2 {
+      font-size: 0.95em;
+    }
+  }
+
+  .filters {
+    display: block;
+
+    > div {
+      margin-bottom: 5px;
+      width: 100%;
+    }
+  }
+
+  .shareChoice {
+    display: block;
+
+    img {
+      height: auto;
+      margin-bottom: 5px;
+      width: 100%;
+    }
   }
 
   .content {

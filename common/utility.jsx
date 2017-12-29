@@ -169,6 +169,20 @@ export const deputesTri = [{
   value: 'stats.commissions.present',
 }];
 
+export const deputesShare = [{
+  text: 'Participation aux scrutins publics',
+  value: 'participation',
+}, {
+  text: 'Présence en commission',
+  value: 'commission',
+}, {
+  text: 'Ses 5 mots préférés',
+  value: 'motspreferes',
+}, {
+  text: 'Ses 5 verbes préférés',
+  value: 'verbespreferes',
+}];
+
 export const groupesTri = [{
   text: 'Participation moyenne aux scrutins publics',
   value: 'stats.positions.exprimes',

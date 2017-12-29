@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 import RequestError from 'components/reusable/RequestError';
 import Spinner from 'components/reusable/Spinner';
 import ActiveLink from 'components/reusable/ActiveLink';
+import Share from './DeputeShare';
 
 import css from './Depute.scss';
 
@@ -78,6 +79,8 @@ const Depute = ({ children, depute, error, fetchDepute }) => {
             </div>
           </div>
         </div>
+
+        <Share depute={depute} />
       </div>
 
       <div className={css.content}>

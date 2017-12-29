@@ -29,10 +29,10 @@ const Groupe = ({ children, error, fetchGroupe, groupe }) => {
         <h1>{groupe.groupe_libelle} ({groupe.groupe_abrev})</h1>
         <div>
           <Link to={`/assemblee/deputes/recherche?groupe=${groupe.groupe_abrev}`}>
-            <i className="fa fa-group" /> {groupe.groupe_nbmembres} membres
+            <i className="fa fa-group fa-fw" /> {groupe.groupe_nbmembres} membres
           </Link>
           <Link to={`/assemblee/deputes/${groupe.president.depute_shortid}`}>
-            <i className="fa fa-bookmark" /> Président : {groupe.president.depute_nom}
+            <i className="fa fa-bookmark fa-fw" /> Président : {groupe.president.depute_nom}
           </Link>
         </div>
       </div>

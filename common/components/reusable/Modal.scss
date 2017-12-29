@@ -1,0 +1,67 @@
+@import '~styles/colors';
+
+.overlay {
+  animation: fadein .3s;
+  background: transparentize($lighter, .1);
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+@keyframes fadein {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.container:focus {outline: 0;}
+
+.module {
+  animation: appear .3s;
+  background: $background;
+  box-shadow: 4px 4px 0 $main;
+  margin-top: 90px;
+  padding: 30px;
+  position: relative;
+}
+@keyframes appear {
+  0% {transform: scale(.8);}
+  100% {transform: scale(1);}
+}
+
+.close {
+  background: $emphasis;
+  color: $white;
+  font-family: sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  height: 35px;
+  position: absolute;
+  right: 20px;
+  top: -10px;
+  transition: background .2s;
+  width: 35px;
+
+  &:focus,
+  &:hover {
+    background: $lighter;
+    outline: 0;
+  }
+
+  span {
+    position: relative;
+    top: -3px;
+  }
+}
+
+:global(.ReactModal__Overlay--before-close) {animation: fadeout .2s;}
+@keyframes fadeout {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+:global(.ReactModal__Content--before-close) {animation: disappear .2s;}
+@keyframes disappear {
+  0% {transform: scale(1);}
+  100% {transform: scale(.8);}
+}

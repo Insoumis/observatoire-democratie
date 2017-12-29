@@ -9,6 +9,7 @@ GLOBAL:
   ☐ Animation au viewport @high
   ☐ Debounce le HOC de resize @high
   ☐ Réduire le stack D3 @high
+  ☐ Resize les icones fa
 
 DEPUTE:
   ✔ Revoir le système de fetch des interventions (load à chaque changement d'onglet) @critical @done (2017-11-29 17:42:36)

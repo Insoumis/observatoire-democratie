@@ -14,9 +14,9 @@ DEPUTE:
   ✔ Revoir le système de fetch des interventions (load à chaque changement d'onglet) @critical @done (2017-11-29 17:42:36)
   ✔ Revoir le système de fetch des votes (load à chaque changement d'onglet) @critical @done (2017-11-29 18:04:10)
   ✔ Ajouter les filtres sur le vote @critical @done (2017-11-30 02:53:04)
+  ✔ Share twitter app ios ne fonctionne pas @done (2017-12-29 08:43:40)
+  ✔ Scroll sur modal de share @done (2017-12-29 08:43:58)
   ☐ Tester nombre de mots avec le député en ayant le plus (prévoir de changer le format 1K) @high
-  ☐ Scroll sur modal de share
-  ☐ Share twitter app ios ne fonctionne pas
 
 ABOUT:
   ✔ Ajouter page mentions légales @critical @done (2017-11-30 02:53:05)

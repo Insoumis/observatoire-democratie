@@ -18,6 +18,11 @@ class DeputeShare extends Component {
     clean: false,
   };
 
+  getTwitterAccount() {
+    const twitter = this.props.depute.depute_contacts.filter(contact => contact.type === 'twitter')[0];
+    return twitter.lien.match(/@\w+/g)[0];
+  }
+
   toggleModal() {
     this.setState({ isModalOpen: !this.state.isModalOpen });
   }
@@ -35,6 +40,9 @@ class DeputeShare extends Component {
     const imgURL = `${API_URL}/visuels/stat21?${query}`;
 
     const shareURL = encodeURIComponent(`${BASE_URL}${pathname}?${query}`);
+
+    const twitterAccount = this.getTwitterAccount();
+    const twitterText = `${depute.depute_nom} ${twitterAccount ? `(${twitterAccount}) ` : ''}, via @Obs_Democratie : `;
 
     return (
       <button onClick={() => this.toggleModal()}>
@@ -84,7 +92,7 @@ class DeputeShare extends Component {
               <img src={imgURL} alt={depute.depute_nom} />
               <div>
                 <a
-                  href={`http://twitter.com/share/?text=${encodeURIComponent('Via @Obs_Democratie :')}&url=${shareURL}`}
+                  href={`http://twitter.com/share/?text=${encodeURIComponent(twitterText)}&url=${shareURL}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -108,7 +116,9 @@ class DeputeShare extends Component {
 }
 
 DeputeShare.propTypes = {
-  depute: PropTypes.shape({}).isRequired,
+  depute: PropTypes.shape({
+    depute_contacts: PropTypes.array.isRequired,
+  }).isRequired,
   pathname: PropTypes.string.isRequired,
 };
 

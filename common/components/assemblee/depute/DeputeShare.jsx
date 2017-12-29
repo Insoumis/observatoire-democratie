@@ -105,6 +105,12 @@ class DeputeShare extends Component {
                 >
                   <i className="fa fa-facebook fa-fw" />  Partager sur Facebook
                 </a>
+                <a
+                  href={imgURL}
+                  download
+                >
+                  <i className="fa fa-download fa-fw" />  Télécharger l&apos;image
+                </a>
               </div>
             </div>
           </div>

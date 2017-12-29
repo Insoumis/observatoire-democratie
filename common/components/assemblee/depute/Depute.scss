@@ -148,6 +148,7 @@
     transition: background .2s;
 
     &:nth-child(2) {background: $facebook;}
+    &:nth-child(3) {background: $emphasis;}
 
     &:hover {background: $lighter;}
   }

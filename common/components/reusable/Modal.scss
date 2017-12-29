@@ -1,8 +1,10 @@
 @import '~styles/colors';
 
-:global(.ReactModal__Body--open) {
-  max-height: 100vh;
-  overflow: hidden;
+:global {
+  .ReactModal__Body--open #root {
+    max-height: 100vh;
+    overflow: hidden;
+  }
 }
 
 .overlay {
@@ -75,5 +77,5 @@
 }
 
 @media (max-width: 767px) {
-  .module {margin: 15px 4px 15px 0;}
+  .module {margin: 25px 4px 15px 0;}
 }

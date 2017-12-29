@@ -14,7 +14,6 @@ body {
   color: $main;
   font-family: Montserrat, sans-serif;
   line-height: 1.5em;
-  padding-bottom: 120px;
 
   @media (max-width: 1023px) {padding-bottom: 80px;}
   @media (max-width: 1023px) {padding-bottom: 40px;}
@@ -58,6 +57,8 @@ input {
 }
 
 :global {
+  #root {padding-bottom: 120px;}
+
   .container {
     margin: auto;
     width: 980px;

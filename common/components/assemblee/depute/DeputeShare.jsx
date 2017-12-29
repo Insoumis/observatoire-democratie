@@ -20,7 +20,7 @@ class DeputeShare extends Component {
 
   getTwitterAccount() {
     const twitter = this.props.depute.depute_contacts.filter(contact => contact.type === 'twitter')[0];
-    return twitter.lien.match(/@\w+/g)[0];
+    return twitter && twitter.lien.match(/@\w+/g)[0];
   }
 
   toggleModal() {

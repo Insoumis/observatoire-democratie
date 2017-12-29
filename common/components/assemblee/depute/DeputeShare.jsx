@@ -42,7 +42,7 @@ class DeputeShare extends Component {
     const shareURL = encodeURIComponent(`${BASE_URL}${pathname}?${query}`);
 
     const twitterAccount = this.getTwitterAccount();
-    const twitterText = `${depute.depute_nom} ${twitterAccount ? `(${twitterAccount}) ` : ''}, via @Obs_Democratie : `;
+    const twitterText = `${depute.depute_nom}${twitterAccount ? ` (${twitterAccount})` : ''}, via @Obs_Democratie : `;
 
     return (
       <button onClick={() => this.toggleModal()}>

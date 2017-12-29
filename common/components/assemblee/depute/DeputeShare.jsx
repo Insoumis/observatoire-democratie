@@ -81,9 +81,7 @@ class DeputeShare extends Component {
 
             <h2>À vous de jouer !</h2>
             <div className={css.shareChoice}>
-              <div className={css.preview}>
-                <img src={imgURL} alt={depute.depute_nom} />
-              </div>
+              <img src={imgURL} alt={depute.depute_nom} />
               <div>
                 <a
                   href={`http://twitter.com/home/?status=${encodeURIComponent(`Via @Obs_Democratie : ${shareURL}`)}`}

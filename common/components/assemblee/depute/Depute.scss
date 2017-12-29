@@ -125,6 +125,13 @@
   display: flex;
   justify-content: space-between;
 
+  img {
+    animation: previewAppear .6s;
+    height: 300px;
+    margin-right: 15px;
+    width: 600px;
+  }
+
   a {
     background: $twitter;
     color: $white;
@@ -138,12 +145,16 @@
     &:nth-child(2) {background: $facebook;}
   }
 }
-
-.preview {
-  margin-right: 15px;
-  width: 70%;
-
-  img {width: 100%;}
+@keyframes previewAppear {
+  0% {opacity: 0;}
+  75% {
+    transform: scale(.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .content {

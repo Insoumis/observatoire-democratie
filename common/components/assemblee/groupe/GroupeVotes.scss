@@ -1,6 +1,6 @@
 @import '~styles/colors';
 
-.stats {
+.stats > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -21,13 +21,13 @@
 
 
 @media (max-width: 1023px) {
-  .stats > div {
+  .stats > div > div {
     width: calc(100% / 2 - 120px);
   }
 }
 
 @media (max-width: 767px) {
-  .stats > div {
+  .stats > div > div {
     width: 100%;
     margin-bottom: 40px;
   }

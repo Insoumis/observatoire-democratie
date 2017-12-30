@@ -1,10 +1,30 @@
-PROD:
-  ☐ Optimisation (https://wulfdeck.com/site/wwwobservatoire-democratiefr) @high
+BUGS:
+  ☐ Bug sur les select : quand multi select un 0 apparaît @high
+  ☐ Debounce le HOC de resize et corriger bug offsetHeight
+  ☐ Changer wordcloud2 pour éviter la petite latence sur "participations" (d3-cloud ?)
 
-GLOBAL:
-  ☐ Bug sur les select quand multi select @high
-  ☐ Changer wordcloud2 pour un truc sans soucis au niveau de node @high
-  ☐ Ajouter reset sur le SearchField @high
-  ☐ Animation au viewport @high
-  ☐ Debounce le HOC de resize @high
-  ☐ Réduire le stack D3 @high
+OPTIMISATION TECH:
+  ☐ Optimisation (https://wulfdeck.com/)
+  ☐ Clean API (faire la liste pour Oro)
+  ☐ Animation au viewport
+  ☐ Réduire le stack D3
+
+AMÉLIORATION INTERFACE / CONTENU:
+  ☐ Ajouter la date sur les scrutins clés @high
+  ☐ Ajouter reset sur les SearchField @high
+  ☐ Ajouter une checkbox sur les scrutins clés pour ne montrer que les plus importants par défaut
+  ☐ Intéraction clic sur la légende des graph scrutins clés = répartition des groupes
+
+PETITES FONCTIONNALITÉS PONCTUELLES À FAIRE PASSER EN SONDAGE RS:
+  ☐ Graphique circo + hémicycle
+  ☐ Calendrier des votes
+  ☐ CSP sur les groupes
+  ☐ Age / Sexe sur les groupes
+
+NOUVELLES FONCTIONNALITÉS:
+  ☐ Page des anciens députés @high
+  ☐ Page des amendements, propositions de loi
+  ☐ Page des scrutins clés
+  ☐ Page d'analyse globale de l'assemblée
+  ☐ Versus députés
+  ☐ Versus groupes

@@ -68,7 +68,6 @@
     "reselect": "^3.0.1",
     "sanitize-html": "^1.16.1",
     "serialize-javascript": "^1.4.0",
-    "uninstall": "0.0.0",
     "uuid": "^3.1.0",
     "wordcloud": "github:snahedis/wordcloud2.js"
   }

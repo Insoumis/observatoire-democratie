@@ -76,7 +76,7 @@ const AboutInformations = () => (
       <a href="https://twitter.com/Obs_Democratie" rel="noopener noreferrer" target="_blank">
         suivez-nous sur Twitter
       </a>
-      {' '}<i className="fa fa-smile-o" />.
+      {' '}<i className="fa fa-smile-o fa-fw" />.
     </p>
   </div>
 );

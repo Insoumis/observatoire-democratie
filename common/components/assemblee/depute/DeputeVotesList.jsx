@@ -27,25 +27,25 @@ const DeputeVotesList = ({ error, isPending, newSearch, pagination, refetch, sea
       case 'pour':
         return (
           <div>
-            <span className={css.pour}><i className="fa fa-check" /> Pour</span> le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
+            <span className={css.pour}><i className="fa fa-check fa-fw" /> Pour</span> le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
           </div>
         );
       case 'contre':
         return (
           <div>
-            <span className={css.contre}><i className="fa fa-times" /> Contre</span> le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
+            <span className={css.contre}><i className="fa fa-times fa-fw" /> Contre</span> le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
           </div>
         );
       case 'abstention':
         return (
           <div>
-            <span className={css.abstention}><i className="fa fa-ban" /> Abstention</span> sur le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
+            <span className={css.abstention}><i className="fa fa-ban fa-fw" /> Abstention</span> sur le scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
           </div>
         );
       case 'absent':
         return (
           <div>
-            <span className={css.absent}><i className="fa fa-question" /> Absent</span> au scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
+            <span className={css.absent}><i className="fa fa-question fa-fw" /> Absent</span> au scrutin n°{vote.scrutin_num} du {vote.scrutin_date}
           </div>
         );
       default:

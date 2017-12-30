@@ -147,11 +147,11 @@ const DeputeRankingListItem = ({ depute, location, stat }) => {
         <div className={css.infos}>
           {(depute.groupe_abrev !== 'NI') ?
             <Link to={`/assemblee/groupes/${depute.groupe_abrev}`}>
-              <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+              <i className="fa fa-group fa-fw" /> {depute.groupe_libelle} ({depute.groupe_abrev})
             </Link>
             :
             <div>
-              <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+              <i className="fa fa-group fa-fw" /> {depute.groupe_libelle} ({depute.groupe_abrev})
             </div>
           }
 
@@ -159,7 +159,7 @@ const DeputeRankingListItem = ({ depute, location, stat }) => {
 
           {(depute.depute_bureau) ?
             <div className={css.role}>
-              <i className="fa fa-exclamation-circle" aria-hidden="true" /> {depute.depute_bureau}
+              <i className="fa fa-exclamation-circle fa-fw" aria-hidden="true" /> {depute.depute_bureau}
             </div>
             :
             false

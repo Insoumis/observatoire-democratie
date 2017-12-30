@@ -26,20 +26,20 @@ const DeputeSearchListItem = ({ depute }) => (
       <div className={css.infos}>
         {(depute.groupe_abrev !== 'NI') ?
           <Link to={`/assemblee/groupes/${depute.groupe_abrev}`}>
-            <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+            <i className="fa fa-group fa-fw" /> {depute.groupe_libelle} ({depute.groupe_abrev})
           </Link>
           :
           <div>
-            <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+            <i className="fa fa-group fa-fw" /> {depute.groupe_libelle} ({depute.groupe_abrev})
           </div>
         }
         <div>
-          <i className="fa fa-briefcase" aria-hidden="true" />
+          <i className="fa fa-briefcase fa-fw" aria-hidden="true" />
           {' '}
           {depute.depute_profession || depute.depute_csp}
         </div>
         <div>
-          <i className="fa fa-birthday-cake" aria-hidden="true" /> {depute.depute_naissance}
+          <i className="fa fa-birthday-cake fa-fw" aria-hidden="true" /> {depute.depute_naissance}
         </div>
 
         <div className={css.stats}>
@@ -68,7 +68,7 @@ const DeputeSearchListItem = ({ depute }) => (
         </div>
         {(depute.depute_bureau) ?
           <div className={css.role}>
-            <i className="fa fa-exclamation-circle" aria-hidden="true" /> {depute.depute_bureau}
+            <i className="fa fa-exclamation-circle fa-fw" aria-hidden="true" /> {depute.depute_bureau}
           </div>
           :
           false

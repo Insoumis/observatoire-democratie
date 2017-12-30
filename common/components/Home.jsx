@@ -30,7 +30,7 @@ const Home = ({ home, refetchDepute, refetchKeyVotes, refetchLastIntervention })
           <a href="https://twitter.com/Obs_Democratie" rel="noopener noreferrer" target="_blank">
             nous suivre sur Twitter
           </a>
-          {' '}<i className="fa fa-smile-o" />.
+          {' '}<i className="fa fa-smile-o fa-fw" />.
         </p>
         <p>
           <i className="fa fa-arrow-circle-o-right" /> <Link to="/assemblee/a-propos">En savoir plus ?</Link>

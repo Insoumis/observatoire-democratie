@@ -36,23 +36,23 @@ const KeyVoteList = ({ keyVotes, refetch }) => {
             <KeyVoteGraph data={vote.positions} />
           </div>
           <div className={css.disclaimer}>
-            <i className="fa fa-question-circle" /> Survolez le graphique pour plus de détails
+            <i className="fa fa-question-circle fa-fw" /> Survolez le graphique pour plus de détails
           </div>
           <div className={css.sources}>
             <div>
-              <i className="fa fa-university" />{' '}
+              <i className="fa fa-university fa-fw" />{' '}
               <a href={vote.detail.lien_texte} target="_blank">Le texte à l&apos;Assemblée</a>
             </div>
             {(vote.detail.lien_source) ?
               <div>
-                <i className="fa fa-newspaper-o" />{' '}
+                <i className="fa fa-newspaper-o fa-fw" />{' '}
                 <a href={vote.detail.lien_source} target="_blank">On en parle dans la presse</a>
               </div>
               :
               false
             }
             <div>
-              <i className="fa fa-arrow-circle-o-right" />{' '}
+              <i className="fa fa-arrow-circle-o-right fa-fw" />{' '}
               <a href={vote.detail.lien} target="_blank">Voir les résultats du vote</a>
             </div>
           </div>

@@ -11,28 +11,28 @@ const DeputeKeyVoteListItem = ({ vote }) => {
     case 'pour':
       result = (
         <div>
-          <span className={css.pour}><i className="fa fa-check" /> Pour</span> {vote.nom} (n°{vote.num})
+          <span className={css.pour}><i className="fa fa-check fa-fw" /> Pour</span> {vote.nom} (n°{vote.num})
         </div>
       );
       break;
     case 'contre':
       result = (
         <div>
-          <span className={css.contre}><i className="fa fa-times" /> Contre</span> {vote.nom} (n°{vote.num})
+          <span className={css.contre}><i className="fa fa-times fa-fw" /> Contre</span> {vote.nom} (n°{vote.num})
         </div>
       );
       break;
     case 'abstention':
       result = (
         <div>
-          <span className={css.abstention}><i className="fa fa-ban" /> Abstention</span> sur {vote.nom} (n°{vote.num})
+          <span className={css.abstention}><i className="fa fa-ban fa-fw" /> Abstention</span> sur {vote.nom} (n°{vote.num})
         </div>
       );
       break;
     case 'absent':
       result = (
         <div>
-          <span className={css.absent}><i className="fa fa-question" /> Absent</span> sur {vote.nom} (n°{vote.num})
+          <span className={css.absent}><i className="fa fa-question fa-fw" /> Absent</span> sur {vote.nom} (n°{vote.num})
         </div>
       );
       break;
@@ -47,19 +47,19 @@ const DeputeKeyVoteListItem = ({ vote }) => {
       <div className={css.content}>
         {parseHTML(vote.desc)}
         <div>
-          <i className="fa fa-university" />{' '}
+          <i className="fa fa-university fa-fw" />{' '}
           <a href={vote.lien_texte} target="_blank">Le texte à l&apos;Assemblée</a>
         </div>
         {(vote.lien_source) ?
           <div>
-            <i className="fa fa-newspaper-o" />{' '}
+            <i className="fa fa-newspaper-o fa-fw" />{' '}
             <a href={vote.lien_source} target="_blank">On en parle dans la presse</a>
           </div>
           :
           false
         }
         <div>
-          <i className="fa fa-arrow-circle-o-right" />{' '}
+          <i className="fa fa-arrow-circle-o-right fa-fw" />{' '}
           <a href={vote.lien} target="_blank">Voir les résultats du vote</a>
         </div>
       </div>

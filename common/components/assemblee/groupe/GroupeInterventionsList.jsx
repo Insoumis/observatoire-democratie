@@ -42,7 +42,7 @@ const GroupeInterventionsList = ({
             </h4>
             <h5>
               <Link to={`/assemblee/deputes/${itv.depute_shortid}/participations`}>
-                <i className="fa fa-user-circle-o" /> {itv.depute_nom}
+                <i className="fa fa-user-circle-o fa-fw" /> {itv.depute_nom}
               </Link>
             </h5>
             <blockquote>

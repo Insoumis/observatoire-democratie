@@ -36,7 +36,7 @@ const DeputeLastIntervention = ({ intervention, refetch }) => {
       </h3>
       <h4>
         <Link to={`/assemblee/deputes/${intervention.depute_shortid}/participations`}>
-          <i className="fa fa-user-circle-o" /> {intervention.depute_nom} ({intervention.groupe_abrev})
+          <i className="fa fa-user-circle-o fa-fw" /> {intervention.depute_nom} ({intervention.groupe_abrev})
         </Link>
       </h4>
       <blockquote>

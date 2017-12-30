@@ -59,23 +59,23 @@ const Depute = ({ children, depute, error, fetchDepute, location }) => {
           <div className={css.data}>
             {(depute.groupe_abrev !== 'NI') ?
               <Link to={`/assemblee/groupes/${depute.groupe_abrev}`}>
-                <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+                <i className="fa fa-group fa-fw" /> {depute.groupe_libelle} ({depute.groupe_abrev})
               </Link>
               :
               <div>
-                <i className="fa fa-group" /> {depute.groupe_libelle} ({depute.groupe_abrev})
+                <i className="fa fa-group fa-fw" /> {depute.groupe_libelle} ({depute.groupe_abrev})
               </div>
             }
             <div>
-              <i className="fa fa-briefcase" aria-hidden="true" />
+              <i className="fa fa-briefcase fa-fw" aria-hidden="true" />
               {' '}
               {depute.depute_profession || depute.depute_csp}
             </div>
             <div>
-              <i className="fa fa-birthday-cake" aria-hidden="true" /> {depute.depute_naissance}
+              <i className="fa fa-birthday-cake fa-fw" aria-hidden="true" /> {depute.depute_naissance}
             </div>
             <div>
-              <i className="fa fa-calendar" aria-hidden="true" /> Début de mandat : {depute.depute_mandat_debut}
+              <i className="fa fa-calendar fa-fw" aria-hidden="true" /> Début de mandat : {depute.depute_mandat_debut}
               {(depute.depute_mandat_fin) ?
                 ` | Fin de mandat : ${depute.depute_mandat_fin} (${depute.depute_mandat_fin_cause})`
                 :

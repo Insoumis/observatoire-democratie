@@ -46,27 +46,27 @@ const Header = ({ location }) => (
       <ul>
         <li>
           <ActiveLink to="/" onlyActiveOnIndex>
-            <i className="fa fa-home" aria-hidden="true" /> Accueil
+            <i className="fa fa-home fa-fw" aria-hidden="true" /> Accueil
           </ActiveLink>
         </li>
         <li>
           <ActiveLink to="/assemblee/groupes">
-            <i className="fa fa-group" aria-hidden="true" /> Groupes
+            <i className="fa fa-group fa-fw" aria-hidden="true" /> Groupes
           </ActiveLink>
         </li>
         <li>
           <ActiveLink to="/assemblee/deputes/recherche">
-            <i className="fa fa-user-circle-o" aria-hidden="true" /> Député&middot;e&middot;s
+            <i className="fa fa-user-circle-o fa-fw" aria-hidden="true" /> Député&middot;e&middot;s
           </ActiveLink>
         </li>
         <li>
           <ActiveLink to="/assemblee/deputes/classement">
-            <i className="fa fa-bar-chart" aria-hidden="true" /> Tops / Flops
+            <i className="fa fa-bar-chart fa-fw" aria-hidden="true" /> Tops / Flops
           </ActiveLink>
         </li>
         <li>
           <ActiveLink to="/assemblee/a-propos">
-            <i className="fa fa-question-circle" aria-hidden="true" /> À propos
+            <i className="fa fa-question-circle fa-fw" aria-hidden="true" /> À propos
           </ActiveLink>
         </li>
       </ul>

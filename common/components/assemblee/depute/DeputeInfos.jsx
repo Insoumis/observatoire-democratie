@@ -23,7 +23,7 @@ const DeputeInfos = ({ depute }) => (
         false
       }
 
-      {(depute.depute_mandats.commissions.length) ?
+      {(depute.depute_mandats.commissions && depute.depute_mandats.commissions.length) ?
         <div>
           <h3>Commission</h3>
           <ul className="fa-ul">
@@ -42,8 +42,9 @@ const DeputeInfos = ({ depute }) => (
       }
 
       {(
-        depute.depute_mandats.delegations_bureau.length
-        || depute.depute_mandats.delegations_office.length
+        Object.keys(depute.depute_mandats).length &&
+        (depute.depute_mandats.delegations_bureau.length ||
+        depute.depute_mandats.delegations_office.length)
       ) ?
         <div>
           <h3>Délégation</h3>
@@ -57,7 +58,7 @@ const DeputeInfos = ({ depute }) => (
               </li>
             ))}
             {depute.depute_mandats.delegations_office.map(delegation => (
-              <li>
+              <li key={delegation.id}>
                 <i className="fa fa-li fa-dot-circle-o" />
                 <strong>{delegation.qualite}</strong> - {delegation.nom}
                 <br />
@@ -70,7 +71,7 @@ const DeputeInfos = ({ depute }) => (
         false
       }
 
-      {(depute.depute_autresmandats.length) ?
+      {(depute.depute_autresmandats && depute.depute_autresmandats.length) ?
         <div>
           <h3>Autres mandats</h3>
           <ul className="fa-ul">
@@ -84,29 +85,45 @@ const DeputeInfos = ({ depute }) => (
       }
     </div>
 
-    <h2>Équipe</h2>
-    <div>
-      <h3>Suppléant·e :</h3>
-      <ul className="fa-ul">
-        <li><i className="fa fa-li fa-dot-circle-o" /> {depute.depute_suppleant}</li>
-      </ul>
-      <h3>Collaborateur·trice·s :</h3>
-      <ul className="fa-ul">
-        {depute.depute_collaborateurs.map(collab => (
-          <li key={collab}><i className="fa fa-li fa-dot-circle-o" /> {collab}</li>
-        ))}
-      </ul>
-    </div>
+    {(depute.depute_suppleant) ?
+      <React.Fragment>
+        <h2>Équipe</h2>
+        <div>
+          <h3>Suppléant·e :</h3>
+          <ul className="fa-ul">
+            <li><i className="fa fa-li fa-dot-circle-o" /> {depute.depute_suppleant}</li>
+          </ul>
+          {(depute.depute_collaborateurs) ?
+            <div>
+              <h3>Collaborateur·trice·s :</h3>
+              <ul className="fa-ul">
+                {depute.depute_collaborateurs.map(collab => (
+                  <li key={collab}><i className="fa fa-li fa-dot-circle-o" /> {collab}</li>
+                ))}
+              </ul>
+            </div>
+            :
+            false
+          }
+        </div>
+      </React.Fragment>
+      :
+      false
+      }
 
     <h2>Autre</h2>
     <div>
-      <p>
-        <strong>Déclaration HATVP :</strong>
-        {' '}
-        <a href={depute.depute_hatvp[0].docurl} target="_blank">
-          Voir la fiche
-        </a>
-      </p>
+      {(depute.depute_hatvp.length) ?
+        <p>
+          <strong>Déclaration HATVP :</strong>
+          {' '}
+          <a href={depute.depute_hatvp[0].docurl} target="_blank">
+            Voir la fiche
+          </a>
+        </p>
+        :
+        false
+      }
       <p>
         <strong>Page sur le site de l&apos;Assemblée Nationale&nbsp;:</strong>
         {' '}

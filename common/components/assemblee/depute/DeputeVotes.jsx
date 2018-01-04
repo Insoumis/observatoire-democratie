@@ -70,8 +70,14 @@ const DeputeVotes = ({ depute }) => {
         </div>
       </div>
 
-      <h2>Les votes clés</h2>
-      <DeputeKeyVoteList keyVotes={depute.votes_cles} />
+      {Object.keys(depute.votes_cles).length ?
+        <div>
+          <h2>Les votes clés</h2>
+          <DeputeKeyVoteList keyVotes={depute.votes_cles} />
+        </div>
+        :
+        false
+      }
 
       <h2>Tous les votes</h2>
       <div className={css.votesList}>

@@ -8,6 +8,7 @@ import { ages, csps, groups, regions } from 'utility';
 
 import SearchField from 'components/reusable/form/SearchField';
 import SelectField from 'components/reusable/form/SelectField';
+import CheckboxField from 'components/reusable/form/CheckboxField';
 
 import css from './DeputeSearch.scss';
 
@@ -16,7 +17,7 @@ class DeputeSearchForm extends Component {
 
   goTo(data) {
     const search = Object.keys(data).reduce((acc, key) => {
-      if (key !== 'page' && data[key].length) {
+      if (key !== 'page' && (key === 'ancien' || data[key].length)) {
         acc[key] = data[key];
       }
 
@@ -73,6 +74,14 @@ class DeputeSearchForm extends Component {
             valueField="value"
           />
         </div>
+        <Field
+          component={CheckboxField}
+          format={val => val !== undefined}
+          label="Montrer les anciens députés"
+          name="ancien"
+          onChange={(e, ancien) => this.goTo({ ...this.props.router.location.query, ancien })}
+          parse={val => val === true || undefined}
+        />
         <button
           className={css.toggleFilters}
           onClick={() => this.setState({ displayFilters: !this.state.displayFilters })}

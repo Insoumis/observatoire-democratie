@@ -57,10 +57,14 @@ const DeputeSearchListItem = ({ depute }) => (
               }
             </div>
           </div>
-          <div className={css.commission}>
-            <h3>Présence commission</h3>
-            <div>{formatNbr(depute.stats.commissions.present)} %</div>
-          </div>
+          {(depute.stats.commissions) ?
+            <div className={css.commission}>
+              <h3>Présence commission</h3>
+              <div>{formatNbr(depute.stats.commissions.present)} %</div>
+            </div>
+            :
+            false
+          }
           <div className={css.talk}>
             <h3>Interventions</h3>
             <div>{formatNbr(depute.stats.nbitvs)}</div>

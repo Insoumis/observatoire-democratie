@@ -11,28 +11,28 @@ const DeputeKeyVoteListItem = ({ vote }) => {
     case 'pour':
       result = (
         <div>
-          <span className={css.pour}><i className="fa fa-check fa-fw" /> Pour</span> {vote.nom} (n°{vote.num})
+          <span className={css.pour}><i className="fa fa-check fa-fw" /> Pour</span> {vote.nom} (scrutin n°{vote.num} du {vote.scrutin_date})
         </div>
       );
       break;
     case 'contre':
       result = (
         <div>
-          <span className={css.contre}><i className="fa fa-times fa-fw" /> Contre</span> {vote.nom} (n°{vote.num})
+          <span className={css.contre}><i className="fa fa-times fa-fw" /> Contre</span> {vote.nom} (scrutin n°{vote.num} du {vote.scrutin_date})
         </div>
       );
       break;
     case 'abstention':
       result = (
         <div>
-          <span className={css.abstention}><i className="fa fa-ban fa-fw" /> Abstention</span> sur {vote.nom} (n°{vote.num})
+          <span className={css.abstention}><i className="fa fa-ban fa-fw" /> Abstention</span> sur {vote.nom} (scrutin n°{vote.num} du {vote.scrutin_date})
         </div>
       );
       break;
     case 'absent':
       result = (
         <div>
-          <span className={css.absent}><i className="fa fa-question fa-fw" /> Absent</span> sur {vote.nom} (n°{vote.num})
+          <span className={css.absent}><i className="fa fa-question fa-fw" /> Absent</span> sur {vote.nom} (scrutin n°{vote.num} du {vote.scrutin_date})
         </div>
       );
       break;
@@ -45,7 +45,7 @@ const DeputeKeyVoteListItem = ({ vote }) => {
       <h3>{vote.scrutin_dossierLibelle}</h3>
       {result}
       <div className={css.content}>
-        {parseHTML(vote.desc)}
+        {parseHTML(vote.descfmt)}
         <div>
           <i className="fa fa-university fa-fw" />{' '}
           <a href={vote.lien_texte} target="_blank">Le texte à l&apos;Assemblée</a>

@@ -127,13 +127,6 @@
   display: flex;
   justify-content: space-between;
 
-  img {
-    animation: previewAppear .6s;
-    height: 300px;
-    margin-right: 15px;
-    width: 600px;
-  }
-
   a {
     background: $twitter;
     color: $white;
@@ -150,6 +143,31 @@
 
     &:hover {background: $lighter;}
   }
+}
+
+.sharePreview {
+  width: 600px;
+
+  img {
+    animation: previewAppear .6s;
+    height: 300px;
+    margin-right: 15px;
+    width: 100%;
+  }
+
+  p {
+    font-size: .8em;
+    margin: 10px 0;
+  }
+
+  i:first-of-type {color: $emphasis;}
+
+  .twitter,
+  .facebook {
+    color: $twitter;
+    font-weight: 600;
+  }
+  .facebook {color: $facebook;}
 }
 @keyframes previewAppear {
   0% {opacity: 0;}

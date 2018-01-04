@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { parseHTML } from 'utility';
+
 import Spinner from 'components/reusable/Spinner';
 import RequestError from 'components/reusable/RequestError';
 import KeyVoteGraph from './KeyVoteGraph';
@@ -30,8 +32,8 @@ const KeyVoteList = ({ keyVotes, refetch }) => {
         <article key={vote.detail.num}>
           <h2><span>{vote.detail.theme}</span></h2>
           <h3>{vote.dossierLibelle}</h3>
-          <h4>Vote pour {vote.detail.nom}</h4>
-          <p>{vote.detail.desc}</p>
+          <h4>Vote pour {vote.detail.nom} ({vote.date})</h4>
+          <p>{parseHTML(vote.detail.descfmt)}</p>
           <div className={css.graph}>
             <KeyVoteGraph data={vote.positions} />
           </div>

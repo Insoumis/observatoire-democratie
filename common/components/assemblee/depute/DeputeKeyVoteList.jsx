@@ -20,13 +20,13 @@ const CatField = reduxForm({
 ));
 
 class DeputeKeyVoteList extends Component {
-  state = { category: Object.keys(this.props.keyVotes)[0] };
+  state = { category: Object.keys(this.props.keyVotes).sort(Intl.Collator().compare)[0] };
 
   render() {
     return (
       <div className={css.keyVotes}>
         <CatField
-          data={Object.keys(this.props.keyVotes)}
+          data={Object.keys(this.props.keyVotes).sort(Intl.Collator().compare)}
           handleChange={category => this.setState({ category })}
           initialValues={{ category: this.state.category }}
         />

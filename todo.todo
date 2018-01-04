@@ -1,5 +1,5 @@
 BUGS:
-  ☐ Bug sur les select : quand multi select un 0 apparaît @high
+  ☐ Bug sur les select : quand multi select un 0 apparaît
   ☐ Debounce le HOC de resize et corriger bug offsetHeight
   ☐ Changer wordcloud2 pour éviter la petite latence sur "participations" (d3-cloud ?)
 
@@ -10,19 +10,21 @@ OPTIMISATION TECH:
   ☐ Réduire le stack D3
 
 AMÉLIORATION INTERFACE / CONTENU:
-  ☐ Ajouter la date sur les scrutins clés @high
-  ☐ Ajouter reset sur les SearchField @high
+  ✔ Ajouter la date sur les scrutins clés @high @done (2018-1-4 18:19:20)
+  ☐ Ajouter reset sur les SearchField
   ☐ Ajouter une checkbox sur les scrutins clés pour ne montrer que les plus importants par défaut
   ☐ Intéraction clic sur la légende des graph scrutins clés = répartition des groupes
 
 PETITES FONCTIONNALITÉS PONCTUELLES À FAIRE PASSER EN SONDAGE RS:
+  ☐ Ajouter la compatibilité avec les autres groupes
+  ☐ Amendements / nombre de mots / nombre d'intervention sur les visuels à partager
   ☐ Graphique circo + hémicycle
   ☐ Calendrier des votes
   ☐ CSP sur les groupes
   ☐ Age / Sexe sur les groupes
 
 NOUVELLES FONCTIONNALITÉS:
-  ☐ Page des anciens députés @high
+  ✔ Page des anciens députés @high @done (2018-1-4 18:19:29)
   ☐ Page des amendements, propositions de loi
   ☐ Page des scrutins clés
   ☐ Page d'analyse globale de l'assemblée

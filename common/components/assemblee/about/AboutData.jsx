@@ -50,7 +50,8 @@ const AboutData = () => (
       "commission", "parlementaire", "député", "deux", "amendement", "sujet",
       "texte", "an", "fois", "lieu", "trois", "mois", "rapporteur", "cinq", "quant",
       "quel", "dix", "nom", "quelle", "deuxième", "hui", "vingt", "point", "question",
-      "y", "ne", "pas" ,"dire", "plus", "fait", "bien", "dit", "président".
+      "y", "ne", "pas" ,"dire", "plus", "fait", "bien", "dit", "président",
+      "pouvoir", "falloir", "mettre", "faire", "vouloir".
     </dd>
 
 

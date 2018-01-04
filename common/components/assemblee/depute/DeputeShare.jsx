@@ -91,7 +91,16 @@ class DeputeShare extends Component {
 
             <h2>À vous de jouer !</h2>
             <div className={css.shareChoice}>
-              <img src={imgURL} alt={depute.depute_nom} />
+              <div className={css.sharePreview}>
+                <img src={imgURL} alt={depute.depute_nom} />
+                <p>
+                  <i className="fa fa-info-circle fa-fw" /> Lorsque vous partagez
+                  sur <span className={css.twitter}>Twitter</span>
+                  {' '}ou <span className={css.facebook}>Facebook</span> le
+                  visuel est ajouté comme prévisualisation du lien. Vous n&apos;avez
+                  donc pas besoin de le télécharger pour le partager <i className="fa fa-smile-o fa-fw" />.
+                </p>
+              </div>
               <div>
                 <a
                   href={`http://twitter.com/share/?text=${encodeURIComponent(twitterText)}&url=${shareURL}`}

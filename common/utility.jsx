@@ -1,7 +1,12 @@
 /* eslint-disable react/no-danger */
 import React, { Component } from 'react';
+import dateFns from 'date-fns/format';
+import dateLocale from 'date-fns/locale/fr';
 import numeral from 'numeral';
 import sanitizeHtml from 'sanitize-html';
+
+export const formatDate = (date, format = 'D MMMM YYYY') =>
+  dateFns(date, format, { locale: dateLocale });
 
 numeral.register('locale', 'fr', {
   delimiters: {
@@ -14,7 +19,7 @@ numeral.locale('fr');
 export const formatNbr = (value, format = '0,0') => numeral(value).format(format);
 
 const options = {
-  allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'h2' ]),
+  allowedTags: sanitizeHtml.defaults.allowedTags.concat(['h2']),
 };
 export const parseHTML = (html, inline = false) => (
   (inline) ?

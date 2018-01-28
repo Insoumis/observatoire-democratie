@@ -7,6 +7,7 @@ import deputes, * as fromDeputes from './deputes';
 import deputeSearch, * as fromDeputeSearch from './deputeSearch';
 import deputeRanking, * as fromDeputeRanking from './deputeRanking';
 import deputeVotes, * as fromDeputeVotes from './deputeVotes';
+import deputeWorks, * as fromDeputeWorks from './deputeWorks';
 import deputeInterventions, * as fromDeputeInterventions from './deputeInterventions';
 import groupes, * as fromGroupes from './groupes';
 import groupeRanking, * as fromGroupeRanking from './groupeRanking';
@@ -18,6 +19,7 @@ const app = combineReducers({
   deputeSearch,
   deputeRanking,
   deputeVotes,
+  deputeWorks,
   deputeInterventions,
   groupes,
   groupeRanking,
@@ -53,6 +55,8 @@ export const getDeputeRanking = createSelector(
 );
 
 export const getDeputeVotes = state => fromDeputeVotes.getDeputeVotes(state.deputeVotes);
+
+export const getDeputeWorks = state => fromDeputeWorks.getDeputeWorks(state.deputeWorks);
 
 export const getDeputeInterventions = state =>
   fromDeputeInterventions.getDeputeInterventions(state.deputeInterventions);

@@ -8,6 +8,7 @@ OPTIMISATION TECH:
   ☐ Clean API (faire la liste pour Oro)
   ☐ Animation au viewport
   ☐ Réduire le stack D3
+  ☐ Remonter les fetch sur le noeud de la route pour améliorer SEO naturel (fetch côté node)
 
 AMÉLIORATION INTERFACE / CONTENU:
   ✔ Ajouter la date sur les scrutins clés @high @done (2018-1-4 18:19:20)

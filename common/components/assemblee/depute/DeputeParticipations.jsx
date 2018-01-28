@@ -6,6 +6,7 @@ import { formatNbr } from 'utility';
 import Gauge from 'components/assemblee/reusable/Gauge';
 import WordsMap from 'components/reusable/WordsMap';
 import AnimatedNumber from 'components/reusable/AnimatedNumber';
+import DeputeWorksSearch from 'containers/assemblee/DeputeWorksSearch';
 import DeputeInterventionsSearch from 'containers/assemblee/DeputeInterventionsSearch';
 
 import css from './DeputeParticipations.scss';
@@ -65,10 +66,15 @@ const DeputeParticipations = ({ depute }) => (
       </div>
     </div>
 
+    <h2>Ses travaux</h2>
+    <div className={css.works}>
+      <DeputeWorksSearch deputeId={depute.id} />
+    </div>
+
     {(depute.depute_nuages.noms) ?
-      <div>
+      <div className={css.wordCloud}>
         <h2>Ses mots</h2>
-        <div className={css.wordCloud}>
+        <div>
           <WordsMap words={depute.depute_nuages.noms} />
         </div>
       </div>
@@ -77,9 +83,9 @@ const DeputeParticipations = ({ depute }) => (
     }
 
     {(depute.depute_nuages.verbes) ?
-      <div>
+      <div className={css.wordCloud}>
         <h2>Ses verbes</h2>
-        <div className={css.wordCloud}>
+        <div>
           <WordsMap words={depute.depute_nuages.verbes} />
         </div>
       </div>

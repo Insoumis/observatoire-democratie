@@ -60,9 +60,72 @@
   }
 }
 
+
 .wordCloud {
-  height: 250px;
-  margin: 0 0 100px !important;
+  h2 {margin-top: 80px;}
+
+  div {height: 250px;}
+}
+
+.works {
+  .count {
+    border-bottom: 1px dashed $lighter;
+    display: inline-block;
+    font-size: .9em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  article {margin: 20px 0 40px;}
+
+  h3 {
+    background: $main;
+    color: $white;
+    display: inline-block;
+    font-size: .9em;
+    margin: 0;
+    padding: 2px 6px;
+  }
+
+  h3 + div {
+    align-items: flex-start;
+    display: flex;
+    font-weight: 700;
+    padding-top: 8px;
+    text-transform: uppercase;
+
+    > span {
+      color: $white;
+      display: inline-block;
+      font-size: .85em;
+      font-weight: 600;
+      margin: -8px 10px 0 0;
+      padding: 8px 0;
+      text-align: center;
+      text-transform: none;
+      width: 140px;
+    }
+  }
+
+  .pour {background: $pour;}
+  .contre {background: $contre;}
+  .abstention {background: $abstention;}
+  .pending {background: $absent;}
+
+  p {
+    font-size: .93em;
+    line-height: 1.8em;
+    margin-left: 20px;
+
+    strong {
+      background: $emphasis;
+      color: $white;
+      margin: 0 2px;
+      padding: 2px 6px;
+    }
+
+    i {color: $lighter;}
+  }
 }
 
 .interventions {

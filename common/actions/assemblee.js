@@ -93,9 +93,9 @@ export const fetchGroupeInterventions = search => ({
   meta: { search },
 });
 
-export const fetchDeputeWorks = search => ({
+export const fetchWorks = search => ({
   endpoint: `/travaux${search}`,
   api: 'assemblee',
-  type: ASSEMBLEE.fetchDeputeWorks,
+  type: (search.depute) ? ASSEMBLEE.fetchDeputeWorks : ASSEMBLEE.fetchGroupeWorks,
   meta: { search },
 });

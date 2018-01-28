@@ -4,15 +4,15 @@ import { connect } from 'react-redux';
 import qs from 'qs';
 
 import { fetchWorks } from 'actions/assemblee';
-import { getDeputeWorks } from 'reducers';
+import { getGroupeWorks } from 'reducers';
 
-import List from 'components/assemblee/depute/DeputeWorksList';
+import List from 'components/assemblee/groupe/GroupeWorksList';
 
-class DeputeWorks extends Component {
+class GroupeWorksSearch extends Component {
   state = { currentSearch: this.getSearch() };
 
   componentDidMount() {
-    const { search } = this.props.deputeWorks;
+    const { search } = this.props.groupeWorks;
     if (search !== this.state.currentSearch) {
       this.props.fetchWorks(this.state.currentSearch);
     }
@@ -21,7 +21,7 @@ class DeputeWorks extends Component {
   getSearch(search) {
     return qs.stringify({
       ...search,
-      depute: this.props.deputeId,
+      groupe: this.props.groupeId,
       itemsperpage: 5,
     }, { addQueryPrefix: true });
   }
@@ -32,7 +32,7 @@ class DeputeWorks extends Component {
   }
 
   render() {
-    const { error, isPending, pagination, search, works } = this.props.deputeWorks;
+    const { error, isPending, pagination, search, works } = this.props.groupeWorks;
 
     return (
       <div>
@@ -50,9 +50,9 @@ class DeputeWorks extends Component {
   }
 }
 
-DeputeWorks.propTypes = {
-  deputeId: PropTypes.string.isRequired,
-  deputeWorks: PropTypes.shape({
+GroupeWorksSearch.propTypes = {
+  groupeId: PropTypes.string.isRequired,
+  groupeWorks: PropTypes.shape({
     works: PropTypes.arrayOf(PropTypes.object).isRequired,
     error: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
     isPending: PropTypes.bool.isRequired,
@@ -64,7 +64,7 @@ DeputeWorks.propTypes = {
 
 export default connect(
   state => ({
-    deputeWorks: getDeputeWorks(state),
+    groupeWorks: getGroupeWorks(state),
   }),
   { fetchWorks },
-)(DeputeWorks);
+)(GroupeWorksSearch);

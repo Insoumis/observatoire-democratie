@@ -6,6 +6,7 @@ import { formatNbr } from 'utility';
 import Gauge from 'components/assemblee/reusable/Gauge';
 import WordsMap from 'components/reusable/WordsMap';
 import AnimatedNumber from 'components/reusable/AnimatedNumber';
+import GroupeWorksSearch from 'containers/assemblee/GroupeWorksSearch';
 import GroupeInterventionsSearch from 'containers/assemblee/GroupeInterventionsSearch';
 
 import css from './GroupeParticipations.scss';
@@ -60,10 +61,15 @@ const GroupeParticipations = ({ groupe }) => (
       </div>
     </div>
 
+    <h2>Les travaux</h2>
+    <div className={css.works}>
+      <GroupeWorksSearch groupeId={groupe.groupe_abrev} />
+    </div>
+
     {(groupe.groupe_nuages.noms) ?
-      <div>
+      <div className={css.wordCloud}>
         <h2>Les mots</h2>
-        <div className={css.wordCloud}>
+        <div>
           <WordsMap words={groupe.groupe_nuages.noms} />
         </div>
       </div>
@@ -72,9 +78,9 @@ const GroupeParticipations = ({ groupe }) => (
     }
 
     {(groupe.groupe_nuages.verbes) ?
-      <div>
+      <div className={css.wordCloud}>
         <h2>Les verbes</h2>
-        <div className={css.wordCloud}>
+        <div>
           <WordsMap words={groupe.groupe_nuages.verbes} />
         </div>
       </div>

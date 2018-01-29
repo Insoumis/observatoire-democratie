@@ -18,7 +18,7 @@
     margin: 20px;
 
     a {
-      display: block;
+      display: inline-block;
       margin-bottom: 8px;
       text-decoration: none;
 
@@ -55,10 +55,34 @@
     }
   }
 
-  > div {
+  .subnav {
     background: $white;
     border: 1px solid $border;
-    padding: 30px 40px;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 10px;
+    justify-content: center;
+
+    a {
+      display: inline-block;
+      font-size: .95em;
+      margin: 0 8px;
+      padding: 3px 10px;
+      text-align: center;
+      text-decoration: none;
+
+      &:global(.active),
+      &:hover {
+        background: $emphasis;
+        color: $white;
+      }
+    }
+  }
+
+  .subcontent {
+    background: $white;
+    border: 1px solid $border;
+    padding: 30px 40px 75px;
     width: 100%;
 
     a {font-weight: 600;}

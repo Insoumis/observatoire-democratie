@@ -30,7 +30,7 @@ const Groupe = ({ children, error, fetchGroupe, groupe }) => {
         <div>
           <Link to={`/assemblee/deputes/recherche?groupe=${groupe.groupe_abrev}`}>
             <i className="fa fa-group fa-fw" /> {groupe.groupe_nbmembres} membres
-          </Link>
+          </Link><br />
           <Link to={`/assemblee/deputes/${groupe.president.depute_shortid}`}>
             <i className="fa fa-bookmark fa-fw" /> Président : {groupe.president.depute_nom}
           </Link>

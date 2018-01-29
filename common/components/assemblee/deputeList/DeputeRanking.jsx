@@ -4,8 +4,8 @@ import Helmet from 'react-helmet';
 
 import { deputesTri } from 'utility';
 
+import List from 'components/reusable/List';
 import DeputeRankingForm from './DeputeRankingForm';
-import DeputeList from './DeputeList';
 import DeputeRankingListItem from './DeputeRankingListItem';
 
 import css from './DeputeRanking.scss';
@@ -26,12 +26,17 @@ const DeputeRanking = ({ deputeRanking, fetchDeputeRanking, router }) => (
       router={router}
     />
 
-    <DeputeList
+    <List
       baseLink="/assemblee/deputes/classement"
-      deputes={deputeRanking.deputes}
       error={deputeRanking.error}
       isPending={deputeRanking.isPending}
-      ListItem={DeputeRankingListItem}
+      list={
+        <ul>
+          {deputeRanking.deputes.map(depute => (
+            <DeputeRankingListItem depute={depute} key={depute.id} />
+          ))}
+        </ul>
+      }
       pagination={deputeRanking.pagination}
       refetch={fetchDeputeRanking}
     />

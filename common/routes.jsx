@@ -16,7 +16,11 @@ import GroupeRanking from 'containers/assemblee/GroupeRanking';
 
 import Groupe from 'containers/assemblee/Groupe';
 import GroupeVotes from 'components/assemblee/groupe/GroupeVotes';
+
 import GroupeParticipations from 'components/assemblee/groupe/GroupeParticipations';
+import GroupeParticipationsOverview from 'components/assemblee/groupe/GroupeParticipationsOverview';
+import GroupeWorks from 'containers/assemblee/GroupeWorks';
+
 import GroupeInfos from 'components/assemblee/groupe/GroupeInfos';
 
 import AssembleeAbout from 'components/assemblee/about/About';
@@ -44,7 +48,11 @@ export default (
     <Route component={Groupe}>
       <Redirect from="/assemblee/groupes/:id" to="/assemblee/groupes/:id/votes" />
       <Route path="/assemblee/groupes/:id/votes" component={GroupeVotes} />
-      <Route path="/assemblee/groupes/:id/participations" component={GroupeParticipations} />
+      <Route path="/assemblee/groupes/:id/participations" component={GroupeParticipations}>
+        <IndexRoute component={GroupeParticipationsOverview} />
+        <Route path="/assemblee/groupes/:id/participations/travaux" component={GroupeWorks} />
+      </Route>
+
       <Route path="/assemblee/groupes/:id/informations" component={GroupeInfos} />
     </Route>
 

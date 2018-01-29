@@ -4,8 +4,8 @@ import Helmet from 'react-helmet';
 
 import { groupesTri } from 'utility';
 
+import List from 'components/reusable/List';
 import GroupeRankingForm from './GroupeRankingForm';
-import GroupeList from './GroupeList';
 import GroupeRankingListItem from './GroupeRankingListItem';
 
 import css from './GroupeRanking.scss';
@@ -26,12 +26,17 @@ const GroupeRanking = ({ groupeRanking, fetchGroupeRanking, router }) => (
       router={router}
     />
 
-    <GroupeList
+    <List
       baseLink="/assemblee/groupes"
-      groupes={groupeRanking.groupes}
       error={groupeRanking.error}
       isPending={groupeRanking.isPending}
-      ListItem={GroupeRankingListItem}
+      list={
+        <ul>
+          {groupeRanking.groupes.map(groupe => (
+            <GroupeRankingListItem groupe={groupe} key={groupe.groupe_abrev} />
+          ))}
+        </ul>
+      }
       pagination={groupeRanking.pagination}
       refetch={fetchGroupeRanking}
     />

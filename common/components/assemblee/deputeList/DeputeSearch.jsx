@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
+import List from 'components/reusable/List';
 import DeputeSearchForm from './DeputeSearchForm';
-import DeputeList from './DeputeList';
 import DeputeSearchListItem from './DeputeSearchListItem';
 
 import css from './DeputeSearch.scss';
@@ -20,12 +20,17 @@ const DeputeSearch = ({ deputeSearch, fetchDeputeSearch, router }) => (
       router={router}
     />
 
-    <DeputeList
+    <List
       baseLink="/assemblee/deputes/recherche"
-      deputes={deputeSearch.deputes}
       error={deputeSearch.error}
       isPending={deputeSearch.isPending}
-      ListItem={DeputeSearchListItem}
+      list={
+        <ul>
+          {deputeSearch.deputes.map(depute => (
+            <DeputeSearchListItem depute={depute} key={depute.id} />
+          ))}
+        </ul>
+      }
       pagination={deputeSearch.pagination}
       refetch={fetchDeputeSearch}
     />

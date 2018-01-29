@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import qs from 'qs';
 
-import { fetchDeputeInterventions } from 'actions/assemblee';
+import { fetchInterventions } from 'actions/assemblee';
 import { getDeputeInterventions } from 'reducers';
 
 import Form from 'components/assemblee/depute/DeputeInterventionsForm';
@@ -15,7 +15,7 @@ class DeputeInterventionsSearch extends Component {
   componentDidMount() {
     const { search } = this.props.deputeInterventions;
     if (search !== this.state.currentSearch) {
-      this.props.fetchDeputeInterventions(this.state.currentSearch);
+      this.props.fetchInterventions(this.state.currentSearch);
     }
   }
 
@@ -29,7 +29,7 @@ class DeputeInterventionsSearch extends Component {
 
   newSearch(newSearch) {
     this.setState({ currentSearch: this.getSearch(newSearch) });
-    this.props.fetchDeputeInterventions(this.getSearch(newSearch));
+    this.props.fetchInterventions(this.getSearch(newSearch));
   }
 
   render() {
@@ -44,7 +44,7 @@ class DeputeInterventionsSearch extends Component {
           newSearch={newSearch => this.newSearch(newSearch)}
           pagination={pagination}
           refetch={
-            () => this.props.fetchDeputeInterventions(this.state.currentSearch)
+            () => this.props.fetchInterventions(this.state.currentSearch)
           }
           search={qs.parse(search, { ignoreQueryPrefix: true })}
           interventions={interventions}
@@ -63,12 +63,12 @@ DeputeInterventionsSearch.propTypes = {
     pagination: PropTypes.shape({}).isRequired,
     search: PropTypes.string.isRequired,
   }).isRequired,
-  fetchDeputeInterventions: PropTypes.func.isRequired,
+  fetchInterventions: PropTypes.func.isRequired,
 };
 
 export default connect(
   state => ({
     deputeInterventions: getDeputeInterventions(state),
   }),
-  { fetchDeputeInterventions },
+  { fetchInterventions },
 )(DeputeInterventionsSearch);

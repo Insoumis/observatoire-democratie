@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { formatNbr } from 'utility';
+
 import Spinner from 'components/reusable/Spinner';
 import RequestError from 'components/reusable/RequestError';
 import Pagination from 'components/reusable/Pagination';
 
-import css from './GroupeList.scss';
+import css from './List.scss';
 
-const GroupeList = ({ baseLink, groupes, error, isPending, ListItem, pagination, refetch }) => {
+const List = ({ baseLink, error, isPending, list, pagination, refetch }) => {
   if (isPending) {
     return <Spinner />;
   }
@@ -23,14 +25,12 @@ const GroupeList = ({ baseLink, groupes, error, isPending, ListItem, pagination,
   return (
     <div className={css.module}>
       <div className={css.count}>
-        {pagination.totalItems} groupe
+        {formatNbr(pagination.totalItems)} élément
         {(pagination.totalItems > 1) ? 's' : ''}
       </div>
-      <ul>
-        {groupes.map(groupe => (
-          <ListItem groupe={groupe} key={groupe.groupe_abrev} />
-        ))}
-      </ul>
+
+      {list}
+
       {(pagination.nbrPages > 1) ?
         <Pagination
           baseLink={baseLink}
@@ -44,16 +44,15 @@ const GroupeList = ({ baseLink, groupes, error, isPending, ListItem, pagination,
   );
 };
 
-GroupeList.propTypes = {
+List.propTypes = {
   baseLink: PropTypes.string.isRequired,
-  groupes: PropTypes.arrayOf(PropTypes.object).isRequired,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
   isPending: PropTypes.bool.isRequired,
-  ListItem: PropTypes.func.isRequired,
+  list: PropTypes.node.isRequired,
   pagination: PropTypes.shape({
     totalItems: PropTypes.number,
   }).isRequired,
   refetch: PropTypes.func.isRequired,
 };
 
-export default GroupeList;
+export default List;

@@ -51,9 +51,7 @@ class Groupe extends Component {
 Groupe.propTypes = {
   children: PropTypes.node.isRequired,
   dispatch: PropTypes.func.isRequired,
-  groupe: PropTypes.shape({
-    groupe_nuages: PropTypes.shape({}).isRequired,
-  }),
+  groupe: PropTypes.shape({}),
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,

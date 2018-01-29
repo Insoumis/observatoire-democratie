@@ -5,10 +5,11 @@ import { formatNbr } from 'utility';
 
 import Gauge from 'components/assemblee/reusable/Gauge';
 
+import groupeCss from './Groupe.scss';
 import css from './GroupeVotes.scss';
 
 const GroupeVotes = ({ groupe }) => (
-  <div className={css.module}>
+  <div className={`${groupeCss.subcontent} ${css.module}`}>
     <h2>Votes aux scrutins publics (moyenne)</h2>
     <div className={css.stats}>
       <div>

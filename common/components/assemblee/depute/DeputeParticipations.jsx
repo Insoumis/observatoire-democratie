@@ -6,7 +6,6 @@ import { formatNbr } from 'utility';
 import Gauge from 'components/assemblee/reusable/Gauge';
 import WordsMap from 'components/reusable/WordsMap';
 import AnimatedNumber from 'components/reusable/AnimatedNumber';
-import DeputeWorksSearch from 'containers/assemblee/DeputeWorksSearch';
 import DeputeInterventionsSearch from 'containers/assemblee/DeputeInterventionsSearch';
 
 import css from './DeputeParticipations.scss';
@@ -64,11 +63,6 @@ const DeputeParticipations = ({ depute }) => (
         <h3>Nombre de mots</h3>
         <strong><AnimatedNumber value={depute.stats.nbmots} /></strong>
       </div>
-    </div>
-
-    <h2>Ses travaux</h2>
-    <div className={css.works}>
-      <DeputeWorksSearch deputeId={depute.id} />
     </div>
 
     {(depute.depute_nuages.noms) ?

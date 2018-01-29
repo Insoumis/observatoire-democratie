@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import qs from 'qs';
 
-import { fetchDeputeVotes } from 'actions/assemblee';
+import { fetchVotes } from 'actions/assemblee';
 import { getDeputeVotes } from 'reducers';
 
 import Form from 'components/assemblee/depute/DeputeVotesForm';
@@ -15,7 +15,7 @@ class DeputeVotesSearch extends Component {
   componentDidMount() {
     const { search } = this.props.deputeVotes;
     if (search !== this.state.currentSearch) {
-      this.props.fetchDeputeVotes(this.state.currentSearch);
+      this.props.fetchVotes(this.state.currentSearch);
     }
   }
 
@@ -29,7 +29,7 @@ class DeputeVotesSearch extends Component {
 
   newSearch(newSearch) {
     this.setState({ currentSearch: this.getSearch(newSearch) });
-    this.props.fetchDeputeVotes(this.getSearch(newSearch));
+    this.props.fetchVotes(this.getSearch(newSearch));
   }
 
   render() {
@@ -47,7 +47,7 @@ class DeputeVotesSearch extends Component {
           newSearch={newSearch => this.newSearch(newSearch)}
           pagination={pagination}
           refetch={
-            () => this.props.fetchDeputeVotes(this.state.currentSearch)
+            () => this.props.fetchVotes(this.state.currentSearch)
           }
           search={qs.parse(search, { ignoreQueryPrefix: true })}
           votes={votes}
@@ -66,12 +66,12 @@ DeputeVotesSearch.propTypes = {
     pagination: PropTypes.shape({}).isRequired,
     search: PropTypes.string.isRequired,
   }).isRequired,
-  fetchDeputeVotes: PropTypes.func.isRequired,
+  fetchVotes: PropTypes.func.isRequired,
 };
 
 export default connect(
   state => ({
     deputeVotes: getDeputeVotes(state),
   }),
-  { fetchDeputeVotes },
+  { fetchVotes },
 )(DeputeVotesSearch);

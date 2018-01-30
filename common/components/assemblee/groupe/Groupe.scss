@@ -64,6 +64,7 @@
     justify-content: center;
 
     a {
+      border-radius: 5px;
       display: inline-block;
       font-size: .95em;
       margin: 0 8px;
@@ -96,7 +97,7 @@
 
     &:not(:first-of-type) {margin-top: 80px;}
 
-    & + div {margin-left: 10px;}
+    & + div:not(module from "components/reusable/Spinner.scss") {margin-left: 10px;}
   }
 
   h3 {margin: 0 0 5px 5px;}

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { formatDate } from 'utility';
+import { amendementsSort, documentsTypes, formatDate, questionsTypes, worksTypes } from 'utility';
 
 import List from 'components/reusable/List';
+import Form from './GroupeWorksForm';
 
 import css from './GroupeWorks.scss';
 
@@ -28,6 +29,9 @@ const getResult = (work) => {
         </div>
       );
     case 'Non renseigné':
+    case 'Retiré':
+    case 'Non soutenu':
+    case 'Tombé':
       return (
         <div>
           <span className={css.pending}>
@@ -45,9 +49,31 @@ const getResult = (work) => {
   }
 };
 
+const getWorksType = (value) => {
+  if (worksTypes.filter(type => type.value === value).length) {
+    return value;
+  } else if (documentsTypes.filter(type => type.value === value).length) {
+    return 'document';
+  } else if (questionsTypes.filter(type => type.value === value).length) {
+    return 'question';
+  }
+
+  return undefined;
+};
+
 const GroupeWorks = ({ fetchWorks, groupeWorks, router }) => (
   <div className={css.module}>
     <h2>Les travaux</h2>
+
+    <Form
+      initialValues={{
+        ...router.location.query,
+        type: getWorksType(router.location.query.type) || worksTypes[0].value,
+        documentType: router.location.query.type || documentsTypes[0].value,
+        sort: router.location.query.sort || amendementsSort[0].value,
+      }}
+      router={router}
+    />
 
     <List
       baseLink={router.location.pathname}
@@ -56,6 +82,7 @@ const GroupeWorks = ({ fetchWorks, groupeWorks, router }) => (
       list={
         groupeWorks.works.map(work => (
           <article key={work.id}>
+            <h4><span>{work.auteurs_noms.join(', ')}</span></h4>
             <h3>
               {work.dossier}
             </h3>

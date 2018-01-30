@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import qs from 'qs';
@@ -9,8 +9,8 @@ import SelectField from 'components/reusable/form/SelectField';
 
 import css from './GroupeRanking.scss';
 
-class GroupeRankingForm extends Component {
-  goTo(data) {
+const GroupeRankingForm = ({ handleSubmit, router }) => {
+  const goTo = (data) => {
     const search = Object.keys(data).reduce((acc, key) => {
       if (key !== 'page' && data[key].length) {
         acc[key] = data[key];
@@ -19,40 +19,38 @@ class GroupeRankingForm extends Component {
       return acc;
     }, {});
 
-    this.props.router.push(`/assemblee/groupes?${qs.stringify(search)}`);
-  }
+    router.push(`/assemblee/groupes?${qs.stringify(search)}`);
+  };
 
-  render() {
-    return (
-      <form onSubmit={this.props.handleSubmit(data => this.goTo(data))}>
-        <div className={`flex wrap space-between ${css.filters}`}>
-          <Field
-            component={SelectField}
-            data={groupesTri}
-            name="tri"
-            onChange={(e, tri) => this.goTo({ ...this.props.router.location.query, tri })}
-            textField="text"
-            valueField="value"
-          />
-          <Field
-            component={SelectField}
-            data={[{
-              text: 'Top',
-              value: 'desc',
-            }, {
-              text: 'Flop',
-              value: 'asc',
-            }]}
-            name="ordre"
-            onChange={(e, ordre) => this.goTo({ ...this.props.router.location.query, ordre })}
-            textField="text"
-            valueField="value"
-          />
-        </div>
-      </form>
-    );
-  }
-}
+  return (
+    <form onSubmit={handleSubmit(data => goTo(data))}>
+      <div className={`flex wrap space-between ${css.filters}`}>
+        <Field
+          component={SelectField}
+          data={groupesTri}
+          name="tri"
+          onChange={(e, tri) => goTo({ ...router.location.query, tri })}
+          textField="text"
+          valueField="value"
+        />
+        <Field
+          component={SelectField}
+          data={[{
+            text: 'Top',
+            value: 'desc',
+          }, {
+            text: 'Flop',
+            value: 'asc',
+          }]}
+          name="ordre"
+          onChange={(e, ordre) => goTo({ ...router.location.query, ordre })}
+          textField="text"
+          valueField="value"
+        />
+      </div>
+    </form>
+  );
+};
 
 GroupeRankingForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,

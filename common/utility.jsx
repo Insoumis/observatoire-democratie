@@ -233,3 +233,77 @@ export const votesTri = [{
   text: 'Absent',
   value: 'absent',
 }];
+
+export const worksTypes = [{
+  text: 'Tous les types de travaux',
+  value: '',
+}, {
+  text: 'Documents',
+  value: 'document',
+}, {
+  text: 'Questions',
+  value: 'question',
+}, {
+  text: 'Amendements',
+  value: 'amendement',
+}];
+
+export const documentsTypes = [{
+  text: 'Tous les documents',
+  value: '',
+}, {
+  text: 'Propositions de loi',
+  value: 'propositiondeloi',
+}, {
+  text: 'Propositions de résolution',
+  value: 'propositionderesolution',
+}, {
+  text: 'Rapports d\'information',
+  value: 'rapportdinformation',
+}, {
+  text: 'Rapports',
+  value: 'rapport',
+}, {
+  text: 'Avis',
+  value: 'avis',
+}, {
+  text: 'Projets de loi',
+  value: 'projetdeloi',
+}];
+
+export const questionsTypes = [{
+  text: 'Toutes les questions',
+  value: '',
+}, {
+  text: 'Questions écrites',
+  value: 'QE',
+}, {
+  text: 'Questions orales',
+  value: 'QG',
+}, {
+  text: 'Questions orales sans débat',
+  value: 'QOSD',
+}];
+
+export const amendementsSort = [{
+  text: 'Tous les amendements',
+  value: '',
+}, {
+  text: 'Adoptés',
+  value: 'adopte',
+}, {
+  text: 'Rejetés',
+  value: 'rejete',
+}, {
+  text: 'Non renseignés',
+  value: 'nonrenseigne',
+}, {
+  text: 'Retirés',
+  value: 'retire',
+}, {
+  text: 'Non soutenus',
+  value: 'nonsoutenu',
+}, {
+  text: 'Tombés',
+  value: 'tombe',
+}];

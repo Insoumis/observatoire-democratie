@@ -163,6 +163,14 @@
     margin-bottom: 40px;
   }
 
+  .keyVotes {
+    > div h3 + div {
+      display: block;
+
+      span {margin-bottom: 10px;}
+    }
+  }
+
   .votesList .filters > div {
     width: 100%;
 

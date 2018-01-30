@@ -47,6 +47,8 @@ const getResult = (work) => {
 
 const GroupeWorks = ({ fetchWorks, groupeWorks, router }) => (
   <div className={css.module}>
+    <h2>Les travaux</h2>
+
     <List
       baseLink={router.location.pathname}
       error={groupeWorks.error}

@@ -70,6 +70,7 @@ const GroupeWorks = ({ fetchWorks, groupeWorks, router }) => (
         ...router.location.query,
         type: getWorksType(router.location.query.type) || worksTypes[0].value,
         documentType: router.location.query.type || documentsTypes[0].value,
+        questionType: router.location.query.type || questionsTypes[0].value,
         sort: router.location.query.sort || amendementsSort[0].value,
       }}
       router={router}

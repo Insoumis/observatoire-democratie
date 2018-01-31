@@ -238,11 +238,11 @@ export const worksTypes = [{
   text: 'Tous les types de travaux',
   value: '',
 }, {
-  text: 'Amendements',
-  value: 'amendement',
-}, {
   text: 'Propositions de loi',
   value: 'propositiondeloi',
+}, {
+  text: 'Amendements',
+  value: 'amendement',
 }, {
   text: 'Questions',
   value: 'question',

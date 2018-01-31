@@ -23,7 +23,7 @@ const GroupeWorksForm = ({
       return acc;
     }, {});
 
-    if (!search.type) {
+    if (!search.type || search.type === 'propositiondeloi') {
       resetDocumentType();
       resetQuestionType();
       resetSort();

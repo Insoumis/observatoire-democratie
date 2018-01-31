@@ -86,7 +86,7 @@ export const groups = [{
   value: 'REM',
 }, {
   text: 'UDI, Agir et Indépendants',
-  value: 'UAI',
+  value: 'UDI-AGIR',
 }];
 
 export const regions = [
@@ -238,22 +238,22 @@ export const worksTypes = [{
   text: 'Tous les types de travaux',
   value: '',
 }, {
-  text: 'Documents',
-  value: 'document',
+  text: 'Amendements',
+  value: 'amendement',
+}, {
+  text: 'Propositions de loi',
+  value: 'propositiondeloi',
 }, {
   text: 'Questions',
   value: 'question',
 }, {
-  text: 'Amendements',
-  value: 'amendement',
+  text: 'Autres documents',
+  value: 'document',
 }];
 
 export const documentsTypes = [{
   text: 'Tous les documents',
   value: 'document',
-}, {
-  text: 'Propositions de loi',
-  value: 'propositiondeloi',
 }, {
   text: 'Propositions de résolution',
   value: 'propositionderesolution',

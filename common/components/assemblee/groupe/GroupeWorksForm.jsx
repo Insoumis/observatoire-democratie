@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { clearFields, Field, formValueSelector, reduxForm } from 'redux-form';
+import { change, Field, formValueSelector, reduxForm } from 'redux-form';
 import qs from 'qs';
 
 import { amendementsSort, documentsTypes, questionsTypes, worksTypes } from 'utility';
@@ -11,7 +11,9 @@ import SelectField from 'components/reusable/form/SelectField';
 
 import css from './GroupeWorks.scss';
 
-const GroupeWorksForm = ({ dispatch, handleSubmit, router, typeSelected }) => {
+const GroupeWorksForm = ({
+  handleSubmit, router, typeSelected, resetDocumentType, resetQuestionType, resetSort,
+}) => {
   const goTo = (data) => {
     const search = Object.keys(data).reduce((acc, key) => {
       if (key !== 'page' && data[key].length) {
@@ -21,22 +23,27 @@ const GroupeWorksForm = ({ dispatch, handleSubmit, router, typeSelected }) => {
       return acc;
     }, {});
 
-    if (search.type === '') {
-      dispatch(clearFields('groupeWorksForm', false, false, 'documentType', 'questionType', 'sort'));
+    if (!search.type) {
+      resetDocumentType();
+      resetQuestionType();
+      resetSort();
     } else if (search.type === 'document') {
-      dispatch(clearFields('groupeWorksForm', false, false, 'questionType', 'sort'));
+      resetQuestionType();
+      resetSort();
     } else if (search.type === 'question') {
-      dispatch(clearFields('groupeWorksForm', false, false, 'documentType', 'sort'));
+      resetDocumentType();
+      resetSort();
     } else if (search.type === 'amendement') {
-      dispatch(clearFields('groupeWorksForm', false, false, 'documentType', 'questionType'));
+      resetDocumentType();
+      resetQuestionType();
     }
 
-    if (search.documentType && search.documentType !== '') {
+    if (search.documentType) {
       search.type = search.documentType;
       delete search.documentType;
     }
 
-    if (search.questionType && search.questionType !== '') {
+    if (search.questionType) {
       search.type = search.questionType;
       delete search.questionType;
     }
@@ -109,8 +116,10 @@ const GroupeWorksForm = ({ dispatch, handleSubmit, router, typeSelected }) => {
 };
 
 GroupeWorksForm.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  resetDocumentType: PropTypes.func.isRequired,
+  resetQuestionType: PropTypes.func.isRequired,
+  resetSort: PropTypes.func.isRequired,
   router: PropTypes.shape({}).isRequired,
   typeSelected: PropTypes.string,
 };
@@ -120,5 +129,10 @@ GroupeWorksForm.defaultProps = { typeSelected: null };
 export default connect(
   state => ({
     typeSelected: formValueSelector('groupeWorksForm')(state, 'type'),
+  }),
+  dispatch => ({
+    resetDocumentType: () => dispatch(change('groupeWorksForm', 'documentType', 'document')),
+    resetQuestionType: () => dispatch(change('groupeWorksForm', 'questionType', 'question')),
+    resetSort: () => dispatch(change('groupeWorksForm', 'sort', '')),
   }),
 )(reduxForm({ form: 'groupeWorksForm' })(GroupeWorksForm));

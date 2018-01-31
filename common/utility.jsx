@@ -250,7 +250,7 @@ export const worksTypes = [{
 
 export const documentsTypes = [{
   text: 'Tous les documents',
-  value: '',
+  value: 'document',
 }, {
   text: 'Propositions de loi',
   value: 'propositiondeloi',
@@ -273,7 +273,7 @@ export const documentsTypes = [{
 
 export const questionsTypes = [{
   text: 'Toutes les questions',
-  value: '',
+  value: 'question',
 }, {
   text: 'Questions écrites',
   value: 'QE',

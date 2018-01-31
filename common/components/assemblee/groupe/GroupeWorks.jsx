@@ -58,7 +58,23 @@ const getWorksType = (value) => {
     return 'question';
   }
 
-  return undefined;
+  return '';
+};
+
+const getDocumentsType = (value) => {
+  if (documentsTypes.filter(type => type.value === value).length) {
+    return value;
+  }
+
+  return 'document';
+};
+
+const getQuestionsType = (value) => {
+  if (questionsTypes.filter(type => type.value === value).length) {
+    return value;
+  }
+
+  return 'question';
 };
 
 const GroupeWorks = ({ fetchWorks, groupeWorks, router }) => (
@@ -68,9 +84,9 @@ const GroupeWorks = ({ fetchWorks, groupeWorks, router }) => (
     <Form
       initialValues={{
         ...router.location.query,
-        type: getWorksType(router.location.query.type) || worksTypes[0].value,
-        documentType: router.location.query.type || documentsTypes[0].value,
-        questionType: router.location.query.type || questionsTypes[0].value,
+        type: getWorksType(router.location.query.type),
+        documentType: getDocumentsType(router.location.query.type),
+        questionType: getQuestionsType(router.location.query.type),
         sort: router.location.query.sort || amendementsSort[0].value,
       }}
       router={router}

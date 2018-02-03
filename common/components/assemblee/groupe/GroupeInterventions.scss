@@ -1,14 +1,6 @@
 @import '~styles/colors';
 
 .module {
-  .count {
-    border-bottom: 1px dashed $lighter;
-    display: inline-block;
-    font-size: .9em;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
   ul {
     list-style: none;
     margin: 0;

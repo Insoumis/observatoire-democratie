@@ -4,16 +4,17 @@ BUGS:
   ☐ Changer wordcloud2 pour éviter la petite latence sur "participations" (d3-cloud ?)
 
 OPTIMISATION TECH:
+  ✔ Remonter les fetch sur le noeud de la route pour améliorer SEO naturel (fetch côté node) @done (2018-2-4 03:45:39)
   ☐ Optimisation (https://wulfdeck.com/)
   ☐ Clean API (faire la liste pour Oro)
   ☐ Animation au viewport
-  ☐ Réduire le stack D3
-  ☐ Remonter les fetch sur le noeud de la route pour améliorer SEO naturel (fetch côté node)
+  ☐ Réduire le stack D3 ou remplacer par recharts
 
 AMÉLIORATION INTERFACE / CONTENU:
+  ☐ Ajouter la définition des termes liés aux travaux parlementaires dans le lexique
+  ☐ Ajouter la notion de niche parlementaire dans le lexique
   ☐ Ajouter reset sur les SearchField
   ☐ Ajouter une checkbox sur les scrutins clés pour ne montrer que les plus importants par défaut
-  ☐ Intéraction clic sur la légende des graph scrutins clés = répartition des groupes
 
 PETITES FONCTIONNALITÉS PONCTUELLES À FAIRE PASSER EN SONDAGE RS:
   ☐ Ajouter la compatibilité avec les autres groupes
@@ -22,10 +23,11 @@ PETITES FONCTIONNALITÉS PONCTUELLES À FAIRE PASSER EN SONDAGE RS:
   ☐ Calendrier des votes
   ☐ CSP sur les groupes
   ☐ Age / Sexe sur les groupes
+  ☐ Intéraction clic sur la légende des graph scrutins clés = répartition des groupes
 
 NOUVELLES FONCTIONNALITÉS:
-  ☐ Page des amendements, propositions de loi
   ☐ Page des scrutins clés
   ☐ Page d'analyse globale de l'assemblée
   ☐ Versus députés
   ☐ Versus groupes
+  ☐ Caler quelque part un calendrier interactif avec les niches parlementaires etc

@@ -46,7 +46,7 @@ const Home = ({ home, refetchDepute, refetchKeyVotes, refetchLastIntervention })
         />
       </section>
       <section>
-        <h1>Les derniers <strong>votes</strong> clés</h1>
+        <h1>Les derniers <strong>votes-clés</strong></h1>
         <KeyVoteList
           keyVotes={home.keyVotes}
           refetch={refetchKeyVotes}

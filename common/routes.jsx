@@ -8,7 +8,11 @@ import DeputeSearch from 'containers/assemblee/DeputeSearch';
 import DeputeRanking from 'containers/assemblee/DeputeRanking';
 
 import Depute from 'containers/assemblee/Depute';
+
 import DeputeVotes from 'components/assemblee/depute/DeputeVotes';
+import DeputeVotesOverview from 'components/assemblee/depute/DeputeVotesOverview';
+import DeputeKeyVotes from 'components/assemblee/depute/DeputeKeyVotes';
+import DeputeVoteSearch from 'containers/assemblee/DeputeVoteSearch';
 
 import DeputeParticipations from 'components/assemblee/depute/DeputeParticipations';
 import DeputeParticipationsOverview from 'components/assemblee/depute/DeputeParticipationsOverview';
@@ -45,7 +49,11 @@ export default (
     <Route path="/assemblee/deputes/classement" component={DeputeRanking} />
     <Route component={Depute}>
       <Redirect from="/assemblee/deputes/:id" to="/assemblee/deputes/:id/votes" />
-      <Route path="/assemblee/deputes/:id/votes" component={DeputeVotes} />
+      <Route path="/assemblee/deputes/:id/votes" component={DeputeVotes}>
+        <IndexRoute component={DeputeVotesOverview} />
+        <Route path="/assemblee/deputes/:id/votes/votes-cles" component={DeputeKeyVotes} />
+        <Route path="/assemblee/deputes/:id/votes/votes-liste" component={DeputeVoteSearch} />
+      </Route>
       <Route path="/assemblee/deputes/:id/participations" component={DeputeParticipations}>
         <IndexRoute component={DeputeParticipationsOverview} />
         <Route path="/assemblee/deputes/:id/participations/travaux" component={DeputeWorks} />

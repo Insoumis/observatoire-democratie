@@ -12,6 +12,7 @@ import DeputeVotes from 'components/assemblee/depute/DeputeVotes';
 
 import DeputeParticipations from 'components/assemblee/depute/DeputeParticipations';
 import DeputeParticipationsOverview from 'components/assemblee/depute/DeputeParticipationsOverview';
+import DeputeWorks from 'containers/assemblee/DeputeWorks';
 import DeputeInterventions from 'containers/assemblee/DeputeInterventions';
 
 import DeputeInfos from 'components/assemblee/depute/DeputeInfos';
@@ -46,6 +47,7 @@ export default (
       <Route path="/assemblee/deputes/:id/votes" component={DeputeVotes} />
       <Route path="/assemblee/deputes/:id/participations" component={DeputeParticipations}>
         <IndexRoute component={DeputeParticipationsOverview} />
+        <Route path="/assemblee/deputes/:id/participations/travaux" component={DeputeWorks} />
         <Route path="/assemblee/deputes/:id/participations/interventions" component={DeputeInterventions} />
       </Route>
       <Route path="/assemblee/deputes/:id/informations" component={DeputeInfos} />

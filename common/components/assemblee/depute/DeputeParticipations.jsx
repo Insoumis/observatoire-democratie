@@ -9,6 +9,7 @@ const DeputeParticipations = ({ children, depute }) => (
   <div>
     <nav className={css.subnav}>
       <ActiveLink onlyActiveOnIndex to={`/assemblee/deputes/${depute.id}/participations`}>Vue d&apos;ensemble</ActiveLink>
+      <ActiveLink to={`/assemblee/deputes/${depute.id}/participations/travaux`}>Ses travaux</ActiveLink>
       <ActiveLink to={`/assemblee/deputes/${depute.id}/participations/interventions`}>Ses interventions</ActiveLink>
     </nav>
     <div className={css.subcontent}>

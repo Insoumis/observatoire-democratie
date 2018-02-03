@@ -209,40 +209,6 @@
     }
   }
 
-  .subnav {
-    background: $white;
-    border: 1px solid $border;
-    display: flex;
-    padding: 15px;
-    margin-bottom: 10px;
-    justify-content: center;
-
-    a {
-      border-radius: 5px;
-      display: inline-block;
-      font-size: .95em;
-      margin: 0 8px;
-      padding: 3px 10px;
-      text-align: center;
-      text-decoration: none;
-
-      &:global(.active),
-      &:hover {
-        background: $emphasis;
-        color: $white;
-      }
-    }
-  }
-
-  .subcontent {
-    background: $white;
-    border: 1px solid $border;
-    padding: 30px 40px;
-    width: 100%;
-
-    a {font-weight: 600;}
-  }
-
   h2 {
     border-bottom: 1px dashed $lighter;
     font-size: 1.8em;
@@ -263,6 +229,40 @@
 
     i {color: $lighter;}
   }
+}
+
+.subnav {
+  background: $white;
+  border: 1px solid $border;
+  display: flex;
+  padding: 15px;
+  margin-bottom: 10px;
+  justify-content: center;
+
+  a {
+    border-radius: 5px;
+    display: inline-block;
+    font-size: .95em;
+    margin: 0 8px;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+
+    &:global(.active),
+    &:hover {
+      background: $emphasis;
+      color: $white;
+    }
+  }
+}
+
+.subcontent {
+  background: $white;
+  border: 1px solid $border;
+  padding: 30px 40px;
+  width: 100%;
+
+  a {font-weight: 600;}
 }
 
 @media (max-width: 1023px) {
@@ -364,16 +364,22 @@
   .content {
     > nav a {width: calc(100% / 2 - 5px);}
 
-    .subcontent {
-      font-size: .95em;
-      padding: 15px 20px;
-    }
-
     h2 {
       font-size: 1.5em;
       padding: 15px;
 
       &:not(:first-of-type) {margin-top: 60px;}
     }
+  }
+
+  .subnav {
+    flex-wrap: wrap;
+
+    a {margin: 5px;}
+  }
+
+  .subcontent {
+    font-size: .95em;
+    padding: 15px 20px;
   }
 }

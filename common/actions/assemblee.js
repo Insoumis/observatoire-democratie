@@ -8,6 +8,7 @@ export const ASSEMBLEE = {
   fetchDeputeRanking: 'FETCH_DEPUTE_RANKING',
   fetchDepute: 'FETCH_DEPUTE',
   fetchDeputeVotes: 'FETCH_DEPUTE_VOTES',
+  fetchDeputeWorks: 'FETCH_DEPUTE_WORKS',
   fetchDeputeInterventions: 'FETCH_DEPUTE_INTERVENTIONS',
   fetchGroupeRanking: 'FETCH_GROUPE_RANKING',
   fetchGroupe: 'FETCH_GROUPE',
@@ -56,6 +57,13 @@ export const fetchDepute = deputeId => ({
   schema: depute,
 });
 
+export const fetchVotes = search => ({
+  endpoint: `/votes${search}`,
+  api: 'assemblee',
+  type: ASSEMBLEE.fetchDeputeVotes,
+  meta: { search },
+});
+
 export const fetchGroupeRanking = search => ({
   endpoint: `/groupes/top${search}`,
   api: 'assemblee',
@@ -71,17 +79,10 @@ export const fetchGroupe = groupId => ({
   schema: groupe,
 });
 
-export const fetchVotes = search => ({
-  endpoint: `/votes${search}`,
-  api: 'assemblee',
-  type: ASSEMBLEE.fetchDeputeVotes,
-  meta: { search },
-});
-
 export const fetchWorks = search => ({
   endpoint: `/travaux${search}`,
   api: 'assemblee',
-  type: ASSEMBLEE.fetchGroupeWorks,
+  type: (search.match('depute')) ? ASSEMBLEE.fetchDeputeWorks : ASSEMBLEE.fetchGroupeWorks,
   meta: { search },
 });
 

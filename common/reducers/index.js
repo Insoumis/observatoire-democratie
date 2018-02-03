@@ -12,6 +12,7 @@ import deputeInterventions, * as fromDeputeInterventions from './deputeIntervent
 import groupes, * as fromGroupes from './groupes';
 import groupeRanking, * as fromGroupeRanking from './groupeRanking';
 import groupeWorks, * as fromGroupeWorks from './groupeWorks';
+import groupeInterventions, * as fromGroupeInterventions from './groupeInterventions';
 
 const app = combineReducers({
   home,
@@ -24,6 +25,7 @@ const app = combineReducers({
   groupes,
   groupeRanking,
   groupeWorks,
+  groupeInterventions,
   form,
 });
 
@@ -77,3 +79,5 @@ export const getGroupeRanking = createSelector(
 
 export const getGroupeWorks = state => fromGroupeWorks.getGroupeWorks(state.groupeWorks);
 
+export const getGroupeInterventions = state =>
+  fromGroupeInterventions.getGroupeInterventions(state.groupeInterventions);

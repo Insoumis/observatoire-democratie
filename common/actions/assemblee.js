@@ -13,6 +13,7 @@ export const ASSEMBLEE = {
   fetchGroupeRanking: 'FETCH_GROUPE_RANKING',
   fetchGroupe: 'FETCH_GROUPE',
   fetchGroupeWorks: 'FETCH_GROUPE_WORKS',
+  fetchGroupeInterventions: 'FETCH_GROUPE_INTERVENTIONS',
 };
 
 
@@ -89,6 +90,6 @@ export const fetchWorks = search => ({
 export const fetchInterventions = search => ({
   endpoint: `/interventions${search}`,
   api: 'assemblee',
-  type: ASSEMBLEE.fetchDeputeInterventions,
+  type: (search.match('depute')) ? ASSEMBLEE.fetchDeputeInterventions : ASSEMBLEE.fetchGroupeInterventions,
   meta: { search },
 });

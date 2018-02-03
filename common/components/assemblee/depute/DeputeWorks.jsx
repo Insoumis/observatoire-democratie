@@ -79,7 +79,7 @@ const getQuestionsType = (value) => {
 
 const DeputeWorks = ({ fetchWorks, deputeWorks, router }) => (
   <div className={css.module}>
-    <h2>Les travaux</h2>
+    <h2>Ses travaux</h2>
 
     <Form
       initialValues={{

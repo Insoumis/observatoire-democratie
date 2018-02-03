@@ -25,6 +25,7 @@ import GroupeVotes from 'components/assemblee/groupe/GroupeVotes';
 import GroupeParticipations from 'components/assemblee/groupe/GroupeParticipations';
 import GroupeParticipationsOverview from 'components/assemblee/groupe/GroupeParticipationsOverview';
 import GroupeWorks from 'containers/assemblee/GroupeWorks';
+import GroupeInterventions from 'containers/assemblee/GroupeInterventions';
 
 import GroupeInfos from 'components/assemblee/groupe/GroupeInfos';
 
@@ -60,6 +61,7 @@ export default (
       <Route path="/assemblee/groupes/:id/participations" component={GroupeParticipations}>
         <IndexRoute component={GroupeParticipationsOverview} />
         <Route path="/assemblee/groupes/:id/participations/travaux" component={GroupeWorks} />
+        <Route path="/assemblee/groupes/:id/participations/interventions" component={GroupeInterventions} />
       </Route>
 
       <Route path="/assemblee/groupes/:id/informations" component={GroupeInfos} />

@@ -10,6 +10,7 @@ const GroupeParticipations = ({ children, groupe }) => (
     <nav className={css.subnav}>
       <ActiveLink onlyActiveOnIndex to={`/assemblee/groupes/${groupe.groupe_abrev}/participations`}>Vue d&apos;ensemble</ActiveLink>
       <ActiveLink to={`/assemblee/groupes/${groupe.groupe_abrev}/participations/travaux`}>Les travaux</ActiveLink>
+      <ActiveLink to={`/assemblee/groupes/${groupe.groupe_abrev}/participations/interventions`}>Les interventions</ActiveLink>
     </nav>
     <div className={css.subcontent}>
       {React.cloneElement(children, { groupe })}

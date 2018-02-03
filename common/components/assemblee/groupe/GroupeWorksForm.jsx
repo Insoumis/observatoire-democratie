@@ -98,7 +98,7 @@ const GroupeWorksForm = ({
   }
 
   return (
-    <form onSubmit={handleSubmit(data => goTo(data))}>
+    <form onSubmit={handleSubmit(data => goTo({ ...router.location.query, requete: data.requete || '' }))}>
       <Field component={SearchField} name="requete" placeholder="Faire une recherche ..." />
       <div className={`flex wrap space-between ${css.filters}`}>
         <Field

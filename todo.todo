@@ -11,7 +11,6 @@ OPTIMISATION TECH:
   ☐ Remonter les fetch sur le noeud de la route pour améliorer SEO naturel (fetch côté node)
 
 AMÉLIORATION INTERFACE / CONTENU:
-  ✔ Ajouter la date sur les scrutins clés @high @done (2018-1-4 18:19:20)
   ☐ Ajouter reset sur les SearchField
   ☐ Ajouter une checkbox sur les scrutins clés pour ne montrer que les plus importants par défaut
   ☐ Intéraction clic sur la légende des graph scrutins clés = répartition des groupes
@@ -25,7 +24,6 @@ PETITES FONCTIONNALITÉS PONCTUELLES À FAIRE PASSER EN SONDAGE RS:
   ☐ Age / Sexe sur les groupes
 
 NOUVELLES FONCTIONNALITÉS:
-  ✔ Page des anciens députés @high @done (2018-1-4 18:19:29)
   ☐ Page des amendements, propositions de loi
   ☐ Page des scrutins clés
   ☐ Page d'analyse globale de l'assemblée

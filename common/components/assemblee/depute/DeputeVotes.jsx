@@ -7,6 +7,7 @@ import DeputeVotesSearch from 'containers/assemblee/DeputeVotesSearch';
 import Gauge from 'components/assemblee/reusable/Gauge';
 import DeputeKeyVoteList from './DeputeKeyVoteList';
 
+import deputeCss from './Depute.scss';
 import css from './DeputeVotes.scss';
 
 const DeputeVotes = ({ depute }) => {
@@ -19,7 +20,7 @@ const DeputeVotes = ({ depute }) => {
   }
 
   return (
-    <div className={css.module}>
+    <div className={` ${deputeCss.subcontent} ${css.module}`}>
       <h2>Votes aux scrutins publics</h2>
       <div className={css.stats}>
         <div>

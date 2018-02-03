@@ -209,7 +209,32 @@
     }
   }
 
-  > div {
+  .subnav {
+    background: $white;
+    border: 1px solid $border;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 10px;
+    justify-content: center;
+
+    a {
+      border-radius: 5px;
+      display: inline-block;
+      font-size: .95em;
+      margin: 0 8px;
+      padding: 3px 10px;
+      text-align: center;
+      text-decoration: none;
+
+      &:global(.active),
+      &:hover {
+        background: $emphasis;
+        color: $white;
+      }
+    }
+  }
+
+  .subcontent {
     background: $white;
     border: 1px solid $border;
     padding: 30px 40px;
@@ -339,7 +364,7 @@
   .content {
     > nav a {width: calc(100% / 2 - 5px);}
 
-    > div {
+    .subcontent {
       font-size: .95em;
       padding: 15px 20px;
     }

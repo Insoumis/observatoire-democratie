@@ -33,7 +33,7 @@ const KeyVoteList = ({ keyVotes, refetch }) => {
           <h2><span>{vote.detail.theme}</span></h2>
           <h3>{vote.dossierLibelle}</h3>
           <h4>Vote pour {vote.detail.nom} ({vote.date})</h4>
-          <p>{parseHTML(vote.detail.descfmt)}</p>
+          {parseHTML(vote.detail.descfmt)}
           <div className={css.graph}>
             <KeyVoteGraph data={vote.positions} />
           </div>

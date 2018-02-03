@@ -49,7 +49,7 @@ const error = (state = false, action) => {
   }
 };
 
-const search = (state = '', action) => {
+const search = (state = null, action) => {
   switch (action.type) {
     case `${ASSEMBLEE.fetchDeputeInterventions}_SUCCESS`:
       return action.meta.search;

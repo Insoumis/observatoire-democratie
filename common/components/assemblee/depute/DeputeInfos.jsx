@@ -3,8 +3,10 @@ import React from 'react';
 
 import ElectionGraph from './ElectionGraph';
 
+import css from './Depute.scss';
+
 const DeputeInfos = ({ depute }) => (
-  <div>
+  <div className={css.subcontent}>
     <h2>Élection</h2>
     <div>
       <ElectionGraph depute={depute} />

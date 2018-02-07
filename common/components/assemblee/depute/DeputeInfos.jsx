@@ -7,10 +7,14 @@ import css from './Depute.scss';
 
 const DeputeInfos = ({ depute }) => (
   <div className={css.subcontent}>
-    <h2>Élection</h2>
-    <div>
-      <ElectionGraph depute={depute} />
-    </div>
+    {depute.depute_election &&
+      <React.Fragment>
+        <h2>Élection</h2>
+        <div>
+          <ElectionGraph depute={depute} />
+        </div>
+      </React.Fragment>
+    }
 
     <h2>Mandats et fonctions</h2>
     <div>

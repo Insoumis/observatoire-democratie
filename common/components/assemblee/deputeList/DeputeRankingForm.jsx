@@ -78,7 +78,7 @@ class DeputeRankingForm extends Component {
         </div>
         <button
           className={css.toggleFilters}
-          onClick={() => this.setState({ displayFilters: !this.state.displayFilters })}
+          onClick={() => this.setState(prevState => ({ displayFilters: !prevState.displayFilters }))}
           type="button"
         >
           {(this.state.displayFilters) ? 'Réduire les filtres' : 'Voir plus de filtres'}

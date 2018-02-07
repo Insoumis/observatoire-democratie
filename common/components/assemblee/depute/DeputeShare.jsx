@@ -26,7 +26,7 @@ class DeputeShare extends Component {
   }
 
   toggleModal() {
-    this.setState({ isModalOpen: !this.state.isModalOpen });
+    this.setState(prevState => ({ isModalOpen: !prevState.isModalOpen }));
   }
 
   render() {

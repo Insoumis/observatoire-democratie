@@ -35,7 +35,7 @@ const getResult = (work) => {
       return (
         <div>
           <span className={css.pending}>
-            <i className="fa fa-question fa-fw" /> Non renseigné
+            <i className="fa fa-question fa-fw" /> {work.sort}
           </span>
           {work.type_libelle} du {formatDate(work.date.$date)}
         </div>

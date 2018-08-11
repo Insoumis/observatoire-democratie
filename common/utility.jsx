@@ -230,7 +230,7 @@ export const votesTri = [{
   text: 'Abstention',
   value: 'abstention',
 }, {
-  text: 'Absent',
+  text: 'Absent·e',
   value: 'absent',
 }];
 

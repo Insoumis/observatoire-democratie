@@ -19,7 +19,7 @@ class KeyVoteGraph extends Component {
       label: 'Abstention',
       value: data.abstention,
     }, {
-      label: 'Absent',
+      label: 'Absent·e',
       value: data.absent,
     }];
 

@@ -48,7 +48,7 @@ const getVoteResult = (vote) => {
     case 'absent':
       result = (
         <div>
-          <span className={css.absent}><i className="fa fa-question fa-fw" /> Absent</span> sur {vote.nom} (scrutin n°{vote.num} du {vote.scrutin_date})
+          <span className={css.absent}><i className="fa fa-question fa-fw" /> Absent·e</span> sur {vote.nom} (scrutin n°{vote.num} du {vote.scrutin_date})
         </div>
       );
       break;

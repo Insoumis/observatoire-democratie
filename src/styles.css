@@ -1,0 +1,26 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #fffcf0;
+  color: #213558;
+  font-family: Montserrat, sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  color: #213558;
+  transition: color 0.2s;
+}
+a:focus,
+a:hover {
+  color: #82cde2;
+}
